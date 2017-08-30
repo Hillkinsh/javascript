@@ -1,0 +1,100 @@
+<html lang="en">
+    <head>
+            <title>async</title>
+    </head>
+    <body>
+        <h1>异步调用的例子：一个微信的面试题目</h1>
+        <div id = 'app'>
+        </div>
+    
+    </body>
+    <script>
+    
+        /**
+        一道微信的前端面试题，内容大概如下：
+    
+            实现一个LazyMan，可以按照以下方式调用:
+            LazyMan(“Hank”)输出:
+            Hi! This is Hank!
+    
+            LazyMan(“Hank”).sleep(10).eat(“dinner”)输出
+            Hi! This is Hank!
+            //等待10秒..
+            Wake up after 10
+            Eat dinner~
+    
+            LazyMan(“Hank”).eat(“dinner”).eat(“supper”)输出
+            Hi This is Hank!
+            Eat dinner~
+            Eat supper~
+    
+            LazyMan(“Hank”).sleepFirst(5).eat(“supper”)输出
+            //等待5秒
+            Wake up after 5
+            Hi This is Hank!
+            Eat supper
+    
+        */
+    
+        /**
+        *解题思路：1，链式调用；
+        2，执行顺序控制：队列。
+        */
+       
+       function lazyMan(name){
+           var quene = [];
+           function next(){  //从队列中取出第一个执行，如果有的话。
+               var fn = quene.shift();
+               fn && fn();
+           }
+           var task = {
+               wait:function(second){  
+                    return function(){//返回一个匿名函数，在该匿名函数调用时，先setTimeout在next()。
+                        console.log(`I will sleep ${second} s.`);
+                        setTimeout(function(){
+                            next();
+                        },second * 1000);
+                    }
+               },
+               eat:function(meal){
+                    return function(){  //返回一个匿名函数，在该匿名函数调用时，调用next()。
+                        console.log(`Eat ${meal} ~`);
+                        next();
+                    }
+               }
+           };
+           quene.push(function(){  //队列先把sayName实现。
+                console.log(`Hi, my name is ${name} ~`);
+                next();
+           })
+    
+           setTimeout(next,0);//异步执行事件队列。
+    
+           return {
+               sleep:function(second){
+                    quene.push(task.wait(second));
+                    return this;
+               },
+               eat:function(meal){
+                   quene.push(task.eat(meal));
+                   return this;
+               },
+               sleepFirst:function(second){
+                   quene.unshift(task.wait(second));
+                   return this;
+               }
+           }
+    
+       }
+    
+    
+    lazyMan('Hank')
+    .sleepFirst(2)
+    // .eat('breadfast')
+    // .sleep(3)
+    // .eat('dinner')
+    // .eat('lanch');
+        
+    
+    </script>
+    </html>
