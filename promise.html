@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+        <title>promise example</title>
+</head>
+<body>
+    <h1>promise的例子：一个周期性变灯光的例子</h1>
+    <div id = 'app'>
+    </div>
+
+</body>
+<script>
+
+    /*
+    题目：红灯三秒亮一次，绿灯一秒亮一次，黄灯2秒亮一次；
+    如何让三个灯不断交替重复亮灯？
+    （用Promise实现）三个亮灯函数已经存在：
+    */
+
+function red(){
+    console.log('red');
+}
+function green(){
+    console.log('green');
+}
+function yellow(){
+    console.log('yellow');
+}
+ 
+var tic = function(timmer, cb){//实现时间控制。
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            cb();
+            resolve();
+        }, timmer);
+    });
+};
+ 
+var d = new Promise((resolve, reject) => {resolve();});
+
+var step = function(def) {
+    def.then(function(){
+        return tic(2000, red);  //为什么需要return，因为要链式调用，接上后面的then。
+    }).then(function(){
+        return tic(1500, green);
+    }).then(function(){
+        return tic(1000, yellow);
+    }).then(function(){
+        step(def);//这里是实现循环的关键，问题是 how(递归大法)
+    });
+}
+ 
+step(d);
+  
+
+</script>
+</html>
