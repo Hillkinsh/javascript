@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+            <title>promise 解决微信的题目</title>
+    </head>
+    <body>
+        <h1>promise的应用：解决微信的题目</h1>
+        <div id = 'app'>
+        </div>
+    
+    </body>
+    <script>
+
+        /*
+        用promise解决那个LazyMan问题。
+        简单清晰，简洁！
+        */
+    
+    function lazyMan(name) {
+        var p = new Promise((resolve,reject) => {
+            resolve(`Hi! This is ${name}!`);
+        })
+        return {
+            sleep:function(second){
+                
+                p = p.then(function(msg) {
+                    msg && console.log(msg);
+                    console.log(`Wake up after ${second}`);
+    
+                     return new Promise((resolve,reject) => {
+                        setTimeout(() => {resolve();},second * 1000)
+                     })               
+                })
+    
+                return this;
+            },
+    
+            sleepFirst:function(second){
+                p = p.then(msg =>{
+                    console.log(`Wake up after ${second}`);
+                    msg && console.log(msg);
+    
+                    return new Promise((resolve,reject) => {
+                        setTimeout(() => {resolve();},second * 1000);
+                    });
+                })
+                return this;
+            },
+    
+            eat:function(meal) {
+                p = p.then(msg => {
+                    msg && console.log(msg);
+                    return Promise.resolve(`Eat ${meal} ~`);
+                })
+                return this;
+            },
+            print: ()=> {
+                p.then((msg) =>{
+                    console.log(msg)
+                })
+            }
+        }
+    }
+    
+    
+    lazyMan('xiaomig')
+    .sleepFirst(2)
+    // .sleep(5)
+    .eat('cafe')
+    .eat('apple')
+    .print();
+    
+    </script>
+    </html>
