@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>instanceof 的理解</title>
+<style> 
+</style>
+</head>
+
+<body>
+
+<script>
+    /** 
+    今天面网易，被虐的有点惨。才发现，我的前端很多代码挖得不够好深，甚至都没有挖。
+    这里记下这个教训。作为以后的教训。
+
+    本博文实现的是 instanceof 背后的机理，其实就一句话：
+
+    能在实例的原型对象链中找到目的构造函数的prototype属性所指向的原型对象，就返回true
+    */
+
+var A = function(){};
+A.prototype = {
+    sayName:function(){},
+    sayAge:function(){}
+}
+
+function B(){}
+B.prototype = new A();
+
+function C(){}
+C.prototype = new B();
+
+var c = new C();
+
+function inst(c,b){
+    while(c.__proto__){
+        if(c.__proto__ === b.prototype){
+            return true;
+        }
+        c = c.__proto__;
+    }
+    return false;
+}
+
+console.log(inst(c,A));//true
+console.log(inst(c,B));//true
+console.log(inst(c,C));//true
+console.log(inst(c,Object));//true
+console.log(inst(c,Array));//false。
+
+
+</script>
+</body>
+</html>
