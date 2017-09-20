@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>母羊生羊问题解决</title>
+    <meta charset="utf-8" />
+   
+  </head>
+  <body>
+  </body>
+  <script language="javascript">
+      /* 
+        核心是状态转移。
+        状态以年为单位作为状态。
+        所以就是设一个初态:[0,1,0,0,0,0]；
+        一个中间态：[0,0,0,0,0,0];
+        两者之间有一个态转移的唯一映射关系。
+      */
+
+      /**
+      str:数字的中间是空格，数字表示羊生羊的年份。
+      p:羊的死亡年份。
+      year:表示过了多少年。
+      */
+function sheep(str,p,year){
+    var arr = str.split(' ');
+    var m = [0,1]; 
+    var n = [0,0];
+    var num = 0;
+    for(var i = 2; i <= p; i++){
+        m.push(0);//初始化数据设定各个年龄的羊的初始值
+        n.push(0);//当年的各年龄段羊的数目
+    }
+    
+    if(year === 1){
+        return 1;
+    }
+
+    var temp
+    var count = 0;
+
+    for(var i = 2; i <= year; i++){
+        count = 0;
+        for(var j = 0; j< arr.length; j++){
+            temp = parseInt(arr[j]);
+            count += m[temp - 1];   
+        }
+        n[1] = count;
+        
+        for(var j = 2; j < n.length; j++){
+            n[j] = m[j-1];
+        }
+
+        for(var w = 1; w < n.length - 1; w++){
+            m[w] = n[w];
+        }
+    }
+
+    for(var i = 1;i < p;i++){
+        num += n[i]
+    }
+    return num;
+}
+
+console.log(sheep('2 4',5,10))//47
+</script>
+</html>
