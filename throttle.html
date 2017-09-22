@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>函数节流</title>
+    <meta charset="utf-8"/>
+    <style></style>
+  </head>
+  <body>
+  </body>
+  <script>
+      /* 
+      函数节流的思想很好接受：即：连续尝试过多的dom操作，会导致浏览器的挂起甚至崩溃。
+      比如操作onresize，一调整浏览器大小，事件就会被触发。
+      就是让一个函数无法在很短的时间间隔内连续调用，
+      只有当上一次函数执行后过了你规定的时间间隔，才能进行下一次该函数的调用。
+
+      节流方法本身，初次看到觉得怪不理解。
+      其实仔细看看也是非常简单。
+      throttle函数内部，首先有一个clearTimeout函数，
+      将设置的定时给去掉。（把定时函数绑成属性确实看的我一愣，其实也没啥就是一个指向定时函数的指针而已。通过clearTimeout将定时取消）。
+      然后又通过method.tId的形式添加新的定时。ok新的定时实现了。
+      所以每当调用节流函数，就会讲已有的tid清除（如果还尚未执行，执行过就没了）重新设置。
+      这样频繁的执行函数还是比频繁的操作高性能作业要好太多。
+      */
+function myFunction (){
+    console.log('yeah')
+}
+
+function throttle(method, context) {
+     clearTimeout(method.tId); //清除定时器
+     method.tId = setTimeout(function(){//给方法添加一个tId定时属性，属性是setTimeout函数，执行method本身。
+         method.call(context);
+     }, 500);
+ }
+ 
+ window.onresize = function(){
+    throttle(myFunction);
+}
+</script>
+</html>
