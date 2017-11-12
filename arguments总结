@@ -1,0 +1,29 @@
+此前在网易面试，聊到arguments，因为掌握太差，被面试官鄙视了一脸。
+这里总结一下该对象的前前后后作为总结。
+arguments是一个类数组对象，是除了箭头函数外的所有函数都可用的局部变量。
+arguments可以用下标索引来引用参数。
+    arguments[0]
+    arguments[1]
+    arguments[2]
+把arguments变成数组：（原因不明）
+var args = Array.prototype.slice.call(arguments);
+var args = [].slice.call(arguments);
+
+// ES2015
+const args = Array.from(arguments);
+var args = [...arguments];
+
+  // TODO:把这个问题细致化：一个对象写成
+    {
+     '0':1,
+     '1':2,
+     '2':3
+    }
+那么他就有中括号的那种下标关系。但是在上面调用slice函数，只返回空数组。
+这是很大的不同点。
+
+属性：arguments.callee 指向当前执行的函数
+arguments.caller 指向调用当前函数的函数（废弃）
+arguments.length 函数的参数数量
+
+
