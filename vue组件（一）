@@ -1,0 +1,28 @@
+1,父组件与子组件
+不得不说，父子组件与预想的差的太多，导致一直都很困惑。这里厘清楚
+<my-component></my-component>
+Vue.component('my-component', {
+  template:'<h1></h1>'
+})
+上面中，<my-component>是<h1>的父组件。
+2，组件注册：全局注册和局部注册
+全局注册：
+Vue.component('my-component',{})
+注册之后就可以作为自定义元素使用。
+比如：
+Vue.component('my-com', {
+  template:'<p>nihao</p>'
+}
+使用：<my-com></my-com>
+
+局部注册：（定义）可以通过某个Vue实例或组件的实例选项components注册仅在其作用域中可用的组件。
+//TODO：这里不理解。找找例子看。
+
+3，data必须是函数。
+Vue.component('my-com', {
+  template:'<div>{{msg}}</div>',
+  data:function(){
+    return {msg:'hello'}
+  }
+}
+
