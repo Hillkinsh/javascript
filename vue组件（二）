@@ -1,0 +1,85 @@
+1，父子组件间的关系。prop和事件
+ 总结下就是一句话:父组件通过prop给子组件下发数据。子组件通过事件给父组件发送消息。
+prop 和 动态prop
+  1），prop 和 动态 prop
+  Vue.component('child', {
+    props:['msg'],
+    template:'<p>{{msg}}</p>'
+  })
+  
+  父组件：<child msg = 'hello'></child>
+
+  2）动态prop。用v-bind动态的将prop绑定到父组件的数据，当父组件的数据变化时，变化也会传到给子组件。组件的数据类型有多种，传对象等引用类型也是可以的
+  
+  比如：父组件
+  <input v-model = 'parentMsg'>
+  <child v-bind:my-message = 'parentMsg'></child>
+
+  再比如：
+  <parent v-bind:obj = "objobj"></parent>
+  Vue.component('parent', {
+    props:['objobj'],
+    template:'<h1>{{objobj.name}}</h1>'
+  })
+ 
+  objobj:{name:'xiaoming'}
+  3),也可以把对象的所有属性作为prop传递。直接使用v-bind
+  例如：
+  <todo v-bind="todo"></todo>
+
+  todo = {a:1,b:2,c:3}
+  Vue.component('todo',{
+    props:['a','b','c'],
+    ...
+}
+  这个在子组件上props时，需要把各个属性名都罗列一下，
+  
+
+  prop是单向数据绑定的。就是父组件数据变化会影响子组件，反之则不会。
+
+！！！在 JavaScript 中对象和数组是引用类型，指向同一个内存空间，如果 prop 是一个对象或数组，在子组件内部改变它会影响父组件的状态。比如：
+    <my-com v-bind:obj = "objobj"></my-com>
+    <p style="color:red">{{objobj.name}}</p>
+
+   Vue.component('my-com',{
+       props:['obj'],
+       template:'<div>'+
+           '<h1>{{obj.age}}</h1>'+
+           '<h1>{{obj.name}}</h1>'+
+           '<h1>{{obj.sex}}</h1>'+
+       '</div>',
+       data:function () {
+           this.obj.name = 'xiaobai';//改变prop对象的属性值。
+           return {}
+       }
+   })
+   
+    objobj:{
+      age:26,
+      sex:'boy',
+      name:'xiaoming'
+    }
+
+ 4）prop验证，对组件的prop指定验证规则，如果传入的数据类型不合要求，则会发出警告。
+比如：
+  Vue.component('exm,{
+    props:['name'],
+    props:{
+      name:String
+    },
+  ...
+}
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
