@@ -46,3 +46,9 @@ vm.$emit(event [, ...args])是可以告知父组件，并携带一些参数过�
   监听子组件有没有触发increment。若有，触发自己的incrementTotal函数。
 个人感觉increment像一个连接的介质，两端为子组件和父组件。
 子组件通过this.$emit（'介质'）传导。父组件通过v-on('介质')感受子组件。
+
+给父组件绑定原生事件。
+父组件可以监听子组件了。那如果想给父组件添加自定义事件怎么做？
+举例：
+<my-component v-on:click.native="dotheThing" ></my-component>
+就是使用v-on的修饰符.native。
