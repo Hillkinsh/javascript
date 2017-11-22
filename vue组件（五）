@@ -1,0 +1,33 @@
+1，动态组件。
+回顾一下前面的局部组件定义：可以通过某个Vue实例的components来注册仅在其作用域中可用的组件。
+比如：
+var Child = {template:'<h1>局部组件</h1>'}
+
+new Vue({
+...
+components:{
+ 'my-component':Child
+}
+
+在dom中可以直接使用<my-component>
+
+这里继续说动态组件。动态组件通过保留的<component>元素，动态的绑定到他的is特性，可以让多个组件可以使用同一个挂载点，并动态切换。
+比如：
+       <component v-bind:is="currentView"></component>
+
+    var vm = new Vue({
+        el: '#counter-event-example',
+        data: {
+          
+          },
+        components:{
+            home:{template:'<h1>home</h1>'},
+            school:{template:'<h2>school</h2>'},
+            hospital:{template:'<h3>hospital</h3>'},
+            constructor1:omponent
+        }
+    })
+
+
+
+
