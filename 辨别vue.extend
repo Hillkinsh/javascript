@@ -1,0 +1,56 @@
+
+1，vue.extend(options)参数为对象
+用法：使用Vue构造器，创建一个子类。参数是一个包含组件选项的对象。其中data选项为函数。
+
+vue.extend返回的是一个“扩展实例构造器”。也就是预设了部分选项的Vue的实例构造器，常用来服务于Vue.component用来生成组件。
+可简单的理解为当在模版中遇到该组件作为标签的自元素时，会自动“扩展实例构造器”来生产组件实例，并挂载到自定义元素上。
+举例：
+<author><author>
+
+var author = Vue.extend({
+        template:'<p><a :href="url">{{author11}}</a></p>',
+        data:function () {
+            return {
+                author11:'xiaoming',
+                url:'http://blog.csdn.net/Dear_Mr/article/details/72614370'
+            }
+        }
+    })
+    new author().$mount('author')
+
+例子2：使用propsData。
+var author = Vue.extend({
+        template:'<p><a :href="url">{{author11}}&&{{name}}</a></p>',
+        data:function () {
+            return {
+                author11:'xiaoming',
+                url:'http://blog.csdn.net/Dear_Mr/article/details/72614370'
+            }
+        },
+        props:[
+            'name'
+        ]
+    })
+    new author({propsData:{name:'yangyang'}}).$mount('author')
+
+还可以挂载在普通元素上
+做法是：new author({propsData:{name:'yangyang'}}).$mount('#author')
+
+2，Vue.component注册全局组件
+举例：
+Vue.component('test-component',{
+        template:'<span>{{abc}}</span>',
+        data:function(){
+            return {abc:1}
+        }
+    })
+他其实内部的操作是调用了Vue.extend
+    Vue.component('test-component',Vue.extend({
+        template:'<span>{{abc}}</span>',
+        data:function(){
+            return {abc:1}
+        }
+    })
+    )
+
+
