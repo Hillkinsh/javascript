@@ -38,17 +38,21 @@ let addHeader = headers => xhr => { // 添加请求头
 
 function getJSON (url, params, addHeader) { // get 请求。
   return new Promise(function (resolve, reject) {
+      
     let xhr = createReq()
     xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        try{
-          resolve(JSON.parse(xhr.responseText))
-        } catch (e) {
-          reject(e)
-        } 
-      } else {
-        reject(xhr)
-      }
+        
+      if (xhr.readyState == 4 ) {
+        if (xhr.status == 200) {
+          try{
+            resolve(JSON.parse(xhr.responseText))
+          } catch (e) {
+            reject(e)
+          } 
+        } else {
+          reject(xhr)
+        }
+      } 
     }
     xhr.open("GET", paramConcatUrl(url, params), true);
     if (addHeader) {
