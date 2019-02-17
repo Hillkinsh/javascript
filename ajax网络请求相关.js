@@ -54,7 +54,7 @@ function getJSON (url, params, addHeader) { // get 请求。
     if (addHeader) {
       addHeader(xhr)
     }
-    xhr.send();
+    xhr.send(null);
   })
 }
 function getJSONWithToken (url, params) { // 加token的get请求
