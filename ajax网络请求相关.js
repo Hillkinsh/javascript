@@ -143,7 +143,7 @@ function postJSONtoJSON (url, params, addHeader) {
     xhr.send(JSON.stringify(params))
   })
 }
-function postJSONtoJSONWithToken (url, params, addHeader) {
+function postJSONtoJSONWithToken (url, params) {
   let Authorization
   return postJSONtoJSON(url, params, addHeader({
     'Authorization': Authorization // token授权
