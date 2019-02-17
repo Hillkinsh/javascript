@@ -38,19 +38,23 @@ let addHeader = headers => xhr => { // 添加请求头
 
 function getJSON (url, params, addHeader) { // get 请求。
   return new Promise(function (resolve, reject) {
+      
     let xhr = createReq()
-    xhr.onreadystatechange = function() {  // 这个方法要先于open创建，目的是为了保证兼容性。
+    xhr.onreadystatechange = function() {// 这个方法要先于open创建，目的是为了保证兼容性。
       // 函数内部使用的是xhr对象，而非this对象。
       // 原因就是：有的浏览器会导致函数执行失败，或者函数出错。因此使用xhr对象实例变量是一个可靠的方式。
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        try{
-          resolve(JSON.parse(xhr.responseText))
-        } catch (e) {
-          reject(e)
-        } 
-      } else {
-        reject(xhr)
-      }
+        
+      if (xhr.readyState == 4 ) {
+        if (xhr.status == 200) {
+          try{
+            resolve(JSON.parse(xhr.responseText))
+          } catch (e) {
+            reject(e)
+          } 
+        } else {
+          reject(xhr)
+        }
+      } 
     }
     xhr.open("GET", paramConcatUrl(url, params), true);
     if (addHeader) {
@@ -139,7 +143,7 @@ function postJSONtoJSON (url, params, addHeader) {
     xhr.send(JSON.stringify(params))
   })
 }
-function postJSONtoJSONWithToken (url, params, addHeader) {
+function postJSONtoJSONWithToken (url, params) {
   let Authorization
   return postJSONtoJSON(url, params, addHeader({
     'Authorization': Authorization // token授权
