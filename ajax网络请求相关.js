@@ -15,7 +15,7 @@ function paramConcatUrl(originurl, params){
   var rep = url.indexOf('?') == -1 ? '?' : '&'
   var pairs = []
   for(let key in params){
-    params[key] && pairs.push(key + '=' + encodeURIComponent(params[key]))
+    params[key] && pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(params[key]))  // key和value都必须用encodeURIComponent编码
   }
   if(pairs.length == 0){
     return tourl(url)
@@ -39,7 +39,9 @@ let addHeader = headers => xhr => { // 添加请求头
 function getJSON (url, params, addHeader) { // get 请求。
   return new Promise(function (resolve, reject) {
     let xhr = createReq()
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function() {  // 这个方法要先于open创建，目的是为了保证兼容性。
+      // 函数内部使用的是xhr对象，而非this对象。
+      // 原因就是：有的浏览器会导致函数执行失败，或者函数出错。因此使用xhr对象实例变量是一个可靠的方式。
       if (xhr.readyState == 4 && xhr.status == 200) {
         try{
           resolve(JSON.parse(xhr.responseText))
