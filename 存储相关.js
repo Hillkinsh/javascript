@@ -28,18 +28,18 @@ function getData(name){ // 查
 // ----------cookie---------------
 function setCookie(name,val,day){
   if(day == 0){
-    document.cookie = name + "="+ escape(val) + ";path=/;expires=Sat Feb 01 5000 01:01:00 GMT"
+    document.cookie = name + "="+ encodeURIComponent(val) + ";path=/;expires=Sat Feb 01 5000 01:01:00 GMT"
   }else{
     let more = new Date()
     more.setTime(more.getTime() + day*24*60*60*1000)
-    document.cookie = name + "="+ escape (val) + ";path=/;expires=" + more.toGMTString()
+    document.cookie = name + "="+ encodeURIComponent (val) + ";path=/;expires=" + more.toGMTString()
   }
 }
 function getCookie(name){
   let arr,
   reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)")
   if(arr=document.cookie.match(reg)) {
-    return unescape(arr[2])
+    return decodeURIComponent(arr[2])
   } else {
     return ''
   }
