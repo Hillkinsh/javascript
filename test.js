@@ -55,21 +55,50 @@ var findTarget = function(root, k) {
   }  
 };
 
-var findTarget2 = function(root, k) {
-  let stack = [root]
-  
-  let map = {}
-  
-  while (stack.length > 0) {
-      let cur = stack.pop()
-      console.log(cur.val)
-      if (map[k - cur.val]) return true
-      map[cur.val] = true;
-      
-      if (cur.left) stack.push(cur.left)
-      if (cur.right) stack.push(cur.right)
+let l1 = {
+  val:2,
+  next: {
+    val: 4,
+    next : {
+      val: 3,
+      next: null
+    }
   }
-  return false
+},
+l2 = {
+  val:5,
+  next: {
+    val:6,
+    next:{
+      val:4,
+      next:null
+    }
+  }
+}
+
+var addTwoNumbers = function(l1, l2) {
+  let arr = []
+  while(l1.next) {
+      arr.push(l1.val + l2.val)
+      l1 = l1.next
+      l2 = l2.next
+  }
+  let temp = 0;
+  for (let i =0 ; i< arr.length; i++) {
+      temp = temp + arr[i]*Math.pow(10, arr.length - i - 1)
+  }
+  let out = {}
+  temp = temp.toString().split('').reverse()
+  return createList(temp)
 };
 
-findTarget2([5,3,6,2,4,null,7], 9)
+function createList(temp) {
+  if (!temp.length) return null
+  
+  return {
+      val: temp[0]-0,
+      next: createList(temp.slice(1))
+  }
+}
+
+addTwoNumbers(l1, l2)
