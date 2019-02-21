@@ -13,6 +13,8 @@
       比如操作onresize，一调整浏览器大小，事件就会被触发。
       就是让一个函数无法在很短的时间间隔内连续调用，
       只有当上一次函数执行后过了你规定的时间间隔，才能进行下一次该函数的调用。
+      
+      思想是如果函数执行过于密集，则会清掉上一次的定时，重新定时执行函数
 
       节流方法本身，初次看到觉得怪不理解。
       其实仔细看看也是非常简单。
@@ -21,6 +23,10 @@
       然后又通过method.tId的形式添加新的定时。ok新的定时实现了。
       所以每当调用节流函数，就会讲已有的tid清除（如果还尚未执行，执行过就没了）重新设置。
       这样频繁的执行函数还是比频繁的操作高性能作业要好太多。
+
+      上面的解释只是对一种具体的实现不理解而已。思想还是太过狭隘。
+      更应该从根本上理解节流那种时间间隔内重复操作无效的思想的把握
+
       */
 function myFunction (){
     console.log('yeah')
@@ -35,6 +41,26 @@ function throttle(method, context) {
  
  window.onresize = function(){
     throttle(myFunction);
+}
+
+var processor = {
+    timeoutId : null,
+    performProcessing: function () {
+        // 实际执行代码
+        console.log(window.innerWidth)
+    },
+    process: function () { // 初始处理调用的方法
+        clearTimeout(this.timeoutId)
+        var that = this
+        this.timeoutId = setTimeout(function () {
+            that.performProcessing()
+        }, 3000)
+    }
+}
+window.onresize = function(){
+    // throttle(myFunction);
+    // console.log(this)
+    processor.process()
 }
 </script>
 </html>
