@@ -76,29 +76,37 @@ l2 = {
   }
 }
 
-var addTwoNumbers = function(l1, l2) {
-  let arr = []
-  while(l1.next) {
-      arr.push(l1.val + l2.val)
-      l1 = l1.next
-      l2 = l2.next
-  }
-  let temp = 0;
-  for (let i =0 ; i< arr.length; i++) {
-      temp = temp + arr[i]*Math.pow(10, arr.length - i - 1)
-  }
-  let out = {}
-  temp = temp.toString().split('').reverse()
-  return createList(temp)
-};
-
-function createList(temp) {
-  if (!temp.length) return null
-  
-  return {
-      val: temp[0]-0,
-      next: createList(temp.slice(1))
+class ListNode {
+  constructor (val) {
+    this.val = val
+    this.next = null
   }
 }
 
+// var addTwoNumbers = function(l1, l2) {
+//   var sm = 0, dummy = cur = new ListNode(0);
+//   while (l1 || l2 || sm){
+//       if (l1){sm += l1.val, l1 = l1.next;} 
+//       if (l2){sm += l2.val, l2 = l2.next;} 
+//       cur = cur.next = new ListNode(sm % 10);
+//       if (sm > 9) {sm = 1;} else{sm = 0;}}
+
+//       console.log(dummy)
+//   return dummy.next;
+// };
+
+
+
+function addTwoNumbers (l1, l2) {
+  let sum =0;
+  let out = list = new ListNode(0)
+  while (l1 || l2 || sum) {
+    if (l1) {sum = sum + l1.val, l1 = l1.next}
+    if (l2) {sum = sum + l2.val, l2 = l2.next}
+    list = list.next = new ListNode(sum % 10)
+    sum = sum > 9 ? 1:0
+  }
+  console.log(out.next)
+  return out.next
+}
 addTwoNumbers(l1, l2)
