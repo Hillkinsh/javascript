@@ -7,33 +7,57 @@
 
 <body>
 <div id="canvas-warp">
-    <canvas id="canvas" style="border: 1px solid #aaaaaa; display: block; margin: 50px auto;" width="800" height="600">
-        你的浏览器居然不支持Canvas？！赶快换一个吧！！
-    </canvas>
+    <button id='btn'>点击按钮</button>
 </div>
 
 <script>
-window.onload = function(){
-    var canvas = document.getElementById("canvas");
-        canvas.width = 800;
-        canvas.height = 600;
-    var context = canvas.getContext("2d");
+  let btn = document.getElementById('btn')
+  btn.addEventListener('click', function (e) {
+      console.log(e)
+      console.log( this)
+  }, false)
 
-    context.beginPath();
-        context.moveTo(150,50);
-        context.lineTo(650,50);
-        context.lineTo(650,550);
-        context.lineTo(150,550);
-        context.lineTo(150,50);     //最后一笔可以不画
-        context.closePath();        //使用closePath()闭合图形
+  var EventUtil = {
+      addHandler : function (element, type, handler) {
+          if (element.addEventListener) {
+            element.addEventListener(type, handler, false)
+          } else if (element.attachEvent) {
+              element.attachEvent('on' + type, handler)
+          } else {
+              element['on' + type] = handler
+          }
+      },
+      getEvent: function (event) {
+          return event ? event: window.event
+      },
+      getTarget: function (event ) {
+          return event.target || event.srcElement
+      },
 
-         context.fillStyle = "yellow";   //选择油漆桶的颜色
-        context.lineWidth = 5;
-        context.strokeStyle = "black";
-
-        context.fill();                 //确定填充
-        context.stroke();
-}
+      removeHandler: function (element, type, handler) {
+        if (element.removeHandler) {
+            element.removeHandler(type, handler, false)
+          } else if (element.detachEvent) {
+              element.attachEvent('on' + type, handler)
+          } else {
+              element['on' + type] = null
+          }
+      },
+      preventDefault: function (event) {
+          if (event.preventDefault) {
+              event.preventDefault()
+          } else {
+              event.returnValue = false
+          }
+      },
+      stopPropagation: function (event) {
+          if (event.stopPropagation) {
+              event.stopPropagation()
+          } else {
+              event.cancelBubble = true
+          }
+      }
+  }
 </script>
 </body>
 

@@ -106,7 +106,25 @@ function addTwoNumbers (l1, l2) {
     list = list.next = new ListNode(sum % 10)
     sum = sum > 9 ? 1:0
   }
-  console.log(out.next)
   return out.next
 }
 addTwoNumbers(l1, l2)
+
+function lengthOfLongestSubstring( s) {
+  let map = new Map()
+  // map.set(256, -1)
+  let maxLen = 0, start = -1
+  for (let i = 0; i != s.length; i++) {
+    if (map.get(s[i])!=undefined && (map.get(s[i]) > start)) {
+      start = map.get(s[i])
+    }
+    map.set(s[i], i)
+    maxLen = Math.max(maxLen, i-start)
+  }
+  console.log(maxLen)
+  return maxLen
+}
+
+lengthOfLongestSubstring('abcdefgacgd')
+lengthOfLongestSubstring('aa')
+lengthOfLongestSubstring('abda')
