@@ -33,5 +33,21 @@
 ```
 
 上面这种写法是我最常的写法。
-首先函数的用意是拼接两或三个字符串，然后返回拼接结果。 其中，第三个是可选的。
+首先函数的用意是拼接两或三个字符串，然后返回拼接结果。 其中，第三个是可选的, 因此必须要检查。
+str3，并不是只有undefined才会转成false，0， ''，都会转成false
+
+注意： 在控制流中使用非布尔值，是极为常见的错误来源。一定要注意。
+
+避免方式就是：
+在此处传入布尔值。
+```
+    function concat(str1, str2, str3) {
+        var result = str1 + str2
+        if (typeof str3 == 'string' ) { 
+            result += str3
+        }
+        return result
+    }
+```
+
 todo: haolema
