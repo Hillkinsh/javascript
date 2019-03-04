@@ -20,3 +20,9 @@ obj.sex // 0
 obj.age || '28'
 
 obj.comp && obj.comp.salary
+
+// 对象是否具有某种属性 
+// hasOwnProperty 不检查原型链。
+obj.hasOwnProperty('age') // true
+
+// for in 遍历对象，会返回 我咋没看到啊。顺序不确定。会遍历原型属性。
