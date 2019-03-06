@@ -25,4 +25,5 @@ obj.comp && obj.comp.salary
 // hasOwnProperty 不检查原型链。
 obj.hasOwnProperty('age') // true
 
-// for in 遍历对象，会返回 我咋没看到啊。顺序不确定。会遍历原型属性。
+// for in 遍历对象，会返回原型上的属性，顺序不确定。 事实上对象的属性返回就是不确定的。如果想要确定为什么不存在数组里。
+// 想要按照顺序来的话，就做一个数组，里面按照正常顺序存放属性名

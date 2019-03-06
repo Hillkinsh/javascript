@@ -8,11 +8,35 @@
 
 <pre>
     <script>
-        document.writeln('Hello world.')   
+          
         Function.prototype.method = function(name, func) {
+            // console.log(this== Function.prototype )
+            // console.log( Function.prototype)
             this.prototype[name] = func
             return this
         }
+
+        Number.method('integer', function () {
+            return this
+            // return Math[this < 0 ? 'ceil' : 'floor'](this)
+        })
+
+        // function foo () {
+        //     return this
+        // }
+       console.log( (-10/3).integer() ) 
+    //    console.log(foo().integer)
+
+    Array.method('reduce', function (fn, value=0) {
+        let i;
+        if (typeof fn !== 'function') {
+            return false
+        }
+        for (i =0; i<this.length;i++) {
+            value = fn(this[i],value)
+        }
+        return value
+    })
     </script>
 </pre>
 
