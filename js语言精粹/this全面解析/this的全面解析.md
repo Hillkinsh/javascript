@@ -59,7 +59,7 @@ var dofo = function (fn) {fn()}
 dofo(obj.sayA) // undefined
 ```
 
-3. 显示绑定 call ，apply，bind
+#### 3. 显示绑定 call ，apply，bind
 
 > 这3个方法的使用就不展开了。可以说是非常熟悉。
 > 这里要注意的是，一些三方库的函数，宿主环境的内置函数等，都提供了一个
@@ -76,7 +76,7 @@ dofo(obj.sayA) // undefined
 ```
 > 这些函数实际上也是call， apply实现的显示绑定。
 
-4. new 绑定
+#### 4. new 绑定
 
 ```
 这个也是熟得不能再熟了，不讲了。
