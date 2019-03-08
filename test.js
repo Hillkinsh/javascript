@@ -128,3 +128,38 @@ function lengthOfLongestSubstring( s) {
 lengthOfLongestSubstring('abcdefgacgd')
 lengthOfLongestSubstring('aa')
 lengthOfLongestSubstring('abda')
+
+function color (rgy) {
+  console.log(rgy)
+}
+
+function sleep (duration) {
+  return new Promise( function (resolve, reject) {
+    setTimeout(resolve, duration)
+  })
+}
+
+async function foo () {
+  while(1) {
+    await sleep(3000)
+    color('green')
+    await sleep(1000)
+    color('yellow')
+    await sleep(2000)
+    color('red')
+  }
+}
+
+function recur () {
+  let colorArr = ['green','yellow', 'red']
+  return function transLight (color) {
+    let sleepObj
+    if (typeof color == 'string') {
+      sleepObj = sleep(colorArr.indexOf(color)*1000)
+    } else {
+      sleepObj = sleep('green')
+    }
+    sleepObj.then(transLight('yellow'))
+  }
+  
+}
