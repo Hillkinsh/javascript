@@ -163,3 +163,58 @@ function recur () {
   }
   
 }
+
+let Task = {
+  setId: function (id) {this.id = id},
+  outputId: function () {console.log(this.id)}
+}
+
+// 让xyz 委托task
+XYZ = Object.create(Task)
+XYZ.prepareTask = function(id, label) {
+  this.setId(id)
+  this.label = label
+}
+XYZ.outputTaskDetails = function() {
+  this.outputId()
+  console.log(this.label)
+}
+
+function Foo(who) {
+  this.me = who
+}
+Foo.prototype.identify = function () {
+  return 'I am ' + this.me
+}
+function Bar (who) {
+  Foo.call(this, who)
+}
+Bar.prototype = Object.create(Foo.prototype)
+Bar.prototype.speak = function () {
+  alert('hello ' + this.identify() + ' .')
+}
+
+var b1 = new Bar('b1')
+var b2 = new Bar('b2')
+b1.speak()
+b2.speak()
+
+Foo = {
+  init: function (who) {
+    this.me = who
+  },
+  identify: function () {
+    return 'I am ' + this.me
+  }
+}
+Bar = Object.create(Foo)
+Bar.speak = function () {
+  alert('hello ' + this.identify() + ' .')
+}
+var b1 = Object.create(Bar)
+b1.init('b1')
+var b2 = Object.create(Bar)
+b2.init('b2')
+
+b1.speak()
+b2.speak()
