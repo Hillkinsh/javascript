@@ -218,3 +218,36 @@ b2.init('b2')
 
 b1.speak()
 b2.speak()
+
+
+let str = 'hello'
+let iter = str[Symbol.iterator]()
+iter.next()  // {value: 'h', done: false}
+iter.next()  // {value: 'e', done: false}
+iter.next()  // {value: 'l', done: false}
+iter.next()  // {value: 'l', done: false}
+iter.next()  // {value: 'o', done: false}
+iter.next()  // {value: undefined, done: true}
+
+let obj = {
+  [Symbol.iterator]: function () {
+    return {
+      next: function () {
+        return {
+          next:1, 
+          done:true
+        }
+      }
+    }
+  }
+}
+
+let arr = [1,2,3,4,5]
+let iter = arr[Symbol.iterator]()
+iter.next()
+
+let set = new Set([1,2,3,4,5])
+let setIter = set[Symbol.iterator]()
+
+let map = new Map()
+map.set({a:1}, 'hello')

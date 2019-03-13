@@ -75,6 +75,6 @@ b2.speak()
 ```
 
 实现结构对比如下：
-
-
+![构造函数](https://github.com/Hillkinsh/javascript/blob/master/image/function.png)
+![委托机制](https://github.com/Hillkinsh/javascript/blob/master/image/weituo.png)
 所以委托的好处就体现出来了，清晰、简洁、实用。
