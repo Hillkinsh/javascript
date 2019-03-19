@@ -136,12 +136,13 @@
     // toggle 很优雅，不需要我这个判断。
 
     function toggleActive(e) {
+      // console.log(e.propertyName);
       if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
       }
     }
-    expand.forEach( item => item.addEventListener('click', e => e.target.classList.toggle('open')))
-    expand.forEach( item => item.addEventListener('transitioned', toggleActive))
+    expand.forEach( item => item.addEventListener('click', e => item.classList.toggle('open')))
+    expand.forEach( item => item.addEventListener('transitionend', toggleActive))
   </script>
 
 
