@@ -1,4 +1,5 @@
-### 1. 遍历器 iterator
+## 遍历器 iterator
+### 1.遍历器 iterator
 
 > 遍历器是一种数据结构的遍历机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署Iterator接口，就可以完成遍历操作（依次处理该数据结构的全部成员）。
 > ES6创建了新的遍历命令 for...of 循环，iterator主要供for...of 使用。
@@ -69,4 +70,25 @@ map.set({a:2}, 'hi')
 let mapIter = map[Symbol.iterator]()
 
  ```
+## 生成器 generator
+> 定义：generator函数是es6提供的一种异步解决方案。在语法上，generator是一个有限状态机，封装了多个内部状态。
 
+```
+ example:
+
+ function *gene() {
+  yield 1
+  yield 2
+  return 3
+}
+
+let iter = gene()   // pos1
+iter.next()
+```
+上面代码内部有两个yield表达式，一个return语句。即函数有3个状态。
+函数调用后（pos1），返回一个指向内部状态的指针。
+
+### next 方法的参数
+```
+  教程给人一种难用不直观的感觉。 举的例子也是不够优雅，等以后有更深入的理解了再去填坑。
+```
