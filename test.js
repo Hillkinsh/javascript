@@ -316,3 +316,14 @@ function *f () {
   }
 }
 let g = f()
+
+Function.prototype.method = function (name, fn) {
+  this.prototype[name] = fn;
+  return this
+}
+Number.method('add', function (a) {
+ return this + a
+})
+Number.method('minus', function (a) {
+  return this - a
+})
