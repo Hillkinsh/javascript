@@ -3,6 +3,9 @@
     <head>
         <style>
             html, body {
+                /* scroll-behavior: smooth; */
+            }
+            .smooth {
                 scroll-behavior: smooth;
             }
             .content {
@@ -14,6 +17,8 @@
         </style>
     </head>
     <body>
+        <div class="smooth">
+        
         <div class="content"><p>很多内容。。1。</p>...</div>
         <div class="content"><p>很多内容。。2。</p>...</div>
         <div class="content"><p>很多内容。。3。</p>...</div>
@@ -35,7 +40,8 @@
         <div class="content"><p>很多内容。。20。</p>...</div>
         <div class="content"><p>很多内容。。21。</p>...</div>
         <div class="content"><p>很多内容。。22。</p>...</div>
-
+    
+    </div>
         <section class="back-to-top">
         回到顶部
         </section>
@@ -85,7 +91,7 @@
         
         top1.addEventListener('click', _ => {
             console.log(window.getComputedStyle(top1).scrollBehavior )
-            if(typeof window.getComputedStyle(document.body).scrollBehavior !== 'undefined') {
+            if(typeof window.getComputedStyle(document.body).scrollBehavior === 'undefined') {
                 // 兼容js代码
                 let nowPos = document.documentElement.scrollTop || document.body.scrollTop;
                 let targetPos = 0
