@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+    .pos {
+        display: flex;
+    }
+    .item {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        margin:20px 10px;
+    }
+    </style>
+    <body>
+        <div class="pos">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+
+        </div>
+        <div class="pos2" options=>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+    
+            </div>
+
+        
+        <script >
+            function handleItem (parentEle) {
+                if (parentEle.children.length == 0) {
+                    return false
+                }
+                let parentWidth = parentEle.offsetWidth 
+                let children = parentEle.children
+                let restWidth = 0
+                for (let i = 0; i < children.length; i++ ) {
+                    restWidth += children[i].offsetWidth
+                }
+
+                let averageSpace = (parentWidth - restWidth) / (children.length + 1)
+
+                for (let i=0; i<children.length; i++) {
+                    children[i].style.position = 'absolute'
+                    children[i].style.left = averageSpace*(i+1) + children[i].offsetWidth*i + 'px'
+                }
+            }
+
+            let flexbox = document.querySelector('.pos2')
+                flexbox.style.position = 'relative'
+
+            //获取盒子的内容高度，内容高度也可用用box.clientHeight获取，内容高度不包括边框和外边距和滚动条
+            var contentHeight = window.getComputedStyle(flexbox).width //输出 '60px'
+
+            handleItem(flexbox)
+
+            //获取盒子客户端的高度
+            // box.clientHeight //输出110 (内容高度+padding * 2)
+
+            // //获取盒子自身实际高度
+            // box.offsetHeight //输出160 (内容高度 + 内边距*2 +边框*2)
+
+
+
+        
+        
+        </script>
+
+    </body>
+</html>
