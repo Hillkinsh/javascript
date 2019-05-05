@@ -60,4 +60,17 @@ function testclass () {
 // 总结一下： 3种情况：
 // 1. var 穿透一切，违反直觉。属于公认设计失误。
 // 2. function 修正过一版，变成声明加赋值，但在if等情况下会被打回原形
-// 3. class let const 也存在预处理，预处理的结果是报错。
+// 3. class let const 也存在预处理，预处理的结果是报类型错误。
+{"seven":"https://img.vipkidstatic.com/beeschool/server/1556192098405/interest%20%281%29.png",
+"backgroundUrls":[
+  "https://img.vipkidstatic.com/beeschool/server/1556267429051/h%20%281%29.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556538121264/sx%20%281%29.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556191437600/2.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556250620867/yc%20%281%29.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556191462276/4.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556191474271/6.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556191486133/7.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556191499827/8.png",
+  "https://img.vipkidstatic.com/beeschool/server/1556451327971/last%20%281%29.png"
+]
+}
