@@ -1,0 +1,19 @@
+{
+  "name": "unittest",
+  "version": "1.0.0",
+  "description": "一直都有听说单元测试，\r 但工作中并没有用到这个东西，\r 而在前面学习《重构》时，重点降到了单元测试在重构中的重要地位\r 是以，这里学习单元测试",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha -t 5000 --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
