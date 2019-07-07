@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>select</title>
+    <style>
+      .d1,.d2 {
+        color:red;
+      }
+      * {
+        background:#e8e8e8;
+      }
+      *[name] {
+        background:#fff;
+      }
+      *[name][age] {
+        background:#666;
+      }
+      *[name = '3'] {
+            background:red;
+        }
+        div[houdai] * {background :green}
+        div[zi] * {background :orange}
+        div[zi = '2'] > h2 + p {background :yellow}
+        
+    </style>
+  </head>
+  <body>
+  <h2>1.选择器分组 </h2>
+  <h3 class='d2'>.d1,.d2</h3>
+  <div class='d1'>
+    选择器分组：各选择器之间用逗号间隔。
+  </div>
+  
+  .d1,.d2 {
+    color:red
+  }
+  <h2>2.通配符选择器 </h2>
+  <p>一个* 号，对应于所有的元素</p>
+  * {
+    background:#e8e8e8;
+  }
+  <div name = 1>
+      <h2 name = 1>3.属性选择器</h2>
+      <p name = 1>选择出具有某个属性的元素</p>
+      *[name] {
+        background:#fff;
+      }
+      <div name = 1, age =1>
+          <p name = 1, age =1>选择多个属性的方式：</p>
+          *[name][age] {
+            background:#666;
+          }
+      </div>
+      <div name = 3 >
+          <p name = 3>选择多个属性的方式：</p>
+          *[name = 3] {
+            background:red;
+          }
+          <p name = 3 >但只精确匹配该属性，即如果该元素还有其他属性也不能被匹配</p>
+      </div>
+      
+  </div>
+
+  <div houdai =1>
+    <h2 >4. 后代选择器</h2>
+    <p>满足前后代的两个元素就会被选择</p>
+   div[houdai] * {background :green}
+  </div>
+
+  <div zi = 1>
+      <h2 >5. 选择子元素</h2>
+      <p>只有满足父子关系的两个元素就会被选择</p>
+     div[zi] > * {background :orange}
+    </div>
+
+    <div zi = 2>
+        <h2 >6. 选择兄弟元素</h2>
+        <p>选择相邻同级的元素，只选一个</p>
+        <p>用 + 表示</p>
+       div[zi = '2'] > h2 + p {background :yellow}
+      </div>
+
+  
+
+  </body>
+</html>

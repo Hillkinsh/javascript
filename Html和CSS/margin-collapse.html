@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>外边距折叠产生原因及避免方式</title>
+<meta name="" content="">
+<style>
+*{
+  margin:0px;
+  padding:0px;
+}
+#no1{
+  background:#808000;
+  width:300px;
+  height:300px;
+  margin:100px 0 0 100px;
+}
+#no2{
+  background:#c0c0c0;
+  width:150px;
+  height:150px;
+  margin-left:20px;
+  margin-top:80px;
+}
+</style>
+</head>
+<body>
+<div id="no1">
+    <div id="no2">Span2</div>
+</div>
+
+<script>
+    //外边距折叠：多个相邻的普通流的块元素垂直方向上margin会折叠。
+    //表现为：
+    //两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+    //两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+    //两个外边距一正一负时，折叠结果是两者的相加的和。
+
+    /*
+    何时产生：
+    1.必须是处于常规文档流的块级盒子,并且处于同一个BFC当中。
+
+    2.没有线盒，没有空隙，没有padding和border将他们分隔开(所以解决办法中有padding或者border两种办法)
+
+    3.都属于垂直方向上相邻的外边距，可以是下面任意一种情况
+      元素的margin-top与其第一个常规文档流的子元素的margin-top（父子）
+      元素的margin-bottom与其下一个常规文档流的兄弟元素的margin-top（上下块）
+      height为auto的元素的margin-bottom与其最后一个常规文档流的子元素的margin-bottom（父子，父不定高）
+      高度为0并且最小高度也为0，不包含常规文档流的子元素，并且自身没有建立新的BFC的元素的margin-top和margin-bottom
+      块元素是同级关系
+    */
+
+    /*
+    解决父子DIV顶部外边距折叠办法：
+    1,父元素div设置边框, 
+    2,给父元素div设置padding
+    3,给父元素div设置overflow–其实是生成了一个新的BFC
+    */
+</script>
+</body>
+</html>

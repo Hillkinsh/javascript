@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BFC原理及应用</title>
+    <meta charset="utf-8" />
+    <style>
+        html{
+            height:100%;
+        }
+    body {
+        width: 100%;
+        height:100%;
+        position: relative;
+    }
+ 
+    .aside {
+        width: 100px;
+        height: 60%;
+        float: right;
+        background: #f66;
+    }
+ 
+    .main {
+        height: 60%;
+        background: yellow;
+    }
+    </style>
+   
+  </head>
+<body>
+        <div class="aside"></div>
+        <div class="main"></div>
+    
+<script>
+    /**
+    BFC:block formatting-context 块级格式化上下文。它是一个独立的渲染区域，
+    只有block-level box参与，它规定了内部的block-level box如何布局。并且与这个区域外部不相干。
+
+    解析一下出现的几个名词：
+    1，box:css布局的基本单位，即盒模型。
+    元素类型和display属性决定了box类型。
+
+    2，block-level box:display属性为block list-item, table的元素。
+    会生成 block-level box。并且参与 block fomatting context；
+
+    inline-level box:display 属性为 inline, inline-block, inline-table 的元素，
+    会生成 inline-level box。并且参与 inline formatting context；
+
+    3，formatting-context：css2.1的规范中的概念。是页面中的一块渲染区域，
+    并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
+    最常见的 Formatting context 有 Block fomatting context (简称BFC)
+    和 Inline formatting context (简称IFC)。
+
+
+    一个块格式化上下文由以下之一创建：
+
+    1，根元素或其它包含它的元素
+    2，浮动元素 (元素的 float 不是 none)
+    绝对3，定位元素 (元素具有 position 为 absolute 或 fixed)
+    4，内联块 (元素具有 display: inline-block)
+    5，表格单元格 (元素具有 display: table-cell，HTML表格单元格默认属性)
+    6，表格标题 (元素具有 display: table-caption, HTML表格标题默认属性)
+    7，具有overflow 且值不是 visible 的块元素，
+    display: flow-root
+    column-span: all 应当总是会创建一个新的格式化上下文，即便具有 column-span: all
+     的元素并不被包裹在一个多列容器中。
+    */
+
+</script>
+</body>
+</html>

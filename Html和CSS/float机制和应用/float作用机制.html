@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            width: 600px;
+        }
+        .ex1 {
+            width: 300px;
+            margin-left: 300px;
+        }
+        .ex1_1 {
+            border: 1px solid red;
+        }
+        .father {
+            float: left;
+        }
+        .father img {
+            width: 200px;
+            height: 150px;
+        }
+        .animal {
+            margin-top: 0;
+        }
+        .ex2 {
+            width: 400px;
+            margin-left: 300px;
+        }
+        .doing {
+            margin-left: -1000px;
+        }
+        .finish {
+            margin-left: -80px;
+        }
+        .ex3 {
+            width: 400px;
+            margin-left: 300px;
+            border: 1px solid red;
+            
+        }
+        /* s */
+    </style>
+</head>
+<body>
+  
+    <h2>1、基本示例</h2>
+    <div class="ex1">
+        <div class="father">
+            <img src="../img/xyjy.png">
+        </div>
+        <p class="animal">小猫1，小猫2，小猫1，小猫2，小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，...</p>
+    </div>
+    <h2>1.1 塌陷</h2>
+    <div class="ex1_1">
+            <div class="father">
+                <img src="../img/xyjy.png">
+            </div>
+            
+            <!-- <p class="animal">小猫1，小猫2，小猫1，小猫2，小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，小猫2小猫1，...</p> -->
+        </div>
+
+    
+    <h2 style='margin-top:200px;'>2、不可重叠性</h2>
+    <div class="ex2">
+        <div class="father">
+            <img src="../img/xyjy.png">
+        </div>
+        <p class="animal">因为不可重叠性，我会出现在图片的右边。</p>
+        <p class="doing">此时浮动元素的垂直高度仍有重叠。所以，我还是会出现在图片的右边，直到高度不重叠才会破解.此时即使负margin也不好使</p>
+        <p class='finish'>终于不重叠了，我现在可以正常布局了,甚至来一个负margin都可以。</p>
+    </div>  
+    <h2>3.包裹性</h2>
+    <div class="ex3">
+            <div class="father">
+                <img src="../img/xyjy.png">
+            </div>
+            <p class="animal">因为不可重叠性，我会出现在图片的右边。</p>
+            <p class="doing">此时浮动元素的垂直高度仍有重叠。所以，我还是会出现在图片的右边，直到高度不重叠才会破解.此时即使负margin也不好使</p>
+        </div>  
+
+
+        
+</body>
+</html>
