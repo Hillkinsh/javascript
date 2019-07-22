@@ -6,4 +6,7 @@ I'm trying to set a UIImage as the background of a UIView. The problem is that i
 
 图片版本的问题。
 ios竟然有三个版本的图片，这就很蛋疼。
-还不如直接写样式来的痛快。
+
+一些简单背景，还不如直接写样式来的痛快。
+其他的当然应该老老实实写，但是一定注意兼容性了。
+特此记录一下
