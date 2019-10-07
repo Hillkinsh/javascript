@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id='mvvm-app'>
+      <input type='text' v-model='word'>
+      <p>{{word}}</p>
+      <button v-on:click='sayhi'>change model</button>
+    </div>
+  </body>
+  <script src="./js/observer.js"></script>
+  <script src="./js/watcher.js"></script>
+  <script src="./js/compile.js"></script>
+  <script src="./js/mvvm.js"></script>
+  <script>
+    // 其实，东西还挺多的。尤其是从编译到watcher那一块
+    var vm = new MVVM({
+      el: '#mvvm-app',
+      data: {
+        word: 'hello world'
+      },
+      methods: {
+        sayhi: function () {
+          this.word = 'hi everybody.'
+        }
+      }
+    })
+  </script>
+</html>
