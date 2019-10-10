@@ -1,12 +1,15 @@
 <!doctype html>
 <html>
-  <head>
-
-  </head>
+  <head></head>
   <body>
     <div id='mvvm-app'>
       <input type='text' v-model='word'>
-      <p>{{word}}</p>
+      <p>22word}</p>
+      <p>22{{word}}</p>
+      <p>22{{word}}</p>
+      <p>22{{word}}</p>
+      <p>22{{word}}</p>
+      <p>22{{word}}</p>
       <button v-on:click='sayhi'>change model</button>
     </div>
   </body>
@@ -22,8 +25,8 @@
         word: 'hello world'
       },
       methods: {
-        sayhi: function () {
-          this.word = 'hi everybody.'
+        sayhi () {
+          this.word = 'haha'
         }
       }
     })
