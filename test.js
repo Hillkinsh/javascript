@@ -1,49 +1,30 @@
-var arr = [2, 3, 1, 0, 2, 5, 3];
+// Number 类型表示我们通常意义上的“数字”。
+// 这个数字大致对应数学中的有理数，当然，在计算机中，我们有一定的精度限制
+// JavaScript 中的 Number 类型基本符合 IEEE 754-2008 规定的双精度浮点数规则
+// jsNumber类型的数字是双精度浮点数
 
-// 参数:
-//        numbers:     一个整数数组
-//        length:      数组的长度
-//        duplication: (输出) 数组中的一个重复的数字
-// 返回值:             
-//        true  - 输入有效，并且数组中存在重复的数字
-//        false - 输入无效，或者数组中没有重复的数字
-function duplicate(numbers, length) {
-  if( length <= 0)
-      return false;
 
-  for(let i = 0; i < length; ++i) { // 边界值处理
-      if(numbers[i] < 0 || numbers[i] > length - 1)
-          return false;
+// 根据双精度浮点数的定义，Number 类型中
+// 有效的整数范围是 -0x1fffffffffffff 至 0x1fffffffffffff，
+// 所以 Number 无法精确表示此范围外的整数。
+// 而根据浮点数的定义，无法用 == 和 === 来比较
+
+// 上面的结果返回false，就是浮点数运算的特点。浮点数运算的精度问题
+// 导致左右两边不是严格相等。而是相差了微小的值
+// 所以是比较方法的问题。正确的比较方法是：
+// Math.abs()
+
+
+function numberEquals(a, b) {
+  // 是否是数字类型
+  let isNumberType = (typeof a === 'number') && (typeof b === 'number')
+  // 是否是NaN
+  let isNaN = Number.isNaN(a) || Number.isNaN(b)
+  if (isNumberType && !isNaN) {
+    return Math.abs(a - b) <= Number.EPSILON
+  } else {
+    throw Error('请输入正确的参数类型')
   }
-
-  for(let i = 0; i < length; ++i) {
-      while(numbers[i] != i)
-      {
-          if(numbers[i] == numbers[numbers[i]])
-          {
-              // *duplication = numbers[i];
-              return numbers[i];
-          }
-
-          // 交换numbers[i]和numbers[numbers[i]]  
-          console.log(numbers[i], i)           
-          let temp = numbers[i];
-          numbers[i] = numbers[temp];
-          numbers[temp] = temp;
-      }
-  }
-
-  return false;
 }
 
-let numbers1 = [ 2, 1, 3, 1, 4 ];
-let numbers2 = [ 2, 4, 3, 1, 4 ];
-let numbers3 = [ 2, 4, 2, 1, 4 ];
-let numbers4 = [ 2, 1, 3, 0, 4 ];
-let numbers5 = [ 2, 1, 3, 5, 4 ];
-
-console.log(duplicate(numbers1, 5))
-// console.log(duplicate(numbers2, 5))
-// console.log(duplicate(numbers3, 5))
-// console.log(duplicate(numbers4, 5))
-// console.log(duplicate(numbers5, 5))
+console.log(numberEquals(0.1 + 0.2, 0.3))
