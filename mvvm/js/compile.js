@@ -1,8 +1,8 @@
 function Compile(el, vm) {
   this.$vm = vm;
-  this.$el = this.isElementNode(el) 
-    ? el
-    : document.querySelector(el);
+  this.$el = this.isElementNode(el) ?
+    el :
+    document.querySelector(el);
 
   if (this.$el) {
     this.$fragment = this.node2Fragment(this.$el)
@@ -14,7 +14,7 @@ let arr = []
 
 Compile.prototype = {
   constructor: Compile,
-  node2Fragment: function(el) {
+  node2Fragment: function (el) {
     var fragment = document.createDocumentFragment(),
       child;
     // 文档片段存在于内存中，并不在DOM树中，
@@ -30,11 +30,11 @@ Compile.prototype = {
     return fragment;
   },
 
-  init: function() { // 编译节点
+  init: function () { // 编译节点
     this.compileElement(this.$fragment);
   },
 
-  compileElement: function(el) {
+  compileElement: function (el) {
     var childNodes = el.childNodes
     var me = this
     arr.slice.call(childNodes).forEach(node => {
@@ -42,8 +42,7 @@ Compile.prototype = {
       var reg = /\{\{(.*)\}\}/
       if (me.isElementNode(node)) { // nodeType == 1
         me.compile(node); // 元素节点编译
-      } 
-      else if (me.isTextNode(node) && reg.test(text)) {
+      } else if (me.isTextNode(node) && reg.test(text)) {
         me.compileText(node, RegExp.$1.trim());
       }
 
@@ -53,10 +52,10 @@ Compile.prototype = {
     })
   },
 
-  compile: function(node) { // 元素节点
+  compile: function (node) { // 元素节点
     var nodeAttrs = node.attributes
     var me = this
-    arr.slice.call(nodeAttrs).forEach(function(attr) {
+    arr.slice.call(nodeAttrs).forEach(function (attr) {
       var attrName = attr.name;
       if (me.isDirective(attrName)) { // 该属性是否是指令 v-
         var exp = attr.value; // 方法名/属性名
@@ -69,94 +68,96 @@ Compile.prototype = {
           // class
           // model
           // 等
-            compileUtil[dir] && compileUtil[dir](node, me.$vm, exp);
+          compileUtil[dir] && compileUtil[dir](node, me.$vm, exp);
         }
         node.removeAttribute(attrName);
       }
     })
   },
 
-  compileText: function(node, exp) {
-      compileUtil.text(node, this.$vm, exp);
+  compileText: function (node, exp) {
+    compileUtil.text(node, this.$vm, exp);
   },
 
-  isDirective: function(attr) { // v-的指令
+  isDirective: function (attr) { // v-的指令
     return attr.indexOf('v-') == 0;
   },
-  isEventDirective: function(dir) {
+  isEventDirective: function (dir) {
     return dir.indexOf('on') === 0;
   },
 
-  isElementNode: function(node) { // 元素节点
+  isElementNode: function (node) { // 元素节点
     return node.nodeType == 1;
   },
-  isTextNode: function(node) { // 文本节点
+  isTextNode: function (node) { // 文本节点
     return node.nodeType == 3;
   }
 };
 
 // 指令处理集合
 var compileUtil = {
-  text: function(node, vm, exp) {
-      this.compileBind(node, vm, exp, 'text');
+  text: function (node, vm, exp) {
+    this.compileBind(node, vm, exp, 'text');
   },
 
-  html: function(node, vm, exp) {
-      this.compileBind(node, vm, exp, 'html');
+  html: function (node, vm, exp) {
+    this.compileBind(node, vm, exp, 'html');
   },
-  model: function(node, vm, exp) {
+  model: function (node, vm, exp) {
 
-      // 绑定时，做了两个事情。
-      // 1.修改node.value = vm[get(value)]
-      // 2.对该节点做监听的相应属性初始化监听类
-      //   就是word
-      this.compileBind(node, vm, exp, 'model')
+    // 绑定时，做了两个事情。
+    // 1.修改node.value = vm[get(value)]
+    // 2.对该节点做监听的相应属性初始化监听类
+    //   就是word
+    this.compileBind(node, vm, exp, 'model')
 
-      var val = this._getVMVal(vm, exp)
-      // 监听当前节点的输入，
-      // 当输入值和vm上的不相登，
-      // 则更新相应的vm的值
-      node.addEventListener('input', e => {
-        var newValue = e.target.value
-        if (val === newValue) { return }
-        this._setVMVal(vm, exp, newValue)
-      });
+    var val = this._getVMVal(vm, exp)
+    // 监听当前节点的输入，
+    // 当输入值和vm上的不相登，
+    // 则更新相应的vm的值
+    node.addEventListener('input', e => {
+      var newValue = e.target.value
+      if (val === newValue) {
+        return
+      }
+      this._setVMVal(vm, exp, newValue)
+    });
   },
-  class: function(node, vm, exp) {
-      this.compileBind(node, vm, exp, 'class')
+  class: function (node, vm, exp) {
+    this.compileBind(node, vm, exp, 'class')
   },
 
-  compileBind: function(node, vm, exp, dir) {
-      var updaterFn = updater[dir + 'Updater']; // 只是取到方法
-      // model 则是给节点添加value属性
-      // node.value = this._getVMVal(vm, exp)
+  compileBind: function (node, vm, exp, dir) {
+    var updaterFn = updater[dir + 'Updater']; // 只是取到方法
+    // model 则是给节点添加value属性
+    // node.value = this._getVMVal(vm, exp)
 
-      // 文本节点 
-      // node.textContent = this._getVMVal(vm, exp)
-      updaterFn && updaterFn(node, this._getVMVal(vm, exp))
+    // 文本节点 
+    // node.textContent = this._getVMVal(vm, exp)
+    updaterFn && updaterFn(node, this._getVMVal(vm, exp))
 
-      // word
-      // 对word做监听。
-      // 监听的回调是修改node.value
-      // TODO: 创建watcher后的作用
-      // 相应的节点做一个watcher
+    // word
+    // 对word做监听。
+    // 监听的回调是修改node.value
+    // TODO: 创建watcher后的作用
+    // 相应的节点做一个watcher
 
-      new Watcher(vm, exp, function(value, oldValue) {
-        updaterFn && updaterFn(node, value, oldValue)
-      })
+    new Watcher(vm, exp, function (value, oldValue) {
+      updaterFn && updaterFn(node, value, oldValue)
+    })
   },
 
   // 事件处理
-  eventHandler: function(node, vm, exp, dir) {
-      var eventType = dir.split(':')[1]
-      var fn = vm.$options.methods && vm.$options.methods[exp]
+  eventHandler: function (node, vm, exp, dir) {
+    var eventType = dir.split(':')[1]
+    var fn = vm.$options.methods && vm.$options.methods[exp]
 
-      if (eventType && fn) { // 添加监听事件
-        node.addEventListener(eventType, fn.bind(vm), false)
-      }
+    if (eventType && fn) { // 添加监听事件
+      node.addEventListener(eventType, fn.bind(vm), false)
+    }
   },
 
-  _getVMVal: function(vm, exp) {
+  _getVMVal: function (vm, exp) {
     // exp是从html属性上解析出来的一个属性值。
     // v-model='word'
     // exp = word
@@ -169,7 +170,7 @@ var compileUtil = {
     return val
   },
 
-  _setVMVal: function(vm, exp, value) {
+  _setVMVal: function (vm, exp, value) {
     // 修改data属性的值。
     // 直接修改
     // vm.data.word
@@ -190,27 +191,27 @@ var compileUtil = {
 
 
 var updater = {
-  textUpdater: function(node, value) {
+  textUpdater: function (node, value) {
     // 文本节点
-      let random = Math.random()+ 'haha'
-      node.textContent = typeof value == 'undefined' ? '' : value + random;
+    let random = Math.random() + 'haha'
+    node.textContent = typeof value == 'undefined' ? '' : value + random;
   },
 
-  htmlUpdater: function(node, value) {
-      node.innerHTML = typeof value == 'undefined' ? '' : value;
+  htmlUpdater: function (node, value) {
+    node.innerHTML = typeof value == 'undefined' ? '' : value;
   },
 
-  classUpdater: function(node, value, oldValue) {
-      var className = node.className;
-      className = className.replace(oldValue, '').replace(/\s$/, '');
+  classUpdater: function (node, value, oldValue) {
+    var className = node.className;
+    className = className.replace(oldValue, '').replace(/\s$/, '');
 
-      var space = className && String(value) ? ' ' : '';
+    var space = className && String(value) ? ' ' : '';
 
-      node.className = className + space + value;
+    node.className = className + space + value;
   },
 
-  modelUpdater: function(node, value) {
+  modelUpdater: function (node, value) {
     // 拿到节点和属性值，之后，节点value赋值
-      node.value = typeof value == 'undefined' ? '' : value;
+    node.value = typeof value == 'undefined' ? '' : value;
   }
 };

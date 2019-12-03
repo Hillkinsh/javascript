@@ -1,10 +1,10 @@
 class Observer {
-  constructor (data) {
+  constructor(data) {
     this.data = data
     console.log('set observe. ', data)
     this.walk(data)
   }
-  walk (data) {
+  walk(data) {
     // 对data中所有属性的劫持，
     // 在劫持后做了哪些事情？
     // 1.get .addDep(this);
@@ -13,29 +13,29 @@ class Observer {
       this.defineReactive(this.data, key, data[key])
     })
   }
-  defineReactive (data, key, val) {
+  defineReactive(data, key, val) {
     var dep = new Dep()
     var childObj = observe(val)
 
     Object.defineProperty(data, key, {
-        enumerable: true, // 可枚举
-        configurable: false, // 不能再define
-        get: function() {
-            if (Dep.target) {
-              dep.depend()
-            }
-            return val
-        },
-        set: function(newVal) {
-          if (newVal === val) {
-            return
-          }
-          val = newVal
-          // 新的值是object的话，进行监听
-          childObj = observe(newVal);
-          // 通知订阅者
-          dep.notify()
+      enumerable: true, // 可枚举
+      configurable: false, // 不能再define
+      get: function () {
+        if (Dep.target) {
+          dep.depend()
         }
+        return val
+      },
+      set: function (newVal) {
+        if (newVal === val) {
+          return
+        }
+        val = newVal
+        // 新的值是object的话，进行监听
+        childObj = observe(newVal);
+        // 通知订阅者
+        dep.notify()
+      }
     });
   }
 }
@@ -50,19 +50,19 @@ function observe(value, vm) {
 
 var uid = 0
 class Dep {
-  constructor () {
+  constructor() {
     this.id = uid++
     this.subs = []
   }
-  addSub (sub) {
+  addSub(sub) {
     this.subs.push(sub)
   }
   // 触发target上的Watcher中的addDep方法,参数为dep的实例本身
-  depend () {
+  depend() {
     Dep.target.addDep(this)
   }
-  notify () {
-    this.subs.forEach(function(sub) {
+  notify() {
+    this.subs.forEach(function (sub) {
       sub.update()
     })
   }
