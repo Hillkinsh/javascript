@@ -72,3 +72,4 @@ function insert (arr) {
   return result
 }
 console.log(insert([2,1,6,4,3,8]))
+
