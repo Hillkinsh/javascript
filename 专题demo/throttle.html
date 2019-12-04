@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>函数节流</title>
-    <meta charset="utf-8"/>
-    <style></style>
-  </head>
-  <body>
-  </body>
-  <script>
-      /* 
+
+<head>
+  <title>函数节流</title>
+  <meta charset="utf-8" />
+  <style></style>
+</head>
+
+<body>
+</body>
+<script>
+  /* 
       函数节流的思想很好接受：即：连续尝试过多的dom操作，会导致浏览器的挂起甚至崩溃。
       比如操作onresize，一调整浏览器大小，事件就会被触发。
       就是让一个函数无法在很短的时间间隔内连续调用，
@@ -35,39 +37,93 @@
       https://github.com/Hillkinsh/demoExamples/blob/master/lazyLoad/lazyloadImg.vue
 
       */
-function myFunction (){
+  function myFunction() {
     console.log('yeah')
-}
+  }
 
-function throttle(method, context) {
-     clearTimeout(method.tId); //清除定时器
-     method.tId = setTimeout(function(){//给方法添加一个tId定时属性，属性是setTimeout函数，执行method本身。
-         method.call(context);
-     }, 500);
- }
- 
- window.onresize = function(){
-    throttle(myFunction);
-}
+  // 这尼玛是个防抖，我这也是够傻逼的。
+  // function throttle(method, context) {
+  //   clearTimeout(method.tId); //清除定时器
+  //   method.tId = setTimeout(function () { //给方法添加一个tId定时属性，属性是setTimeout函数，执行method本身。
+  //     method.call(context);
+  //   }, 500);
+  // }
 
-var processor = {
-    timeoutId : null,
+  function debounce(fn, time = 100) {
+    return (...args) => {
+      clearTimeout(fn.id)
+      fn.id = setTimeout(() => {
+        fn.call(this, ...args)
+      }, time)
+    }
+  }
+
+  // window.onresize = function () {
+  //   throttle(myFunction);
+  // }
+
+  var processor = {
+    timeoutId: null,
     performProcessing: function () {
-        // 实际执行代码
-        console.log(window.innerWidth)
+      // 实际执行代码
+      console.log(window.innerWidth)
     },
     process: function () { // 初始处理调用的方法
-        clearTimeout(this.timeoutId)
-        var that = this
-        this.timeoutId = setTimeout(function () {
-            that.performProcessing()
-        }, 3000)
+      clearTimeout(this.timeoutId)
+      var that = this
+      this.timeoutId = setTimeout(function () {
+        that.performProcessing()
+      }, 300)
     }
-}
-window.onresize = function(){
-    // throttle(myFunction);
-    // console.log(this)
-    processor.process()
-}
+  }
+  // window.onresize = function () {
+  //   // throttle(myFunction);
+  //   // console.log(this)
+  //   processor.process()
+  // }
+
+  let timer
+
+  function throttle(fn, time = 10) {
+    console.log(time)
+    return (...args) => {
+      if (throttle.timer) {
+        return
+      } else {
+        console.log(time)
+        throttle.timer = setTimeout(() => {
+          fn.call(this, ...args)
+          throttle.timer = null
+        }, time)
+      }
+    }
+  }
+
+  class Throttle {
+    _timer
+    constructor(fn, time) {
+      return this.init(fn, time)
+    }
+    init(fn, time = 200) {
+      return (...args) => {
+        if (this._timer) {
+          return
+        } else {
+          this._timer = setTimeout(() => {
+            fn.call(this, ...args)
+            this._timer = null
+          })
+        }
+      }
+    }
+  }
+
+
+
+  let iter = 0
+  window.onresize = throttle(() => {
+    console.log('hahahaha')
+  }, 10000)
 </script>
+
 </html>
