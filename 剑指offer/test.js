@@ -1,30 +1,40 @@
-//随便找一个值，让比他小的放在左边，比他大的放在右边。返回该值的下表即可。
-// 只有对范围内的数字进行排列
-let data = [3,1,4,2,9,6,7,8]
-function partition (data, length, start, end) {
-  let index = start + Math.floor(Math.random() * (end - start))
-  swap(index, end)
-
-  let small = start - 1
-  for (index = start; index < end; ++index) {
-    if (data[index] < data[end]) {
-      ++small;
-      if (small != index) {
-        swap(index, small)
-      }
+function merge (arr, p, q, r) {
+  let left = []
+  let right = []
+  for (let i=0; i < q - p; i++) {
+    left.push(arr[p + i])
+  }
+  for (let i=0; i < r - q; i++) {
+    right.push(arr[q+i])
+  }
+  // console.log(left, right)
+  let left_iter = 0
+  let right_iter = 0
+  for (let i=p; i<r; i++) {
+    if (left[left_iter] <= right[right_iter]) {
+      arr[i] = left[left_iter]
+      left_iter++
+    } else {
+      arr[i] = right[right_iter]
+      right_iter++
     }
   }
-  ++small;
-  swap(small, end)
-  console.log(data, 'data')
-  return small
 }
-
-function swap (posA, posB) {
-  let temp = data[posA]
-  data[posA] = data[posB]
-  data[posB] = temp
+function merge_sort(arr, p, r) {
+  if (p < r) {
+    let q = Math.floor((p + r) / 2)
+    // console.log(q)
+    merge_sort(arr, p, q)
+    
+    merge_sort(arr, q + 1, r)
+    merge(arr, p, q, r)
+    console.log('p: q: r: ', p, q, r)
+    console.log(arr)
+  }
 }
-
-
-console.log(partition(data, 8, 0, 7), data)
+// let arr = [1,2,3,2,3,4]
+// console.log(merge(arr, 0, 3, 6))
+let arr = [2,3,1,7,5,8,0]
+console.log(merge_sort(arr, 0, 7))
+console.log(arr)
+let cur = [0,0,1]
