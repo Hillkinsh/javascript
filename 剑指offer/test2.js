@@ -10,7 +10,7 @@ function merge (arr, left, mid, right) {
 
   let iter_l = 0
   let iter_r = 0
-  for (let i = 0; i < right - left; i++) {
+  for (let i=0; i<right-left; i++) {
     if (iter_l<leftarr.length && iter_r<rightarr.length) {
       if (leftarr[iter_l]<rightarr[iter_r]) {
         arr[i+left] = leftarr[iter_l]
