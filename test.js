@@ -1,42 +1,91 @@
-var mySqrt = function(x) {
-    if (x<=0) return 0
-    if (x === 1) return 1
-    //都用double，int和float会过不了大数值测试
-    //极限上下界
-    let offset = 0.000005;
-    //跳跃点
-    let point = x;
-    //跳跃上界
-    let r = x;
-    //跳跃下界
-    let l = 0;
-    while (true) {
-        //判断是否达到“极限”
-        if (point * point + offset > x
-          && point * point - offset < x)
-            break;
-        //大了，改变跳跃上界
-        if (point * point > x) {
-            r = point;
-            point = (r + l) / 2;
+var tree = {
+    "id": 0,
+    "name": "root",
+    "left": {
+        "id": 1,
+        "name": "Simon",
+        "left": {
+            "id": 3,
+            "name": "Carl",
+            "left": {
+                "id": 7,
+                "name": "Lee",
+                "left": {
+                    "id": 11,
+                    "name": "Fate"
+                }
+            },
+            "right": {
+                "id": 8,
+                "name": "Annie",
+                "left": {
+                    "id": 12,
+                    "name": "Saber"
+                }
+            }
+        },
+        "right": {
+            "id": 4,
+            "name": "Tony",
+            "left": {
+                "id": 9,
+                "name": "Candy"
+            }
         }
-        //小了，改变跳跃下界
-        else if (point * point < x) {
-            l = point;
-            point = (r + l) / 2;
+    },
+    "right": {
+        "id": 2,
+        "name": "right",
+        "left": {
+            "id": 5,
+            "name": "Carl",
+        },
+        "right": {
+            "id": 6,
+            "name": "Carl",
+            "right": {
+                "id": 10,
+                "name": "Kai"
+            }        
         }
     }
-    return Math.floor(point);
-};
-// a = "1010", b = "1011"
-console.log(mySqrt(1))
-console.log(mySqrt(0))
-console.log(mySqrt(8))
-console.log(mySqrt(9))
-console.log(mySqrt(36))
-console.log(mySqrt(81))
-console.log(mySqrt(1998))
-console.log(mySqrt(807810077))
+}
 
+         // 把这个对象中所有的名字以“前序遍历”的方式全部输出到console中
+         function getListWithDLR(obj) {
+            console.log(obj.id);
+            if(obj.left){
+                getListWithDLR(obj.left);
+            }
+            if(obj.right){
+                getListWithDLR(obj.right);
+            }
+        }
+        console.log("前序遍历：");
+        getListWithDLR(tree);
 
-// 二分查找是什么
+        // 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中
+        function getListWithLDR(obj) {
+                if(obj.left){
+                    getListWithLDR(obj.left);
+                }
+                console.log(obj.id);
+                if(obj.right){
+                    getListWithLDR(obj.right);
+                }         
+        }
+        console.log("中序遍历：");
+        getListWithLDR(tree);
+
+        // 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中
+        function getListWithLRD(obj) {
+                if(obj.left){
+                    getListWithLRD(obj.left);
+                }
+                if(obj.right){
+                    getListWithLRD(obj.right);
+                } 
+                console.log(obj.id);
+        }
+        console.log("后序遍历：");
+        getListWithLRD(tree);
