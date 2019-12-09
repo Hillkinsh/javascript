@@ -23,7 +23,7 @@ function curry2(fn) {
 }
 console.log(curry2(add)(2)(3)(4))
 
-// 2.发布订阅
+// 2.发布订阅 写法有问题
 
 class EventEmitter {
   constructor() {
@@ -38,7 +38,7 @@ class EventEmitter {
     this._eventpool[event] &&
       this._eventpool[event].forEach(cb => cb(...args))
   }
-  off(event) {
+  off(event, fn) {
     if (this._eventpool[event]) {
       delete this._eventpool[event]
     }

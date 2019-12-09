@@ -62,6 +62,7 @@ Compile.prototype = {
         var dir = attrName.substring(2);
         // 事件指令
         if (me.isEventDirective(dir)) { // on-事件指令
+          // node：节点，vue实例，方法名，
           compileUtil.eventHandler(node, me.$vm, exp, dir);
         } else { // 普通指令
           // text
@@ -127,7 +128,7 @@ var compileUtil = {
     this.compileBind(node, vm, exp, 'class')
   },
 
-  compileBind: function (node, vm, exp, dir) {
+  compileBind: function (node, vm, exp, dir) { // dir = ‘text'
     var updaterFn = updater[dir + 'Updater']; // 只是取到方法
     // model 则是给节点添加value属性
     // node.value = this._getVMVal(vm, exp)
@@ -141,7 +142,7 @@ var compileUtil = {
     // 监听的回调是修改node.value
     // TODO: 创建watcher后的作用
     // 相应的节点做一个watcher
-
+    // exp 为对应的属性
     new Watcher(vm, exp, function (value, oldValue) {
       updaterFn && updaterFn(node, value, oldValue)
     })
@@ -163,7 +164,6 @@ var compileUtil = {
     // exp = word
     // 取到vm上，vm.word 的值 hello world.
     var val
-    console.log('heeloo , here.')
     exp.split('.').forEach(k => {
       val = vm[k]
     })
