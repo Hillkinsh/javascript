@@ -1,138 +1,37 @@
-#include <stdio.h>
-#include<stdlib.h>
-#include<windows.h>
-using namespace std;
-
-int main() {
-#include <cstdio>
-
-// 参数:
-//        numbers:     一个整数数组
-//        length:      数组的长度
-//        duplication: (输出) 数组中的一个重复的数字
-// 返回值:             
-//        true  - 输入有效，并且数组中存在重复的数字
-//        false - 输入无效，或者数组中没有重复的数字
-bool duplicate(int numbers[], int length, int* duplication) {
-    if(numbers == nullptr || length <= 0)
-        return false;
-
-    for(int i = 0; i < length; ++i) { // 边界值处理
-        if(numbers[i] < 0 || numbers[i] > length - 1)
-            return false;
-    }
-
-    for(int i = 0; i < length; ++i) {
-        while(numbers[i] != i)
-        {
-            if(numbers[i] == numbers[numbers[i]])
-            {
-                *duplication = numbers[i];
-                return true;
-            }
-
-            // 交换numbers[i]和numbers[numbers[i]]             
-            int temp = numbers[i];
-            numbers[i] = numbers[temp];
-            numbers[temp] = temp;
+class Solution {
+    public String longestPalindrome(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
         }
-    }
-
-    return false;
-}
-
-// ====================测试代码====================
-bool contains(int array[], int length, int number)
-{
-    for(int i = 0; i < length; ++i)
-    {
-        if(array[i] == number)
-            return true;
-    }
-
-    return false;
-}
-
-void test(char* testName, int numbers[], int lengthNumbers, int expected[], int expectedExpected, bool validArgument)
-{
-    printf("%s begins: ", testName);
-
-    int duplication;
-    bool validInput = duplicate(numbers, lengthNumbers, &duplication);
-
-    if(validArgument == validInput)
-    {
-        if(validArgument)
-        {
-            if(contains(expected, expectedExpected, duplication))
-                printf("Passed.\n");
-            else
-                printf("FAILED.\n");
+//         保存起始位置，测试了用数组似乎能比全局变量稍快一点
+        int[] range = new int[2];
+        char[] str = s.toCharArray();
+        for (int i = 0; i < s.length(); i++) {
+//             把回文看成中间的部分全是同一字符，左右部分相对称
+//             找到下一个与当前字符不同的字符
+            i = findLongest(str, i, range);
         }
-        else
-            printf("Passed.\n");
+        return s.substring(range[0], range[1] + 1);
     }
-    else
-        printf("FAILED.\n");
+    
+    public static int findLongest(char[] str, int low, int[] range) {
+//         查找中间部分
+        int high = low;
+        while (high < str.length - 1 && str[high + 1] == str[low]) {
+            high++;
+        }
+//         定位中间部分的最后一个字符
+        int ans = high;
+//         从中间向左右扩散
+        while (low > 0 && high < str.length - 1 && str[low - 1] == str[high + 1]) {
+            low--;
+            high++;
+        }
+//         记录最大长度
+        if (high - low > range[1] - range[0]) {
+            range[0] = low;
+            range[1] = high;
+        }
+        return ans;
+    }
 }
-
-// 重复的数字是数组中最小的数字
-void test1()
-{
-    int numbers[] = { 2, 1, 3, 1, 4 };
-    int duplications[] = { 1 };
-    test("Test1", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), true);
-}
-
-// 重复的数字是数组中最大的数字
-void test2()
-{
-    int numbers[] = { 2, 4, 3, 1, 4 };
-    int duplications[] = { 4 };
-    test("Test2", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), true);
-}
-
-// 数组中存在多个重复的数字
-void test3()
-{
-    int numbers[] = { 2, 4, 2, 1, 4 };
-    int duplications[] = { 2, 4 };
-    test("Test3", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), true);
-}
-
-// 没有重复的数字
-void test4()
-{
-    int numbers[] = { 2, 1, 3, 0, 4 };
-    int duplications[] = { -1 }; // not in use in the test function
-    test("Test4", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), false);
-}
-
-// 没有重复的数字
-void test5()
-{
-    int numbers[] = { 2, 1, 3, 5, 4 };
-    int duplications[] = { -1 }; // not in use in the test function
-    test("Test5", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), false);
-}
-
-// 无效的输入
-void test6()
-{
-    int* numbers = nullptr;
-    int duplications[] = { -1 }; // not in use in the test function
-    test("Test6", numbers, 0, duplications, sizeof(duplications) / sizeof(int), false);
-}
-
-void main()
-{
-    test1();
-    test2();
-    test3();
-    test4();
-    test5();
-    test6();
-}
-   return 0;
-}
-// E:\git\javascript\test.cpp
