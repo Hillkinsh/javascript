@@ -1,10 +1,20 @@
-var getSum = function (a, b) {
-  let sum, carry
-  sum = a ^ b;
-  carry = (a & b) << 1
-  if (carry) {
-    return getSum(sum, carry)
+var sortColors = function (nums) {
+  if (!nums.length) return nums
+  let count = [0, 0, 0]
+  for (let i = 0; i < nums.length; i++) {
+    count[nums[i]]++
   }
-  return sum
-}
-console.log(getSum(3, 6))
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < count.length; j++) {
+      if (count[j]) {
+        nums[i] = j
+        count[j]--
+        break
+      }
+    }
+  }
+};
+
+let nums = [2, 0, 2, 1, 1, 0]
+sortColors(nums)
+console.log(nums)

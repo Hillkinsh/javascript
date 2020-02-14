@@ -1,52 +1,41 @@
-var MinStack = function () {
-  this.arr = []
-  this.sortArr = []
-};
+function partition(data, length, start, end) {
+  if (!data || length <= 0 || start < 0 || end >= length) {
+    throw new Error('无效的参数')
+  }
+  let index = Math.random() * (end - start)
+  index = Math.floor(index)
+  index += start
 
-/** 
- * @param {number} x
- * @return {void}
- */
-MinStack.prototype.push = function (x) {
-  this.arr.push(x)
-  this.sortArr.push(x)
-  this.sortArr.sort((a, b) => a - b)
-};
+  [data[index], data[end]] = [data[end], data[index]] // swap(index, end)
 
-/**
- * @return {void}
- */
-MinStack.prototype.pop = function () {
-  let popEle = this.arr.pop()
-  let pos = -1
-  this.sortArr.some((item, idx) => {
-    if (item === popEle) {
-      pos = idx
-      return true
+  let small = start - 1
+  for (index = start; index < end; index++) {
+    if (data[index] < data[end]) {
+      small++
+      if (small !== index) {
+        [data[index], data[small]] = [data[small], data[index]]
+      }
     }
-  })
-  this.sortArr.splice(pos, 1)
-};
+  }
+  small++
 
-/**
- * @return {number}
- */
-MinStack.prototype.top = function () {
-  return this.arr[this.arr.length - 1]
-};
+  [data[small], data[end]] = [data[end], data[small]]
+  return small
+}
 
-/**
- * @return {number}
- */
-MinStack.prototype.getMin = function () {
-  return this.sortArr[0] || null
-};
+function quickSort(data, length, start, end) {
+  if (start == end) return
+  let index = partition(data, length, start, end)
+  if (index > start) {
+    quickSort(data, length, start, index - 1)
+  }
+  if (index < end) {
+    quickSort(data, length, index + 1, end)
+  }
+}
 
-let minStack = new MinStack();
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-console.log(minStack.getMin()); //--> 返回 -3.
-console.log(minStack.pop());
-console.log(minStack.top()); //--> 返回 0.
-console.log(minStack.getMin()); //--> 返回 -2.
+let nums = [2, 0, 2, 1, 1, 0]
+
+quickSort(nums, 6, 0, 5)
+
+console.log(nums)
