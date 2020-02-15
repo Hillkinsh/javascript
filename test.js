@@ -1,41 +1,55 @@
-function partition(data, length, start, end) {
-  if (!data || length <= 0 || start < 0 || end >= length) {
-    throw new Error('无效的参数')
-  }
-  let index = Math.random() * (end - start)
-  index = Math.floor(index)
-  index += start
-
-  [data[index], data[end]] = [data[end], data[index]] // swap(index, end)
-
-  let small = start - 1
-  for (index = start; index < end; index++) {
-    if (data[index] < data[end]) {
-      small++
-      if (small !== index) {
-        [data[index], data[small]] = [data[small], data[index]]
+var tree = {
+  "val": 0,
+  "name": "root",
+  "left": {
+    "val": 1,
+    "name": "Simon",
+    "left": {
+      "val": 3,
+      "name": "Carl",
+      "left": {
+        "val": 7,
+        "name": "Lee",
+        "left": {
+          "val": 11,
+          "name": "Fate"
+        }
+      },
+      "right": {
+        "val": 8,
+        "name": "Annie",
+        "left": {
+          "val": 12,
+          "name": "Saber"
+        }
+      }
+    },
+    "right": {
+      "val": 4,
+      "name": "Tony",
+      "left": {
+        "val": 9,
+        "name": "Candy"
+      }
+    }
+  },
+  "right": {
+    "val": 2,
+    "name": "right",
+    "left": {
+      "val": 5,
+      "name": "Carl",
+    },
+    "right": {
+      "val": 6,
+      "name": "Carl",
+      "right": {
+        "val": 10,
+        "name": "Kai"
       }
     }
   }
-  small++
-
-  [data[small], data[end]] = [data[end], data[small]]
-  return small
 }
 
-function quickSort(data, length, start, end) {
-  if (start == end) return
-  let index = partition(data, length, start, end)
-  if (index > start) {
-    quickSort(data, length, start, index - 1)
-  }
-  if (index < end) {
-    quickSort(data, length, index + 1, end)
-  }
-}
 
-let nums = [2, 0, 2, 1, 1, 0]
-
-quickSort(nums, 6, 0, 5)
-
-console.log(nums)
+console.log(buildTree([9, 3, 15, 20, 7], [9, 15, 7, 20, 3]))

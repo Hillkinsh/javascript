@@ -1,37 +1,18 @@
 class Solution {
-    public String longestPalindrome(String s) {
-        if (s == null || s.length() == 0) {
-            return "";
-        }
-//         保存起始位置，测试了用数组似乎能比全局变量稍快一点
-        int[] range = new int[2];
-        char[] str = s.toCharArray();
-        for (int i = 0; i < s.length(); i++) {
-//             把回文看成中间的部分全是同一字符，左右部分相对称
-//             找到下一个与当前字符不同的字符
-            i = findLongest(str, i, range);
-        }
-        return s.substring(range[0], range[1] + 1);
+public:
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        return buildTree(0,inorder.size()-1,0,postorder.size()-1,inorder,postorder);
     }
-    
-    public static int findLongest(char[] str, int low, int[] range) {
-//         查找中间部分
-        int high = low;
-        while (high < str.length - 1 && str[high + 1] == str[low]) {
-            high++;
+    TreeNode* buildTree(int ll,int lr,int rl,int rr,vector<int> inorder,vector<int> postorder){
+        if(ll>lr||rl>rr) return NULL;
+        int len=0;
+        for(int i=ll;i<=lr;i++){
+            if(inorder[i]==postorder[rr]) break;
+            len++;
         }
-//         定位中间部分的最后一个字符
-        int ans = high;
-//         从中间向左右扩散
-        while (low > 0 && high < str.length - 1 && str[low - 1] == str[high + 1]) {
-            low--;
-            high++;
-        }
-//         记录最大长度
-        if (high - low > range[1] - range[0]) {
-            range[0] = low;
-            range[1] = high;
-        }
-        return ans;
+        TreeNode* root=new TreeNode(postorder[rr]);
+        root->left=buildTree(ll,ll+len-1,rl,rl+len-1,inorder,postorder);
+        root->right=buildTree(ll+len+1,lr,rl+len,rr-1,inorder,postorder);
+        return root;
     }
-}
+};

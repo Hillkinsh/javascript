@@ -1,20 +1,74 @@
-var sortColors = function (nums) {
-  if (!nums.length) return nums
-  let count = [0, 0, 0]
-  for (let i = 0; i < nums.length; i++) {
-    count[nums[i]]++
+var connect = function (root) {
+  let queue = [];
+  if (root) {
+    queue.push(root);
   }
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = 0; j < count.length; j++) {
-      if (count[j]) {
-        nums[i] = j
-        count[j]--
-        break
+  while (queue.length !== 0) {
+    let level = [];
+    let len = queue.length;
+    for (let i = 0; i < len; i++) {
+      let currentNode = queue.shift();
+      level.push(currentNode);
+      if (currentNode.left !== null) queue.push(currentNode.left);
+      if (currentNode.right !== null) queue.push(currentNode.right);
+    }
+    for (let j = 0; j < level.length; j++) {
+      level[j].next = level[j + 1];
+    }
+  }
+  return root;
+};
+
+var tree = {
+  "val": 0,
+  "name": "root",
+  "left": {
+    "val": 1,
+    "name": "Simon",
+    "left": {
+      "val": 3,
+      "name": "Carl",
+      "left": {
+        "val": 7,
+        "name": "Lee",
+        "left": {
+          "val": 11,
+          "name": "Fate"
+        }
+      },
+      "right": {
+        "val": 8,
+        "name": "Annie",
+        "left": {
+          "val": 12,
+          "name": "Saber"
+        }
+      }
+    },
+    "right": {
+      "val": 4,
+      "name": "Tony",
+      "left": {
+        "val": 9,
+        "name": "Candy"
+      }
+    }
+  },
+  "right": {
+    "val": 2,
+    "name": "right",
+    "left": {
+      "val": 5,
+      "name": "Carl",
+    },
+    "right": {
+      "val": 6,
+      "name": "Carl",
+      "right": {
+        "val": 10,
+        "name": "Kai"
       }
     }
   }
-};
-
-let nums = [2, 0, 2, 1, 1, 0]
-sortColors(nums)
-console.log(nums)
+}
+console.log(connect(tree))
