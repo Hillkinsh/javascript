@@ -1,8 +1,7 @@
 let Dep = require('./dep').Dep
 let observe = require('./index')
-console.log(observe)
+
 var Observer = function Observer(value) {
-  console.log('hahah')
   this.value = value;
   this.dep = new Dep();
   this.walk(value);
@@ -62,5 +61,6 @@ function defineReactive$$1(
     }
   });
 }
+
 
 module.exports = Observer

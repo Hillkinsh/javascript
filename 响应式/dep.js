@@ -4,10 +4,10 @@ class Dep {
   constructor() {
     this.subs = []
   }
-  addSub(sub) { // Watcher
+  addSub(sub) { // sub: Watcher
     this.subs.push(sub)
   }
-  removeSub(sub) { //Watcher
+  removeSub(sub) { // sub: Watcher
     remove(this.subs, sub)
   }
   depend() {
