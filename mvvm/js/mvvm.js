@@ -3,7 +3,7 @@ class MVVM {
     this.$options = options || {}
     let data = this._data = this.$options.data
 
-    Object.keys(data).forEach((key) => {
+    Object.keys(data).forEach((key) => { // 将data里的属性放到this上
       this._proxyData(key)
     })
     observe(data) // 劫持监听值得变化.对所有属性进行劫持，每一个属性做一个发布订阅
@@ -12,7 +12,6 @@ class MVVM {
   }
 
   // 将data属性全都代理到vue实例属性上，只有get/set方法用于读取和修改data
-  // 而observe 又代理一层
   _proxyData(key) {
     Object.defineProperty(this, key, {
       enumerable: true,

@@ -26,3 +26,8 @@ var lengthOfLongestSubstring = function (s) {
 };
 
 console.log(lengthOfLongestSubstring('abcabcbb'))
+
+
+
+
+// LazyMan("Hank").sleep(10).eat("dinner")
