@@ -1,33 +1,76 @@
+// 构造继承
+// function SuperFn (name, age, color) {
+//   this.name = name || 'tommy'
+//   this.age = age || 28
+//   this.color = color || '#fff'
+//   this.getName = function () {
+//     return this.name
+//   }
+//   this.getAge = function () {
+//     return this.age
+//   }
+//   this.getColor = function () {
+//     return this.color
+//   }
+//   this.setName = function (newName) {
+//     this.name = newName
+//   }
+// }
+// function SuperFn2 (name, age, color) {
+//   this.name = name || 'tommywwww'
+//   // this.age = age || 218
+//   this.color = color || '#222fff'
+//   this.getName = function () {
+//     return this.name
+//   }
+//   // this.getAge = function () {
+//   //   return this.age
+//   // }
+//   this.getColor = function () {
+//     return this.color
+//   }
+//   this.setName = function (newName) {
+//     this.name = newName
+//   }
+// }
+
+// let a = new SuperFn('xiaoming', 28, 'green')
+// console.log(a.getName())
+// a.setName('ahahah')
+// console.log(a.getName())
+
+// function Sub() {
+//   SuperFn.call(this, 'ahahah', 27, 'red')
+//   SuperFn2.call(this)
+// }
+
+// let bo = new Sub()
+
+// console.log(bo)
+
+// 原型链继承
+
+// sub.prototype = new Super()
+
 /**
- * @param {string} s
- * @return {number}
+ * 存在的最大问题：如果父构造器上有引用类型值，那么将在子类的实例上共享。
  */
-var lengthOfLongestSubstring = function (s) {
-  var tempStr = '';
-  var char = '';
-  var len = s.length;
-  var max = 0;
-  for (var i = 0; i < len; i++) {
-    char = s[i];
-    if (tempStr.indexOf(char) != -1) {
-      if (tempStr.length > max)
-        max = tempStr.length;
-      tempStr = tempStr.substring(tempStr.indexOf(char) + 1, tempStr.length);
-    }
-    tempStr += s[i];
-    if (max < tempStr.length) {
-      max = tempStr.length;
-    }
-  }
-  if (max == 0 && len > 0) {
-    return len;
-  }
-  return max;
-};
 
-console.log(lengthOfLongestSubstring('abcabcbb'))
+ function Super (name, age) {
+   this.name = name || 'john'
+   this.age = age || 25
+   this.friends = ['tomi', 'bolo']
+   this.getFriends = function (i=0) {
+     return this.friends[i]
+   }
+ }
 
+ function Sub (name, age) {
+   this.__proto__ = new Super(name, age)
+ }
 
-
-
-// LazyMan("Hank").sleep(10).eat("dinner")
+ let sb = new Sub('xio', 3)
+ let sb2 = new Sub('sb2', 4)
+ sb.friends.push('hehehi')
+ console.log(sb.friends) // ['tomi', 'bolo', 'hehehi']
+ console.log(sb.friends) // ['tomi', 'bolo', 'hehehi']
