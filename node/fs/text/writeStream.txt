@@ -1,0 +1,9 @@
+
+  writeFile('write.txt')
+  let buffer = Buffer.from('')
+  function createWriteStream(path, buffer) {
+    let out = fs.createWriteStream(path)
+    out.write(buffer);
+    out.end();
+  }
+  createWriteStream('writeStream.txt')
