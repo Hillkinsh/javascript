@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+  <style>
+    /*绝对定位+margin:auto */
+
+.out1{
+    width: 200px;
+    height: 200px;
+    background: green;
+    position:absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+/*方法2：绝对定位+负margin */
+.out2{
+    width:200px;
+    height: 200px;
+    background:green;
+    
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-100px;
+    margin-top:-100px;
+}
+/* 方法3：绝对定位+transform */
+
+.out3{
+    width: 200px;
+    height: 200px;
+    background: green;
+    
+    position:absolute;
+    left:50%;    /* 定位父级的50% */
+    top:50%;
+    transform: translate(-50%,-50%); /*自己的50% */
+}
+/*方法4：flex布局 */
+
+.out4{
+     height:600px;  
+     display:flex;
+     justify-content:center;  
+     align-items:center;      
+       /* aa只要三句话就可以实现不定宽高水平垂直居中。 */
+}
+.inner4{
+    background: green;
+    width: 200px;
+    height: 200px;
+}
+
+  </style>
+  <div class='out1'>
+    <div class="inner1">水平垂直剧中1</div>
+  </div>
+  <div class='out2'>
+    <div class="inner2">水平垂直剧中2</div>
+  </div>
+  <div class='out3'>
+    <div class="inner3">水平垂直剧中3</div>
+  </div>
+  <div class='out4'>
+    <div class="inner4">水平垂直剧中4</div>
+  </div>
+ 
+</body>
+</html>
