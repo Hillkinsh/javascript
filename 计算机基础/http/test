@@ -1,0 +1,31 @@
+3ci
+kehuduan SYN, seq = x
+ack = x + 1, seq = y
+seq = y + 1
+
+4ci
+
+fin seq = x
+ACK ack = x + 1
+FIN seq = w
+ack ack = w + 1
+
+// cors
+同源
+域名，端口号，协议
+简单请求跨域 head post get
+
+origin
+access-control-allow-origin:
+access-control-allow-credential
+access-control-allow-head
+
+非
+prelight
+origin
+access-control-request-method
+access-control-request-heads
+
+access-control-allow-method
+access-control-allow-credential
+access-control-allow-head
