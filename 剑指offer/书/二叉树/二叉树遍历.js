@@ -66,8 +66,8 @@ function getListWithDLR(obj) {
     getListWithDLR(obj.right);
   }
 }
-console.log("前序遍历：");
-getListWithDLR(tree);
+// console.log("前序遍历：");
+// getListWithDLR(tree);
 // 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中
 function getListWithLDR(obj) {
   if(obj.left){
@@ -78,8 +78,8 @@ function getListWithLDR(obj) {
     getListWithLDR(obj.right);
   } 
 }
-console.log("中序遍历：");
-getListWithLDR(tree);
+// console.log("中序遍历：");
+// getListWithLDR(tree);
 
 // 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中
 function getListWithLRD(obj) {
@@ -91,8 +91,8 @@ function getListWithLRD(obj) {
   } 
   console.log(obj.id);
 }
-console.log("后序遍历：");
-getListWithLRD(tree);
+// console.log("后序遍历：");
+// getListWithLRD(tree);
 
 // 非递归打印二叉树
 //
@@ -131,3 +131,31 @@ while (arr.length !== 0 || node !== null) {
   }
 }
 }
+
+function prevI (root) {
+  if (!root) {
+    throw new Error('数据格式错误')
+  }
+  let arr = []
+  arr.unshift(root)
+  while (arr.length) {
+    let node = arr.shift()
+    console.log(node.id)
+    if (node.right) {
+      arr.unshift(node.right)
+    }
+    if (node.left) {
+      arr.unshift(node.left)
+    }
+  }
+}
+
+prevI(tree)
+
+function recurTreePre(root) {
+  if (!root) throw new Error('传参格式错误')
+  console.log(root.id)
+  root.left && recurTreePre(root.left)
+  root.right && recurTreePre(root.right)
+}
+recurTreePre(tree)
