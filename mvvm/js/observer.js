@@ -1,23 +1,24 @@
 class Observer {
-  constructor(data) {
+  constructor(data) { // 这个是监听的那个data对象
     this.data = data
-    console.log('set observe. ', data)
-    this.walk(data)
+    this.walk(this.data)
   }
   walk(data) {
     // 对data中所有属性的劫持，
+    // mvvm 是对vue实例上的data属性都做了监听
+
     // 在劫持后做了哪些事情？
     // 1.get .addDep(this);
     // 2.set sub.update();
     Object.keys(data).forEach(key => {
-      this.defineReactive(this.data, key, data[key])
+      this.defineReactive(data, key, data[key])
     })
   }
   defineReactive(data, key, val) {
     var dep = new Dep()
     var childObj = observe(val)
 
-    Object.defineProperty(data, key, {
+    Object.defineProperty(this.data, key, {
       enumerable: true, // 可枚举
       configurable: false, // 不能再define
       get: function () {

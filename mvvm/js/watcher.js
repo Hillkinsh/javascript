@@ -17,9 +17,7 @@ class Watcher {
     // 每个可能需要的刷新的节点上，都做了一个watcher。在相应的值变更后，
     // 会触发触发所有相关的订阅
     const val = this.get()
-    console.log('watcher here')
     if (val !== this.val) {
-      console.log('watcher here, inner ')
       this.val = val;
       this.cb.call(this.vm, val);
     }
@@ -28,7 +26,6 @@ class Watcher {
     // 如果在depIds的hash中没有当前的id,可以判断是新Watcher,因此可以添加到dep的数组中储存
     // 此判断是避免同id的Watcher被多次储存
     if (!this.depIds.hasOwnProperty(dep.id)) {
-      // console.log('---I will add sub. ---', dep)
       dep.addSub(this)
       this.depIds[dep.id] = dep
     }
@@ -36,7 +33,7 @@ class Watcher {
   get() {
     // 当前订阅者(Watcher)读取被订阅数据的最新更新后的值时，通知订阅者管理员收集当前订阅者
     Dep.target = this
-    // 此时访问this.vm._data, 触发该属性的get劫持
+    // 此时访问this.vm._data, 触发该属性的observer 的get劫持
     const val = this.vm._data[this.expOrFn]
     // 置空，用于下一个Watcher使用
     Dep.target = null
