@@ -1,0 +1,12 @@
+服务器内部错误
+服务器内部错误
+服务器内部错误
+服务器内部错误
+Trace: Lulingniu
+    at Object.<anonymous> (/Users/xuqingshan/Documents/git/javascript/node/console/index.js:24:9)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)
+    at internal/main/run_main_module.js:17:11

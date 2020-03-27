@@ -1,0 +1,28 @@
+1. 做哪些优化： 打包耗时分析，打包体积分析，打包
+
+2. 如何看优化点：
+
+1. loader和插件耗时分析：SpeedMeasurePlugin
+
+  SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+  
+  const smp = new SpeedMeasurePlugin();
+  
+  const webpackConfig = smp.wrap({
+    plugins: [
+      new MyPlugin(),
+      new MyOtherPlugin()
+    ]
+  });
+
+2. 打包体积分析：webpack-build-analyzer
+
+  1.1使用minicss抽取css代码，
+
+1.2 dll 
+事先把常用但又构建时间长的代码提前打包好（例如 react、react-dom），
+取个名字叫 dll。后面再打包的时候就跳过原来的未打包代码，
+直接用 dll。这样一来，构建时间就会缩短，提高 webpack 打包速度
+
+1.3 多进程多实例构建
+happypack thread-loader

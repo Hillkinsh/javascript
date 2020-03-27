@@ -1,0 +1,16 @@
+刘海屏
+
+<meta name=“viewport” content=“width=device-width, viewport-fit=cover”>
+
+1.  viewport-fit=cover
+
+2.内容区
+.container {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+3. fix
+.fixed-wrap {
+  padding-bottom: env(safe-area-inset-bottom);
+}

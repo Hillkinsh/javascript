@@ -1,0 +1,7 @@
+热替换：
+运行时，更新各种模块，而无需进行完全刷新
+配置：webpack-dev-server --hotOnly
+
+热重载：
+就是当修改文件之后，webpack自动编译，
+然后浏览器自动刷新->等价于页面window.location.reload()
