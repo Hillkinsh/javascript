@@ -1,55 +1,31 @@
-function Test(name) {
-  this.task = [];
-  let fn = () => {
-    console.log(name);
-    this.next();
+Function.prototype.mybind = function (context, ...args) {
+  if (typeof this !== 'function') {
+    throw new TypeError('TypeError: Bind must be called on a function')
   }
-  this.task.push(fn);
-  setTimeout(() => {
-    this.next();
-  }, 0)
-  return this;
-}
-
-Test.prototype.firstSleep = function (timer) {
-  console.time("firstSleep")
-  let that = this;
-  let fn = () => {
-    setTimeout(() => {
-      console.timeEnd("firstSleep");
-      that.next();
-    }, timer * 1000)
+  var _this = this
+  function F() {
+    args = args.concat(...arguments)
+    if (args.length === _this.length) {
+      F.prototype.__proto__ = new _this(...args.concat(...arguments))
+    }
+    if (this instanceof F) {
+      return F.apply(context, args)
+    }
   }
-  this.task.unshift(fn);
-  return this;
+  return F
+}
+function Animal (name, color) {
+  this.name = name
+  this.color = color
+}
+Animal.prototype.say = function () {
+  return `I am a ${this.color}!!! ${this.name}`
 }
 
-Test.prototype.sleep = function (timer) {
-  console.time("sleep")
-  let that = this;
-  let fn = () => {
-    setTimeout(() => {
-      console.timeEnd("sleep");
-      that.next();
-    }, timer * 1000)
-  }
-  this.task.push(fn);
-  return this;
-}
+const Cat = Animal.mybind(null)
+console.log(Cat)
 
-Test.prototype.eat = function (dinner) {
-  let that = this;
-  let fn = () => {
-    console.log(dinner);
-    that.next();
-  }
-  this.task.push(fn);
-  return this;
-}
-
-Test.prototype.next = function () {
-  let fn = this.task.shift();
-  fn && fn()
-}
-
-new Test("test").firstSleep(3).sleep(5).eat("dinner")
+const cat = new Cat('cat', 'white')
+console.log(cat.say())
+console.log(cat instanceof Cat)
+console.log(cat instanceof Animal)

@@ -1,14 +1,261 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
-  <link rel="stylesheet" type="text/css" href="./test.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .screen {
+      min-height: 100vh;
+      text-align:center;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .screen h1 {
+      margin:0;
+      padding:0;
+      white-space: nowrap;
+      line-height: 100vh;
+      color: #fff;
+      font-size: 3.5em;
+    }
+    #first-screen {
+      background: rgb(0,106,221);
+    }
+    #second-screen {
+      background: rgb(255,25,129);
+    }
+    #fourth-screen {
+      background: #FFDF19;
+    }
+    #monitor {
+      position:fixed;
+      top: 1em;
+      right: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      background: #000;
+      font-family: monospace;
+      text-align: center;
+      line-height: 2.8em;
+    }
+    #isIntersecting {
+      color: #33ff00;
+      opacity: 0;
+      transition: opacity .2s linear;
+    }
+    img {
+      display: block;
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      min-height: 100px;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  </style>
+  
 </head>
-
 <body>
-  <div><i class='icon-english'></i>
-    <span class='icon-english2'>哈哈哈，写代码</span>
+  <div class="screen" name="myInput" id="first-screen">
+    <h1>First screen</h1>
   </div>
-</body>
+  <div class="screen" name="myInput" id="second-screen">
+    <h1 id='h1'>Second Screen</h1>
+  </div>
+  <h1>First screen</h1>
+  <a href="" id='a' class="pv2 grow db no-underline black"><img class="db w-100" id='img' src="https://img.vipkidstatic.com/beeschool/server/1578226108705/toutu-xx.png"></a>
 
+  
+  <!-- <div class="screen pa3 pa4-ns w-100 w-80-ns center">
+    <main class="cf pa2">
+      <div class="fl w-100 w-50-ns ph2">
+       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://img.vipkidstatic.com/beeschool/server/1578226108705/toutu-xx.png"></a>
+       <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://img.vipkidstatic.com/beeschool/server/1578228686860/%E5%BE%90%E4%BC%9F.png"></a>
+      </div>
+      <div class="fl w-100 w-50-ns ph2">
+        <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://img.vipkidstatic.com/beeschool/server/1578226339580/1_one.png"></a>
+        <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://img.vipkidstatic.com/beeschool/server/1578226356539/2.png"></a>
+      </div>
+      <div class="fl w-100 w-50-ns ph2">
+        <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://img.vipkidstatic.com/beeschool/server/1578226369061/3.png"></a>
+        <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="https://img.vipkidstatic.com/beeschool/server/1578646411600/1.png"></a>
+      </div>
+    </main>
+  </div> -->
+  
+  <div class="screen" name="myInput" id="fourth-screen">
+    <h1>Fourth Screen</h1>
+  </div>
+  
+  <div id="monitor">
+    <div id="isIntersecting">
+      <span class="placeholder">0</span>
+      images loaded
+      </div>
+  </div> 
+  <script>
+    // TODO: 滚动监听， 无限滚动，停留时长
+    // 页面滚动位置
+    
+    function returnType(id) {
+      let ele = document.getElementsByName('myInput')
+      document.getElementsByName("myInput");
+      document.getElementsByTagName
+      document.getElementsByTagNameNS
+      // document.getSelection
+      document.getAttribute
+      document.getKey
+      console.log(Object.prototype.toString.call(ele))
+    }
+    returnType('h1')
+    // returnType('a')
+    // returnType('img')
+    // returnType('first-screen')
+    // TODO: 打包npm，明天上午差不多
+    
+
+      class PageObserver {
+        static BEFOREUNWATCH = 0
+        static FIRSTSHOW = 1
+        static FIRSTLEAVE = 2
+        constructor (cb) {
+          this.watchInfo = {} // 返回对象
+          this.cb = cb // 回调函数
+          this.uniqueProp = '' // 唯一区分ID
+          this.pageTime = 0 // 页面停留时长
+          this.triggerTime = 0 // 回调触发类型
+          this.entries = null // 监听对象
+          this.config = { // 监听粒度，暂不支持可配置
+            threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
+          }
+          this.observer = this._init(this.config)
+        }
+        getKey (img) {
+          return img.getAttribute(this.uniqueProp)
+        }
+        initDuration (entries) {
+          if (Object.keys(this.watchInfo).length) return
+          this.entries = entries
+          entries.forEach((item, idx) => {
+            let key = this.getKey(item.target)
+            key = `${idx}_${key}`
+            this.watchInfo[key] = {}
+          })
+        }
+        _init (config) {
+          return new IntersectionObserver((entries) => {
+            this.initDuration (entries)
+            entries.forEach((entry, idx) => {
+              if (entry.isIntersecting) { // 如果当前元素在可视区
+                this.triggerTime === PageObserver.FIRSTSHOW && this.cb && this.cb('firstshow')
+                this.countTime(entry) // 
+              } else {
+                this.endCountTime(entry)
+              }
+            })
+          }, config)
+        }
+        countTime (entry) { // 开始计时
+          let entryKey = this.getKey(entry.target)
+          Object.keys(this.watchInfo).some(item => {
+            if (item.includes(entryKey)) {
+              if (this.watchInfo[item].start === undefined) { // 未初始化，则初始化
+                this.watchInfo[item] = {
+                  start: new Date(),
+                  duration: 0,
+                  maxScroll: 0,
+                  watchTimes: 0,
+                }
+              } else { // 已初始化，则更新maxscroll
+                this.updateDuration(item)                
+                this.watchInfo[item].start = new Date()
+                this.watchInfo[item].maxScroll = 
+                  Math.max(this.watchInfo[item].maxScroll, entry.intersectionRatio)
+              }
+              return true
+            }
+          })
+        }
+        updateDuration (item) {
+          if (this.watchInfo[item].start) {
+            this.watchInfo[item].duration += (new Date() - this.watchInfo[item].start)
+          }
+        }
+        endCountTime (entry) { // 结束计时
+          let entryKey = this.getKey(entry.target)
+          Object.keys(this.watchInfo).some(item => {
+            if (item.includes(entryKey)) {
+              if (this.watchInfo[item].duration === undefined) return true
+              this.triggerTime === PageObserver.FIRSTLEAVE && this.cb && this.cb('endcounttime')
+              this.updateDuration(item)
+              this.watchInfo[item].maxScroll = Math.max(entry.intersectionRatio, this.watchInfo[item].maxScroll)
+              this.watchInfo[item].start = null
+              if (this.watchInfo[item].duration) {
+                this.watchInfo[item].watchTimes += 1 
+              }
+              return true
+            }
+          })
+        }
+        isNotDOMNode (domElements) {
+          let typeStr = Object.prototype.toString.call(domElements)
+          return typeStr.indexOf('NodeList') === -1
+            && typeStr.indexOf('Element') === -1
+            && typeStr.indexOf('HTMLCollection') === -1
+        }
+        /**
+         * @param { Array } domElements dom对象数组
+         * @param { string } uniqueProp 各监听dom之间区分的属性，比如class， id等
+         * @param { function } cb 回调函数，希望在执行中触发的函数
+         * @param { number } triggerTime 触发的时间 0: 停止监听时触发 1: 进入视野就触发，2: 离开视野触发 
+        */
+        watch (domElements, uniqueProp, cb, triggerTime=0) {
+          // NodeList, Element
+          if (this.isNotDOMNode(domElements)) {
+            throw '待监听数据格式有误'
+          }
+          if (!uniqueProp || typeof uniqueProp !== 'string') {
+            throw '待监听数据的唯一属性应是非空的字符串'
+          }
+          if (triggerTime !== 0 && triggerTime !== 1 && triggerTime !== 2) {
+            throw '回调函数触发类型设置不正确'
+          }
+          this.cb = cb
+          this.uniqueProp = uniqueProp
+          this.triggerTime = triggerTime
+          this.pageTime = new Date()
+          const nodeLists = [...domElements]
+          nodeLists && nodeLists.forEach(node => { // 做监听
+            this.observer.observe(node)
+          })
+        }
+        unWatch () {
+          if (this.entries) {
+            this.entries.forEach(entry => {
+              this.observer.unobserve(entry.target);
+            })
+            this.watchInfo.pageTime = new Date() - this.pageTime
+            this.cb && this.triggerTime === PageObserver.BEFOREUNWATCH && this.cb('unwatch:')
+            return this.watchInfo
+          }
+        }
+      }
+
+      let mypage = new PageObserver()
+      // document.getElementsByName()
+      mypage.watch(
+        document.getElementsByClassName('screen'),
+        
+        'id', 
+        data => console.log('track', data), 
+        2
+      )
+      setTimeout( item => {
+        mypage.unWatch()
+      }, 30*1000)
+    </script>
+</body>
 </html>

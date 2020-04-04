@@ -1,11 +1,11 @@
 function instanceof2 (a, constr) {
-  let ctr = a.__proto__.constructor
+  let ctr = a.__proto__
   while(ctr) {
-    if (ctr === constr) {
+    if (ctr === constr.prototype) {
       return true
     }
     a = a.__proto__
-    ctr = a && a.__proto__ && a.__proto__.constructor
+    ctr = a && a.__proto__ && a.__proto__
   }
   return false
 }

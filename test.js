@@ -1,28 +1,28 @@
-function instanceof2 (a, constr) {
-  let ctr = a.__proto__.constructor
-  while(ctr) {
-    if (ctr === constr) {
-      return true
+const obj = {
+  name: 'jscoder',
+  skill: ['es', 'a', 'b'],
+  say: function () {
+    for (var i = 0, len = this.skill.length; i < len; i++) {
+      setTimeout((i => {
+        return _ => {
+          console.log('no' + i + this.name)
+          console.log(this.skill[i])
+          console.log('-----------------')
+        }
+      })(i), 0)
+      console.log(i+1)
     }
-    a = a.__proto__
-    ctr = a && a.__proto__ && a.__proto__.constructor
   }
-  return false
 }
-
-let Cs = function (name) {
-  this.name = name
-}
-
-let cs = new Cs('haha')
-
-// console.log(instanceof2(cs, Cs))
-
-function C() {}
-function D() {}
-
-let o = new C()
-
-console.log(instanceof2(o,  C))
-console.log(instanceof2(o,  D))
-console.log(instanceof2(o,  Object))
+obj.say()
+/**
+ * 1
+ * 2
+ * 3
+ * no 1 js
+ * es
+ * no 2 js
+ * a
+ * no 3 js
+ * b
+ */

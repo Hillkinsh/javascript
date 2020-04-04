@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .out {
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      height: 800px;
+    }
+    .inner {
+      color: #000;
+      margin: 0 10px;
+      height: 0;
+      width: 100%;
+      position: relative;
+      background: pink;
+      padding: 0;
+      padding-bottom: calc(50% - 10px);
+    }
+    p {
+      position: absolute;
+      margin: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<!---
+  左右边距10px
+  A元素高是宽度的50%
+  A元素垂直居中屏幕中央
+  A元素文字20px，垂直居中
+   
+  实现1: 宽高定比固定
+  思路：使用padding-bottom: calc(50% - 10px);
+  因为% 是对应于父元素，故可以操作。
+  注意让元素高度为0
+
+  2，垂直居中：在撑出来的元素内部使用绝对定位，可以实现子元素的垂直居中
+-->
+<body>
+  <div class="out">
+    <div class="inner">
+      <p>
+        <span>P</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

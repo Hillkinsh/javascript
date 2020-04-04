@@ -1,0 +1,41 @@
+Arguments: 
+  /Users/xuqingshan/.nvm/versions/node/v12.10.0/bin/node /usr/local/bin/yarn add webpack-sources -D
+
+PATH: 
+  /Users/xuqingshan/.nvm/versions/node/v12.10.0/bin:/Users/xuqingshan/.nvm/versions/node/v12.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/xuqingshan/.nvm/versions/node/v12.10.0/bin:/usr/local/mysql/bin:/usr/local/mysql/bin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  12.10.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/xuqingshan/Library/Caches/Yarn/v2/npm-is-extendable-1.0.1-a7470f9e426733d81bd81e1155264e3a3507cab4/README.md' -> '/Users/xuqingshan/Documents/git/javascript/testWebpack/node_modules/micromatch/node_modules/is-extendable/README.md'
+
+npm manifest: 
+  {
+    "name": "testWebpack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "webpack": "^4.42.1",
+      "webpack-cli": "^3.3.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
