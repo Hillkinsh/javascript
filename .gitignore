@@ -8,4 +8,5 @@ lib
 .idea
 .vscode
 unittest/node_modules
-node
+
+node/stream/bigFile
