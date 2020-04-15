@@ -10,3 +10,4 @@ lib
 unittest/node_modules
 
 node/stream/bigFile
+node
