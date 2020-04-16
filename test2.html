@@ -1,49 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .redBg {
+        background: red;
+      }
+      .blueFont {
+        color: blue;
+      }
+      .greenFont {
+        color: green;
+      }
+    </style>
+</head>
 <body>
-    <script>
-        var OfflightState = function (light) {
-            this.light = light
-        }
-        OfflightState.prototype.buttonWasPressed = function () {
-            console.log('weak light')
-            this.light.setState(this.light.weakLightState)
-        }
-        var WeakLightState = function (light) {
-            this.light = light
-        }
-        WeakLightState.prototype.buttonWasPressed = function () {
-            console.log('strong light')
-            this.light.setState(this.light.strongLightState)
-        }
-        var StrongLightState = function (light) {
-            this.light = light
-        }
-        StrongLightState.prototype.buttonWasPressed = function () {
-            console.log( '关灯' ); // strongLightState 对应的行为
-            this.light.setState( this.light.offLightState );
-        }
-        var Light = function () {
-            this.offLightState = new OfflightState(this)
-            this.weakLightState = new WeakLightState(this)
-            this.strongLightState = new StrongLightState(this)
-            this.button = null
-        }
-        Light.prototype.init = function () {
-            var button = document.createElement('button')
-            self = this
-            this.button = document.body.appendChild(button)
-            this.button.innerHTML = '开关'
-            this.currentState = this.offLightState
-            this.button.onclick = function () {
-                self.currentState.buttonWasPressed()
-            }
-        }
-        Light.prototype.setState = function (newState) {
-            this.currentState = newState
-        }
-        var light = new Light()
-        light.init()
-
-    </script>
-    </body>
+<!--题目说明-->
+<!--将children下，第3个div子元素，背景颜色置为红色-->
+<!--将children下，第2个子元素，文字颜色置为蓝色-->
+<!--将children下，lang属性包含bcd，文字颜色置为绿色-->
+<div>
+    <div class="children">
+        <div>test</div>
+        <p >test</p>
+        <div><div>abd</div>test</div>
+        <p>test</p>
+        <div lang="abc">test</div>
+        <div lang="abcd">test</div>
+        <div>test</div>
+        <div>test</div>
+    </div>
+</div>
+<script>
+  let children = document.getElementsByClassName('children')[0]
+  children = children.childNodes
+  let allCount = 0
+  let count = 0
+  for (let i = 0; i < children.length; i++) {
+    if (children[i].tagName) {
+      allCount++
+      if (allCount === 2) {
+        children[i].className = 'blueFont'
+      }
+      if (children[i].lang && children[i].lang.indexOf('bcd') !== -1) {
+        children[i].className = 'greenFont'
+      }
+    }
+    if (children[i].tagName === 'DIV') {
+      count++
+      if (count === 3) {
+        children[i].className = 'redBg'
+      }
+    }
+  }
+</script>
+</body>
 </html>

@@ -25,7 +25,9 @@ LazyMan.prototype.next = function () {
 }
 
 new LazyMan("Hank")
-  .sleep(2)
+  .sleep(1)
   .eat("dinner")
+  .sleep(1)
   .eat("dinner")
+  .sleep(1)
   .eat("dinner")

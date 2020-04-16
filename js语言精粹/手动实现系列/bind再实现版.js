@@ -8,6 +8,16 @@ Function.prototype.mybind = function (ctx, ...args) {
   return F
 }
 
+
+Function.prototype.bi = function (ctx, ...args) {
+  let that = this
+  return function F () {
+    args = args ? [...args, ...arguments] : [...arguments]
+    F.prototype.__proto__ = new this(...args)
+    that.apply(ctx, args)
+  }
+}
+
 /**
  * 是根据一道面试题目写出来的。比大神版本的效果好一些
  */

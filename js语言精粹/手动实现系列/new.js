@@ -1,7 +1,8 @@
 function _new (ctor) {
-  let obj = Object.create(ctor.prototype)
+  let obj = Object.create(ctor.prototype) // 原型对象
+
   let argsArr = [].slice.call(arguments, 1)
-  let ctorReturnResult = ctor.apply(obj, argsArr)
+  let ctorReturnResult = ctor.apply(obj, argsArr) // 该方法寄生调用在obj上。
 
   var isObject = typeof ctorReturnResult === 'object' && ctorReturnResult !== null;
   var isFunction = typeof ctorReturnResult === 'function';
