@@ -34,3 +34,23 @@ function random_partition (arr, begin, end) {
   swap(arr, index, end)
   return partition(arr, begin, end)
 }
+
+function quick (arr, begin, end) {
+  if (begin < end) {
+    let index = partition(arr, begin, end)
+    quick(arr, begin, index - 1)
+    quick(arr, index + 1, end)
+  }
+}
+function partition (arr, begin, end) {
+  let privot = begin - 1
+  let value = arr[end]
+  for (let i = begin; i < end; i++) {
+    if (arr[i] <= value) {
+      privot++
+      [arr[privot], arr[i]] = [arr[i], arr[privot]]
+    }
+  }
+  [arr[privot + 1], arr[end]] = [arr[end], arr[privot + 1]]
+  return privot + 1
+}
