@@ -10,6 +10,8 @@ lib
 unittest/node_modules
 /*/*/node_modules
 /*/*/run/
+/*/*/logs/
+
 package-lock.json
 
 node/stream/bigFile
