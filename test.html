@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    .des-title {
+        margin-bottom: 4px;
+        font-family: 'HYQiHei-FEJ';
+        font-weight: bold;
+        font-size: 36px;
+        color: rgba(0,0,0,0.90);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .item {
+        flex-shrink: 0;
+    }
+    .desc_text {
+        font-family: MicrosoftYaHei;
+        font-size: 20px;
+        color: #0084FF;
+        border: 1px solid #0084FF;
+        border-radius: 4px;
+        margin: 0 0 0 16px;
+        padding: 0 8px;
+        width: 50px;
+        bottom: 10px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="des-title">
+        <text class="item">企企业企业企业企业企业企业</text>
+        <text class="item">企企业企业企业企业企业企业</text>
+        <text class="item">企企业企业企业企业企业企业</text>
+        <text class="desc_text">企业</text>
+    </div>
+    <div class="des-title">
+        企企业企业企业企业企业企业<span class="desc_text">企业</span>
+    </div>
+    
+    <script>
+        function getNewlinePos (name) {
+            let lineMaxLength = 30
+            let count = 0
+            let newLinePos = 0
+            for (let i = 0; i < name.length; i++) {
+                if (count >= lineMaxLength) {
+                    return newLinePos = i + 1
+                }
+                if (name[i].match(/[\u4e00-\u9fa5]/g)) {
+                    count += 2
+                } else {
+                    count++
+                }
+            }
+            return newLinePos
+        }
+        console.log(getNewlinePos('一二三四五六七八九十一二三四五六七'))
+        console.log(getNewlinePos('一二三四五六七八九十一二三四'))
+        console.log(getNewlinePos('一二三四五六七八九十一二三四五'))
+        console.log(getNewlinePos(''))
+        console.log(getNewlinePos('abcdefg hijklmn opqrst uvwxyz abcdefg'))
+    </script>
+</body>

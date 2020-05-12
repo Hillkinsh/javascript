@@ -1,0 +1,141 @@
+2020-05-05 16:43:39,818 INFO 16677 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 42380185ms at 2020-05-06 04:30:00.003
+2020-05-05 16:43:39,816 INFO 16678 [Job#15886682198151130979877366511] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2020-05-05 16:43:39,822 INFO 16678 [Job#15886682198151130979877366511] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 6ms
+2020-05-09 16:47:55,434 INFO 17982 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 42124569ms at 2020-05-10 04:30:00.003
+2020-05-09 16:47:55,434 INFO 17982 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 25924566ms at 2020-05-10 00:00:00.000
+2020-05-09 16:47:55,434 INFO 17982 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 25925566ms at 2020-05-10 00:00:01.000
+2020-05-09 16:47:55,286 INFO 17983 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 16:47:55,286 INFO 17983 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 16:47:55,286 INFO 17983 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 16:49:24,735 INFO 18032 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 16:49:24,735 INFO 18032 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 16:49:24,735 INFO 18032 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 16:50:17,999 INFO 18044 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 16:50:17,999 INFO 18044 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 16:50:17,999 INFO 18044 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:01:00,503 INFO 18378 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:01:00,503 INFO 18378 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:01:00,503 INFO 18378 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:02:47,186 INFO 18408 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:02:47,186 INFO 18408 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:02:47,186 INFO 18408 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:04:52,000 INFO 18440 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:04:52,000 INFO 18440 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:04:52,000 INFO 18440 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:06:00,898 INFO 18460 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:06:00,898 INFO 18460 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:06:00,898 INFO 18460 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:12:57,655 INFO 18526 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:12:57,655 INFO 18526 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:12:57,655 INFO 18526 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:17:46,460 INFO 18636 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:17:46,460 INFO 18636 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:17:46,460 INFO 18636 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:18:24,156 INFO 18671 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 40295846ms at 2020-05-10 04:30:00.002
+2020-05-09 17:18:24,156 INFO 18671 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 24095844ms at 2020-05-10 00:00:00.000
+2020-05-09 17:18:24,156 INFO 18671 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 24096844ms at 2020-05-10 00:00:01.000
+2020-05-09 17:18:23,981 INFO 18672 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:18:23,981 INFO 18672 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:18:23,981 INFO 18672 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:19:00,322 INFO 18690 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:19:00,322 INFO 18690 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:19:00,322 INFO 18690 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:20:10,407 INFO 18731 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:20:10,407 INFO 18731 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:20:10,407 INFO 18731 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:28:00,586 INFO 18787 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:28:00,586 INFO 18787 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:28:00,586 INFO 18787 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:28:53,453 INFO 18844 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 39666549ms at 2020-05-10 04:30:00.002
+2020-05-09 17:28:53,453 INFO 18844 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 23466547ms at 2020-05-10 00:00:00.000
+2020-05-09 17:28:53,454 INFO 18844 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 23467547ms at 2020-05-10 00:00:01.001
+2020-05-09 17:28:53,386 INFO 18845 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:28:53,386 INFO 18845 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:28:53,386 INFO 18845 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 17:52:55,946 INFO 19043 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 38224056ms at 2020-05-10 04:30:00.002
+2020-05-09 17:52:55,947 INFO 19043 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 22024054ms at 2020-05-10 00:00:00.001
+2020-05-09 17:52:55,947 INFO 19043 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 22025053ms at 2020-05-10 00:00:01.000
+2020-05-09 17:52:55,804 INFO 19044 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 17:52:55,805 INFO 19044 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 17:52:55,805 INFO 19044 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:12:50,441 INFO 19166 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:12:50,441 INFO 19166 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:12:50,441 INFO 19166 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:13:01,488 INFO 19177 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:13:01,488 INFO 19177 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:13:01,488 INFO 19177 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:15:52,967 INFO 19190 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:15:52,967 INFO 19190 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:15:52,967 INFO 19190 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:17:09,599 INFO 19205 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:17:09,599 INFO 19205 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:17:09,600 INFO 19205 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:38:48,255 INFO 19433 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 35471747ms at 2020-05-10 04:30:00.002
+2020-05-09 18:38:48,255 INFO 19433 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 19271745ms at 2020-05-10 00:00:00.000
+2020-05-09 18:38:48,255 INFO 19433 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 19272745ms at 2020-05-10 00:00:01.000
+2020-05-09 18:38:48,111 INFO 19434 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:38:48,112 INFO 19434 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:38:48,112 INFO 19434 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:43:03,227 INFO 19467 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:43:03,227 INFO 19467 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:43:03,227 INFO 19467 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:44:20,324 INFO 19505 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:44:20,324 INFO 19505 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:44:20,324 INFO 19505 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:45:53,371 INFO 19529 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:45:53,371 INFO 19529 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:45:53,371 INFO 19529 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:47:25,592 INFO 19556 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:47:25,592 INFO 19556 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:47:25,592 INFO 19556 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 18:55:20,907 INFO 19639 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 18:55:20,907 INFO 19639 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 18:55:20,907 INFO 19639 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 19:54:53,348 INFO 19838 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 30906655ms at 2020-05-10 04:30:00.003
+2020-05-09 19:54:53,349 INFO 19838 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 14706652ms at 2020-05-10 00:00:00.001
+2020-05-09 19:54:53,349 INFO 19838 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 14707651ms at 2020-05-10 00:00:01.000
+2020-05-09 19:54:53,166 INFO 19839 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 19:54:53,166 INFO 19839 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 19:54:53,166 INFO 19839 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 19:57:38,820 INFO 19849 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 19:57:38,820 INFO 19849 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 19:57:38,820 INFO 19849 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 20:00:44,837 INFO 19869 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 20:00:44,837 INFO 19869 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 20:00:44,837 INFO 19869 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 20:01:04,397 INFO 19884 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 20:01:04,397 INFO 19884 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 20:01:04,397 INFO 19884 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 20:19:12,157 INFO 20308 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 20:19:12,157 INFO 20308 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 20:19:12,157 INFO 20308 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 20:23:42,163 INFO 20459 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 29177839ms at 2020-05-10 04:30:00.002
+2020-05-09 20:23:42,163 INFO 20459 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 12977837ms at 2020-05-10 00:00:00.000
+2020-05-09 20:23:42,163 INFO 20459 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 12978837ms at 2020-05-10 00:00:01.000
+2020-05-09 20:23:41,998 INFO 20460 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 20:23:41,999 INFO 20460 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 20:23:41,999 INFO 20460 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 20:35:12,374 INFO 20580 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 28487628ms at 2020-05-10 04:30:00.002
+2020-05-09 20:35:12,374 INFO 20580 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 12287626ms at 2020-05-10 00:00:00.000
+2020-05-09 20:35:12,374 INFO 20580 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 12288626ms at 2020-05-10 00:00:01.000
+2020-05-09 20:35:12,241 INFO 20581 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 20:35:12,241 INFO 20581 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 20:35:12,241 INFO 20581 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 20:36:17,325 INFO 20602 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 20:36:17,325 INFO 20602 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 20:36:17,325 INFO 20602 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 20:42:34,818 INFO 20679 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 20:42:34,818 INFO 20679 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 20:42:34,818 INFO 20679 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 21:34:56,264 INFO 21188 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 21:34:56,264 INFO 21188 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 21:34:56,264 INFO 21188 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-09 21:46:18,539 INFO 21312 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-05-09 21:46:18,539 INFO 21312 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-05-09 21:46:18,539 INFO 21312 [egg-schedule]: register schedule /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-05-10 00:00:00,279 INFO 21312 [Job#1589040000241589924465894061] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2020-05-10 00:00:00,294 INFO 21312 [Job#1589040000241589924465894061] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 11ms
+2020-05-10 00:00:00,258 INFO 20580 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 86399751ms at 2020-05-11 00:00:00.009
+2020-05-10 00:00:01,235 INFO 21312 [Job#1589040001232589934329862971] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2020-05-10 00:00:01,241 INFO 21312 [Job#1589040001232589934329862971] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 6ms
+2020-05-10 00:00:01,234 INFO 20580 [Timer] /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 86399768ms at 2020-05-11 00:00:01.002

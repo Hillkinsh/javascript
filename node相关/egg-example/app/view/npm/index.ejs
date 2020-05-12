@@ -1,0 +1,19 @@
+<% var status = status || 200 %>
+<% var headers = headers || '' %>
+<% var package = package || {value: ''} %>
+
+
+<html>
+  <head>
+    <title>Hacker News</title>
+    <link rel="stylesheet" href="/public/css/news.css" />
+  </head>
+  <body>
+    <h1>status</h1>
+    <p><%- status %></p>
+    <h1>head</h1>
+    <p><%- JSON.stringify(headers) %></p>
+    <h1>package</h1>
+    <p><%- JSON.stringify(package) %></p>
+  </body>
+</html>

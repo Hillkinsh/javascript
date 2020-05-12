@@ -1,0 +1,467 @@
+2020-05-10 01:01:26,616 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 252354ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-10 06:18:20,908 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 19014176ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-10 08:04:39,873 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 6358661ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-10 19:15:03,557 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 40163668ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 07:45:05,977 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 45002401ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 08:55:08,513 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 4202527ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 09:41:21,788 ERROR 23465 [-/127.0.0.1/-/18ms GET /news] nodejs.RequestError: connect ECONNREFUSED 127.0.0.1:80, GET http://{baseUrl}/cloud-company-background/construct/getRegHumanList?type=0&pageSize=1&pageNum=1&gid=b6bc016381 -1 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":1,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"localhost:80:":1},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1161:14)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 80
+name: "RequestError"
+data: undefined
+path: "%7Bbaseurl%7D/cloud-company-background/construct/getRegHumanList?type=0&pageSize=1&pageNum=1&gid=b6bc016381"
+status: -1
+headers: {}
+res: {"status":-1,"statusCode":-1,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":9,"keepAliveSocket":false,"requestUrls":["http:///%7Bbaseurl%7D/cloud-company-background/construct/getRegHumanList?type=0&pageSize=1&pageNum=1&gid=b6bc016381"],"timing":null,"remoteAddress":"127.0.0.1","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 23465
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 09:44:27,138 ERROR 23530 [-/127.0.0.1/-/7ms GET /news] nodejs.ReferenceError: pageSize is not defined
+    at API (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/service/news.js:3:109)
+    at NewsService.list (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/service/news.js:8:47)
+    at NewsController.list (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js:22:39)
+    at Object.callFn (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:45:18)
+    at /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/router.js:190:18
+
+pid: 23530
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 09:46:01,227 ERROR 23550 [-/127.0.0.1/-/6ms GET /news] nodejs.ReferenceError: pageSize is not defined
+    at API (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/service/news.js:3:109)
+    at NewsService.list (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/service/news.js:8:47)
+    at NewsController.list (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js:22:39)
+    at Object.callFn (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:45:18)
+    at /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/router.js:190:18
+
+pid: 23550
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 09:53:01,855 ERROR 23622 [-/127.0.0.1/-/101ms GET /news] nodejs.TypeError: Assignment to constant variable.
+    at NewsService.list (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/service/news.js:16:12)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 23622
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 09:53:36,678 ERROR 23639 [-/127.0.0.1/-/93ms GET /news] nodejs.TypeError: /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:20
+    18|     <p>一个list模版数据</p>
+    19|     <ul>
+ >> 20|         <% list.forEach(item => { %>
+    21|             <li>
+    22|                 <a url="<%- item.url %>"> <%- item.title %> </a>
+    23|             </li>
+
+list.forEach is not a function
+    18|     <p>一个list模版数据</p>
+    19|     <ul>
+ >> 20|         <% list.forEach(item => { %>
+    21|             <li>
+    22|                 <a url="<%- item.url %>"> <%- item.title %> </a>
+    23|             </li>
+
+list.forEach is not a function
+    at eval (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:38:13)
+    at list (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:682:17)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:36)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+    at ContextView.[contextView#render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/context_view.js:70:23)
+path: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs"
+pid: 23639
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:00:02,629 ERROR 23713 [-/127.0.0.1/-/86ms GET /news] nodejs.SyntaxError: Unexpected token catch in /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:652:12)
+    at Object.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:392:16)
+    at handleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:215:18)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:16)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+
+pid: 23713
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:00:41,988 ERROR 23713 [-/127.0.0.1/-/76ms GET /news] nodejs.SyntaxError: Unexpected token catch in /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:652:12)
+    at Object.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:392:16)
+    at handleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:215:18)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:16)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+
+pid: 23713
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:00:55,390 ERROR 23713 [-/127.0.0.1/-/73ms GET /news] nodejs.SyntaxError: Unexpected token catch in /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:652:12)
+    at Object.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:392:16)
+    at handleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:215:18)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:16)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+
+pid: 23713
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:16:39,100 ERROR 23862 [-/127.0.0.1/-/70ms GET /news] nodejs.SyntaxError: Unexpected token ) in /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:652:12)
+    at Object.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:392:16)
+    at handleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:215:18)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:16)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+
+pid: 23862
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:17:06,064 ERROR 23862 [-/127.0.0.1/-/86ms GET /news] nodejs.ReferenceError: /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:12
+    10|   </head>
+    11|   <body>
+ >> 12|       <%- helper.relativeTime(item.time) %>
+    13|       <div>一串从接口返回的数据</div>
+    14|         <% for (let key in newsListData) { %>
+    15|             <p><%- key + ': ' + newsListData[key] %></p>
+
+item is not defined
+    10|   </head>
+    11|   <body>
+ >> 12|       <%- helper.relativeTime(item.time) %>
+    13|       <div>一串从接口返回的数据</div>
+    14|         <% for (let key in newsListData) { %>
+    15|             <p><%- key + ': ' + newsListData[key] %></p>
+
+item is not defined
+    at eval (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:25:37)
+    at list (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:682:17)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:36)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+    at ContextView.[contextView#render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/context_view.js:70:23)
+path: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs"
+pid: 23862
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:19:13,732 ERROR 23862 [-/127.0.0.1/-/80ms GET /news] nodejs.TypeError: /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:13
+    11|   </head>
+    12|   <body>
+ >> 13|       <%- helper.relativeTime(time) %>
+    14|       <div>一串从接口返回的数据</div>
+    15|         <% for (let key in newsListData) { %>
+    16|             <p><%- key + ': ' + newsListData[key] %></p>
+
+helper.relativeTime is not a function
+    11|   </head>
+    12|   <body>
+ >> 13|       <%- helper.relativeTime(time) %>
+    14|       <div>一串从接口返回的数据</div>
+    15|         <% for (let key in newsListData) { %>
+    16|             <p><%- key + ': ' + newsListData[key] %></p>
+
+helper.relativeTime is not a function
+    at eval (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:28:24)
+    at list (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:682:17)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:36)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+    at ContextView.[contextView#render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/context_view.js:70:23)
+path: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs"
+pid: 23862
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:19:59,289 ERROR 23862 [-/127.0.0.1/-/84ms GET /news] nodejs.TypeError: /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:13
+    11|   </head>
+    12|   <body>
+ >> 13|       <%- helper.relativeTime(time) %>
+    14|       <div>一串从接口返回的数据</div>
+    15|         <% for (let key in newsListData) { %>
+    16|             <p><%- key + ': ' + newsListData[key] %></p>
+
+helper.relativeTime is not a function
+    11|   </head>
+    12|   <body>
+ >> 13|       <%- helper.relativeTime(time) %>
+    14|       <div>一串从接口返回的数据</div>
+    15|         <% for (let key in newsListData) { %>
+    16|             <p><%- key + ': ' + newsListData[key] %></p>
+
+helper.relativeTime is not a function
+    at eval (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs:28:24)
+    at list (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:682:17)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:36)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+    at ContextView.[contextView#render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/context_view.js:70:23)
+path: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/news/list.ejs"
+pid: 23862
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 10:47:32,632 ERROR 24850 [-/127.0.0.1/-/7ms GET /news] nodejs.TypeError: Cannot read property 'relativeTime' of undefined
+    at NewsController.list (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js:22:29)
+    at Object.callFn (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:45:18)
+    at /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:44:32)
+    at /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa-compose/index.js:36:12
+
+pid: 24850
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 12:22:47,134 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 2190715ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 12:57:09,152 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 2001931ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 13:34:29,307 ERROR 20580 nodejs.ClusterClientNoResponseError: client no response in 2220134ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:427:11)
+    at tryOnTimeout (timers.js:289:5)
+    at listOnTimeout (timers.js:252:5)
+    at Timer.processTimers (timers.js:212:10)
+name: "ClusterClientNoResponseError"
+pid: 20580
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 14:32:58,995 ERROR 26551 nodejs.SyntaxError: missing ) after argument list in /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/npm/index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:652:12)
+    at Object.compile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:392:16)
+    at handleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:215:18)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:16)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+
+pid: 26551
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 14:34:34,267 ERROR 26551 nodejs.ReferenceError: /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/npm/index.ejs:17
+    15|     <p><%- headers %></p>
+    16|     <h1>body</h1>
+ >> 17|     <p><%- body %></p>
+    18|   </body>
+    19| </html>
+
+body is not defined
+    15|     <p><%- headers %></p>
+    16|     <h1>body</h1>
+ >> 17|     <p><%- body %></p>
+    18|   </body>
+    19| </html>
+
+body is not defined
+    at eval (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/npm/index.ejs:25:17)
+    at index (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:682:17)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:36)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+    at ContextView.[contextView#render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/context_view.js:70:23)
+path: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/npm/index.ejs"
+pid: 26551
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 14:41:29,107 ERROR 26707 [-/127.0.0.1/-/298ms GET /npm] nodejs.TypeError: /Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/npm/index.ejs:15
+    13|     <p><%- status %></p>
+    14|     <h1>head</h1>
+ >> 15|     <p><%- JSON.stringtify(headers) %></p>
+    16|     <h1>package</h1>
+    17|     <p><%- JSON.stringtify(package) %></p>
+    18|   </body>
+
+JSON.stringtify is not a function
+    13|     <p><%- status %></p>
+    14|     <h1>head</h1>
+ >> 15|     <p><%- JSON.stringtify(headers) %></p>
+    16|     <h1>package</h1>
+    17|     <p><%- JSON.stringtify(package) %></p>
+    18|   </body>
+
+JSON.stringtify is not a function
+    at eval (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/npm/index.ejs:22:22)
+    at index (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:682:17)
+    at tryHandleCache (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:254:36)
+    at Object.exports.renderFile (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/node_modules/ejs/lib/ejs.js:485:10)
+    at Promise (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:15:12)
+    at EjsView.render (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view-ejs/lib/view.js:28:36)
+    at ContextView.[contextView#render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/context_view.js:70:23)
+path: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app/view/npm/index.ejs"
+pid: 26707
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-11 15:29:10,005 ERROR 27806 [-/127.0.0.1/-/5ms GET /news] nodejs.TypeError: Cannot read property 'some' of undefined
+    at robotMiddleware (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/middleware/robot.js:6:32)
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at i18n (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at dta (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at xframe (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-security/lib/middlewares/xframe.js:7:11)
+
+pid: 27806
+hostname: xqsdeMacBook-Pro.local
+

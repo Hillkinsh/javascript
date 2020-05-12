@@ -1,0 +1,39 @@
+<% var user = {name: "hello world, ejs."} || null %>
+<% vari = '123456' %>
+<% var list = list || [] %>
+<% var newsListData = newsListData || {} %>
+<% var time = 13456789012 %>
+<% var extendWord = extendWord || "hello default words." %>
+<% var extendCtxwd = extendCtxwd || 'extendCtxwd extendCtxwd' %>
+<html>
+  <head>
+    <title>Hacker News</title>
+    <link rel="stylesheet" href="/public/css/news.css" />
+  </head>
+  <body>
+    <h1><%- extendWord %></h1>
+    <h1><%- extendCtxwd %></h1>
+      <%- helper.relativeTime(time) %>
+      <div>一串从接口返回的数据</div>
+        <% for (let key in newsListData) { %>
+            <p><%- key + ': ' + newsListData[key] %></p>
+        <% } %>
+
+    <% if (user) { %>
+        <h2><%= user.name %></h2>
+    <% } %>
+    <p><%- vari + 'abcdefg' %></p>
+    <%# 这个是一个普通的注释 %>
+    <%# \<\%- 表示一个非转义输出的字符串 %>
+    <p>获取子模版</p>
+    <%- include('./child.ejs', {name:'hello', age: 28}) %>
+    <p>一个list模版数据</p>
+    <ul>
+        <% list.forEach(item => { %>
+            <li>
+                <a url="<%- item.url %>"> <%- item.title %> </a>
+            </li>
+        <% }) %>
+    </ul>
+  </body>
+</html>

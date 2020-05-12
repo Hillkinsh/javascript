@@ -1,0 +1,282 @@
+2020-04-30 19:00:18,537 INFO 15658 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-04-30 19:00:18,544 INFO 15658 [egg:core] dump config after load, 3ms
+2020-04-30 19:00:18,576 INFO 15658 [egg-watcher] Start watching: ["/Users/xqs/Documents/git/javascript/node相关/egg-example/app","/Users/xqs/Documents/git/javascript/node相关/egg-example/config","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy","/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"]
+2020-04-30 19:00:18,576 INFO 15658 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app"
+2020-04-30 19:00:18,576 INFO 15658 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/config"
+2020-04-30 19:00:18,577 INFO 15658 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks"
+2020-04-30 19:00:18,577 INFO 15658 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy"
+2020-04-30 19:00:18,577 INFO 15658 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"
+2020-04-30 19:00:18,577 INFO 15658 [egg-watcher:agent] watcher start success
+2020-04-30 19:00:18,588 INFO 15658 [egg:core] dump config after ready, 4ms
+2020-04-30 19:00:19,169 INFO 15658 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/public","stat":{"dev":16777221,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1729051,"size":64,"blocks":0,"atimeMs":1588244419157.3777,"mtimeMs":1588244419157.3777,"ctimeMs":1588244419157.3777,"birthtimeMs":1588244419157.3777,"atime":"2020-04-30T11:00:19.157Z","mtime":"2020-04-30T11:00:19.157Z","ctime":"2020-04-30T11:00:19.157Z","birthtime":"2020-04-30T11:00:19.157Z"},"remove":false,"isDirectory":true,"isFile":false}
+2020-05-01 11:21:55,536 INFO 15838 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-01 11:21:55,544 INFO 15838 [egg:core] dump config after load, 5ms
+2020-05-01 11:21:55,587 INFO 15838 [egg-watcher] Start watching: ["/Users/xqs/Documents/git/javascript/node相关/egg-example/app","/Users/xqs/Documents/git/javascript/node相关/egg-example/config","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy","/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"]
+2020-05-01 11:21:55,587 INFO 15838 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app"
+2020-05-01 11:21:55,588 INFO 15838 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/config"
+2020-05-01 11:21:55,588 INFO 15838 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks"
+2020-05-01 11:21:55,588 INFO 15838 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy"
+2020-05-01 11:21:55,588 INFO 15838 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"
+2020-05-01 11:21:55,588 INFO 15838 [egg-watcher:agent] watcher start success
+2020-05-01 11:21:55,607 INFO 15838 [egg:core] dump config after ready, 5ms
+2020-05-01 11:22:49,157 INFO 15882 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-01 11:22:49,163 INFO 15882 [egg:core] dump config after load, 2ms
+2020-05-01 11:22:49,198 INFO 15882 [egg-watcher] Start watching: ["/Users/xqs/Documents/git/javascript/node相关/egg-example/app","/Users/xqs/Documents/git/javascript/node相关/egg-example/config","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy","/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"]
+2020-05-01 11:22:49,198 INFO 15882 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app"
+2020-05-01 11:22:49,198 INFO 15882 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/config"
+2020-05-01 11:22:49,199 INFO 15882 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks"
+2020-05-01 11:22:49,199 INFO 15882 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy"
+2020-05-01 11:22:49,199 INFO 15882 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"
+2020-05-01 11:22:49,199 INFO 15882 [egg-watcher:agent] watcher start success
+2020-05-01 11:22:49,216 INFO 15882 [egg:core] dump config after ready, 4ms
+2020-05-01 11:26:14,754 WARN 15882 [agent:development] reload worker because /Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/home.js change
+2020-05-01 11:26:14,545 INFO 15882 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/home.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1728809,"size":236,"blocks":8,"atimeMs":1588303360549.4124,"mtimeMs":1588303574481.108,"ctimeMs":1588303574481.108,"birthtimeMs":1588244019448.8994,"atime":"2020-05-01T03:22:40.549Z","mtime":"2020-05-01T03:26:14.481Z","ctime":"2020-05-01T03:26:14.481Z","birthtime":"2020-04-30T10:53:39.449Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-01 11:26:20,762 WARN 15882 [agent:development] reload worker because /Users/xqs/Documents/git/javascript/node相关/egg-example/app/router.js change
+2020-05-01 11:26:20,560 INFO 15882 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/router.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1728863,"size":175,"blocks":8,"atimeMs":1588303469074.7495,"mtimeMs":1588303580548.9194,"ctimeMs":1588303580548.9194,"birthtimeMs":1588244082281.6235,"atime":"2020-05-01T03:24:29.075Z","mtime":"2020-05-01T03:26:20.549Z","ctime":"2020-05-01T03:26:20.549Z","birthtime":"2020-04-30T10:54:42.282Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-01 11:27:58,618 WARN 15882 [agent:development] reload worker because /Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js rename
+2020-05-01 11:27:58,416 INFO 15882 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1730066,"size":0,"blocks":0,"atimeMs":1588303678329.3757,"mtimeMs":1588303678329.3757,"ctimeMs":1588303678329.3757,"birthtimeMs":1588303678329.3757,"atime":"2020-05-01T03:27:58.329Z","mtime":"2020-05-01T03:27:58.329Z","ctime":"2020-05-01T03:27:58.329Z","birthtime":"2020-05-01T03:27:58.329Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-01 11:28:25,728 WARN 15882 [agent:development] reload worker because /Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/home.js change
+2020-05-01 11:28:25,522 INFO 15882 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/home.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1728809,"size":245,"blocks":8,"atimeMs":1588303575886.8286,"mtimeMs":1588303705409.7446,"ctimeMs":1588303705409.7446,"birthtimeMs":1588244019448.8994,"atime":"2020-05-01T03:26:15.887Z","mtime":"2020-05-01T03:28:25.410Z","ctime":"2020-05-01T03:28:25.410Z","birthtime":"2020-04-30T10:53:39.449Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-01 11:28:29,129 WARN 15882 [agent:development] reload worker because /Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js change
+2020-05-01 11:28:28,875 INFO 15882 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1730066,"size":568,"blocks":8,"atimeMs":1588303678329.3757,"mtimeMs":1588303708863.7356,"ctimeMs":1588303708863.7356,"birthtimeMs":1588303678329.3757,"atime":"2020-05-01T03:27:58.329Z","mtime":"2020-05-01T03:28:28.864Z","ctime":"2020-05-01T03:28:28.864Z","birthtime":"2020-05-01T03:27:58.329Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-01 11:28:28,925 INFO 15882 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1730066,"size":568,"blocks":8,"atimeMs":1588303678329.3757,"mtimeMs":1588303708863.7356,"ctimeMs":1588303708863.7356,"birthtimeMs":1588303678329.3757,"atime":"2020-05-01T03:27:58.329Z","mtime":"2020-05-01T03:28:28.864Z","ctime":"2020-05-01T03:28:28.864Z","birthtime":"2020-05-01T03:27:58.329Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-01 11:29:27,116 WARN 15882 [agent:development] reload worker because /Users/xqs/Documents/git/javascript/node相关/egg-example/app/router.js change
+2020-05-01 11:29:26,910 INFO 15882 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/xqs/Documents/git/javascript/node相关/egg-example/app/router.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":1728863,"size":170,"blocks":8,"atimeMs":1588303582873.4915,"mtimeMs":1588303766849.0955,"ctimeMs":1588303766849.0955,"birthtimeMs":1588244082281.6235,"atime":"2020-05-01T03:26:22.873Z","mtime":"2020-05-01T03:29:26.849Z","ctime":"2020-05-01T03:29:26.849Z","birthtime":"2020-04-30T10:54:42.282Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-01 11:29:39,823 INFO 16014 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-01 11:29:39,830 INFO 16014 [egg:core] dump config after load, 3ms
+2020-05-01 11:29:39,867 INFO 16014 [egg-watcher] Start watching: ["/Users/xqs/Documents/git/javascript/node相关/egg-example/app","/Users/xqs/Documents/git/javascript/node相关/egg-example/config","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy","/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"]
+2020-05-01 11:29:39,867 INFO 16014 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app"
+2020-05-01 11:29:39,867 INFO 16014 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/config"
+2020-05-01 11:29:39,867 INFO 16014 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks"
+2020-05-01 11:29:39,867 INFO 16014 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy"
+2020-05-01 11:29:39,867 INFO 16014 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"
+2020-05-01 11:29:39,867 INFO 16014 [egg-watcher:agent] watcher start success
+2020-05-01 11:29:39,880 INFO 16014 [egg:core] dump config after ready, 4ms
+2020-05-01 11:30:41,517 INFO 16064 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-01 11:30:41,522 INFO 16064 [egg:core] dump config after load, 2ms
+2020-05-01 11:30:41,545 INFO 16064 [egg-watcher] Start watching: ["/Users/xqs/Documents/git/javascript/node相关/egg-example/app","/Users/xqs/Documents/git/javascript/node相关/egg-example/config","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy","/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"]
+2020-05-01 11:30:41,545 INFO 16064 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app"
+2020-05-01 11:30:41,546 INFO 16064 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/config"
+2020-05-01 11:30:41,546 INFO 16064 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks"
+2020-05-01 11:30:41,546 INFO 16064 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy"
+2020-05-01 11:30:41,546 INFO 16064 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"
+2020-05-01 11:30:41,546 INFO 16064 [egg-watcher:agent] watcher start success
+2020-05-01 11:30:41,557 INFO 16064 [egg:core] dump config after ready, 4ms
+2020-05-01 11:48:34,168 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 452040ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-01 13:15:11,575 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 5177388ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-01 21:26:09,630 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 28817945ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-02 01:27:12,294 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 14402636ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-02 09:28:09,397 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 28817081ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-02 13:27:19,026 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 14309603ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 01:40:24,820 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 43985769ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 09:40:42,371 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 28817543ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 13:41:48,336 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 14465950ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 16:03:44,806 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 8496424ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 04:05:02,605 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 43257533ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 11:44:19,198 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 27515964ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 12:15:19,422 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 899696ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 12:39:05,330 INFO 16677 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-04 12:39:05,336 INFO 16677 [egg:core] dump config after load, 3ms
+2020-05-04 12:39:05,377 INFO 16677 [egg-watcher] Start watching: ["/Users/xqs/Documents/git/javascript/node相关/egg-example/app","/Users/xqs/Documents/git/javascript/node相关/egg-example/config","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks","/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy","/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"]
+2020-05-04 12:39:05,377 INFO 16677 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app"
+2020-05-04 12:39:05,377 INFO 16677 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/config"
+2020-05-04 12:39:05,377 INFO 16677 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks"
+2020-05-04 12:39:05,377 INFO 16677 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/mocks_proxy"
+2020-05-04 12:39:05,377 INFO 16677 [egg-watcher] Start watching: "/Users/xqs/Documents/git/javascript/node相关/egg-example/app.js"
+2020-05-04 12:39:05,377 INFO 16677 [egg-watcher:agent] watcher start success
+2020-05-04 12:39:05,392 INFO 16677 [egg:core] dump config after ready, 6ms
+2020-05-04 12:45:09,859 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 203323ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 15:54:31,594 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 9721404ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 01:22:45,199 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2384873ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 01:55:02,455 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 1897240ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 03:05:23,042 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 4180541ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 03:45:55,733 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2372623ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 04:24:35,973 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2280201ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 05:04:45,979 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2249908ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 07:06:56,768 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 7110688ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 07:39:28,662 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 1871854ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 08:34:13,648 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 3244950ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 09:14:03,481 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2349778ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 10:00:16,079 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2712548ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+

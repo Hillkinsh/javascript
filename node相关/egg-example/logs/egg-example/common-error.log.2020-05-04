@@ -1,0 +1,221 @@
+2020-05-01 11:30:48,664 ERROR 16065 [-/127.0.0.1/-/6ms GET /news] nodejs.AssertionError: Can't find news/list.tpl from 
+    at Map.resolve (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/view_manager.js:74:5)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async ContextView.[contextView#render] (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/egg-view/lib/context_view.js:50:22)
+    at async NewsController.list (/Users/xqs/Documents/git/javascript/node相关/egg-example/app/controller/news.js:12:5)
+generatedMessage: false
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 16065
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-01 11:48:34,164 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 452040ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-01 13:15:11,575 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 5177388ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-01 21:26:09,630 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 28817945ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-02 01:27:12,294 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 14402636ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-02 09:28:09,396 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 28817081ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-02 13:27:19,025 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 14309603ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 01:40:24,815 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 43985769ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 09:40:42,371 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 28817543ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 13:41:48,333 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 14465950ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-03 16:03:44,804 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 8496424ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 04:05:02,495 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 43257533ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 11:44:19,194 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 27515964ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 12:15:19,422 ERROR 16064 nodejs.ClusterClientNoResponseError: client no response in 899696ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16064
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 12:45:09,855 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 203323ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-04 15:54:31,594 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 9721404ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 01:22:45,197 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2384873ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 01:55:02,454 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 1897240ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 03:05:23,041 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 4180541ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 03:45:55,733 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2372623ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 04:24:35,972 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2280201ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 05:04:45,978 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2249908ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 07:06:56,768 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 7110688ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 07:39:28,661 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 1871854ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 08:34:13,648 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 3244950ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 09:14:03,481 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2349778ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+
+2020-05-05 10:00:16,079 ERROR 16677 nodejs.ClusterClientNoResponseError: client no response in 2712548ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/xqs/Documents/git/javascript/node相关/egg-example/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 16677
+hostname: xqsdeMacBook-Pro.local
+

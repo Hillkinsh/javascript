@@ -1,0 +1,123 @@
+2020-05-01 11:22:49,667 INFO 15883 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-05-01 11:22:49,684 INFO 15883 [egg-multipart] stream mode enable
+2020-05-01 11:22:49,768 INFO 15883 [egg-static] starting static serve /public/ -> /Users/xqs/Documents/git/javascript/node相关/egg-example/app/public
+2020-05-01 11:22:49,771 INFO 15883 [egg-security] use csrf middleware
+2020-05-01 11:22:49,772 INFO 15883 [egg-security] use methodnoallow middleware
+2020-05-01 11:22:49,772 INFO 15883 [egg-security] use noopen middleware
+2020-05-01 11:22:49,774 INFO 15883 [egg-security] use nosniff middleware
+2020-05-01 11:22:49,775 INFO 15883 [egg-security] use xssProtection middleware
+2020-05-01 11:22:49,776 INFO 15883 [egg-security] use xframe middleware
+2020-05-01 11:22:49,776 INFO 15883 [egg-security] use dta middleware
+2020-05-01 11:22:49,776 INFO 15883 [egg-security] compose 7 middlewares into one security middleware
+2020-05-01 11:22:49,789 INFO 15883 [egg:core] dump config after load, 5ms
+2020-05-01 11:22:49,801 INFO 15883 [egg-watcher:application] watcher start success
+2020-05-01 11:22:49,815 INFO 15883 [egg:core] dump config after ready, 10ms
+2020-05-01 11:26:15,520 INFO 15905 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-05-01 11:26:15,546 INFO 15905 [egg-multipart] stream mode enable
+2020-05-01 11:26:15,618 INFO 15905 [egg-static] starting static serve /public/ -> /Users/xqs/Documents/git/javascript/node相关/egg-example/app/public
+2020-05-01 11:26:15,621 INFO 15905 [egg-security] use csrf middleware
+2020-05-01 11:26:15,622 INFO 15905 [egg-security] use methodnoallow middleware
+2020-05-01 11:26:15,623 INFO 15905 [egg-security] use noopen middleware
+2020-05-01 11:26:15,624 INFO 15905 [egg-security] use nosniff middleware
+2020-05-01 11:26:15,624 INFO 15905 [egg-security] use xssProtection middleware
+2020-05-01 11:26:15,625 INFO 15905 [egg-security] use xframe middleware
+2020-05-01 11:26:15,626 INFO 15905 [egg-security] use dta middleware
+2020-05-01 11:26:15,626 INFO 15905 [egg-security] compose 7 middlewares into one security middleware
+2020-05-01 11:26:15,634 INFO 15905 [egg:core] dump config after load, 3ms
+2020-05-01 11:26:15,641 INFO 15905 [egg-watcher:application] watcher start success
+2020-05-01 11:26:15,651 INFO 15905 [egg:core] dump config after ready, 8ms
+2020-05-01 11:26:21,179 INFO 15916 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-05-01 11:26:21,196 INFO 15916 [egg-multipart] stream mode enable
+2020-05-01 11:26:21,226 INFO 15916 [egg-static] starting static serve /public/ -> /Users/xqs/Documents/git/javascript/node相关/egg-example/app/public
+2020-05-01 11:26:21,228 INFO 15916 [egg-security] use csrf middleware
+2020-05-01 11:26:21,228 INFO 15916 [egg-security] use methodnoallow middleware
+2020-05-01 11:26:21,228 INFO 15916 [egg-security] use noopen middleware
+2020-05-01 11:26:21,229 INFO 15916 [egg-security] use nosniff middleware
+2020-05-01 11:26:21,229 INFO 15916 [egg-security] use xssProtection middleware
+2020-05-01 11:26:21,229 INFO 15916 [egg-security] use xframe middleware
+2020-05-01 11:26:21,229 INFO 15916 [egg-security] use dta middleware
+2020-05-01 11:26:21,229 INFO 15916 [egg-security] compose 7 middlewares into one security middleware
+2020-05-01 11:26:21,236 INFO 15916 [egg:core] dump config after load, 4ms
+2020-05-01 11:26:21,244 INFO 15916 [egg-watcher:application] watcher start success
+2020-05-01 11:26:21,249 INFO 15916 [egg:core] dump config after ready, 4ms
+2020-05-01 11:27:59,334 INFO 15939 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-05-01 11:27:59,358 INFO 15939 [egg-multipart] stream mode enable
+2020-05-01 11:27:59,439 INFO 15939 [egg-static] starting static serve /public/ -> /Users/xqs/Documents/git/javascript/node相关/egg-example/app/public
+2020-05-01 11:27:59,442 INFO 15939 [egg-security] use csrf middleware
+2020-05-01 11:27:59,443 INFO 15939 [egg-security] use methodnoallow middleware
+2020-05-01 11:27:59,444 INFO 15939 [egg-security] use noopen middleware
+2020-05-01 11:27:59,445 INFO 15939 [egg-security] use nosniff middleware
+2020-05-01 11:27:59,446 INFO 15939 [egg-security] use xssProtection middleware
+2020-05-01 11:27:59,447 INFO 15939 [egg-security] use xframe middleware
+2020-05-01 11:27:59,448 INFO 15939 [egg-security] use dta middleware
+2020-05-01 11:27:59,448 INFO 15939 [egg-security] compose 7 middlewares into one security middleware
+2020-05-01 11:27:59,456 INFO 15939 [egg:core] dump config after load, 3ms
+2020-05-01 11:27:59,464 INFO 15939 [egg-watcher:application] watcher start success
+2020-05-01 11:27:59,470 INFO 15939 [egg:core] dump config after ready, 5ms
+2020-05-01 11:30:41,940 INFO 16065 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-05-01 11:30:41,956 INFO 16065 [egg-multipart] stream mode enable
+2020-05-01 11:30:41,986 INFO 16065 [egg-static] starting static serve /public/ -> /Users/xqs/Documents/git/javascript/node相关/egg-example/app/public
+2020-05-01 11:30:41,988 INFO 16065 [egg-security] use csrf middleware
+2020-05-01 11:30:41,988 INFO 16065 [egg-security] use methodnoallow middleware
+2020-05-01 11:30:41,988 INFO 16065 [egg-security] use noopen middleware
+2020-05-01 11:30:41,989 INFO 16065 [egg-security] use nosniff middleware
+2020-05-01 11:30:41,989 INFO 16065 [egg-security] use xssProtection middleware
+2020-05-01 11:30:41,989 INFO 16065 [egg-security] use xframe middleware
+2020-05-01 11:30:41,990 INFO 16065 [egg-security] use dta middleware
+2020-05-01 11:30:41,990 INFO 16065 [egg-security] compose 7 middlewares into one security middleware
+2020-05-01 11:30:41,999 INFO 16065 [egg:core] dump config after load, 6ms
+2020-05-01 11:30:42,007 INFO 16065 [egg-watcher:application] watcher start success
+2020-05-01 11:30:42,013 INFO 16065 [egg:core] dump config after ready, 4ms
+2020-05-01 11:48:34,159 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-01 13:15:11,575 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-01 21:26:09,630 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-02 01:27:12,296 WARN 16065 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-02 01:27:12,296 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-02 09:28:09,396 WARN 16065 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-02 09:28:09,398 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-02 13:27:19,026 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-03 01:40:24,819 WARN 16065 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-03 01:40:24,821 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-03 09:40:42,371 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-03 13:41:48,329 WARN 16065 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-03 13:41:48,331 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-03 16:03:44,800 WARN 16065 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-03 16:03:44,807 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-04 04:05:02,494 WARN 16065 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-04 04:05:02,600 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-04 11:44:19,192 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-04 12:15:19,422 WARN 16065 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-04 12:39:05,833 INFO 16678 [egg:logger] init all loggers with options: {"dir":"/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-example-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-05-04 12:39:05,851 INFO 16678 [egg-multipart] stream mode enable
+2020-05-04 12:39:05,955 INFO 16678 [egg-static] starting static serve /public/ -> /Users/xqs/Documents/git/javascript/node相关/egg-example/app/public
+2020-05-04 12:39:05,960 INFO 16678 [egg-security] use csrf middleware
+2020-05-04 12:39:05,962 INFO 16678 [egg-security] use methodnoallow middleware
+2020-05-04 12:39:05,963 INFO 16678 [egg-security] use noopen middleware
+2020-05-04 12:39:05,964 INFO 16678 [egg-security] use nosniff middleware
+2020-05-04 12:39:05,965 INFO 16678 [egg-security] use xssProtection middleware
+2020-05-04 12:39:05,966 INFO 16678 [egg-security] use xframe middleware
+2020-05-04 12:39:05,967 INFO 16678 [egg-security] use dta middleware
+2020-05-04 12:39:05,967 INFO 16678 [egg-security] compose 7 middlewares into one security middleware
+2020-05-04 12:39:05,980 INFO 16678 [egg:core] dump config after load, 6ms
+2020-05-04 12:39:05,997 INFO 16678 [egg-watcher:application] watcher start success
+2020-05-04 12:39:06,005 INFO 16678 [egg:core] dump config after ready, 6ms
+2020-05-04 12:45:09,355 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-04 15:54:31,593 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 01:22:45,198 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 01:55:02,458 WARN 16678 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-05 01:55:02,458 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 03:05:23,041 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 03:45:55,733 WARN 16678 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-05 03:45:55,733 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 04:24:35,973 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 05:04:45,978 WARN 16678 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-05 05:04:45,979 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 07:06:56,768 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 07:39:28,661 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 08:34:13,648 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 09:14:03,481 WARN 16678 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-05-05 09:14:03,481 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 10:00:16,078 WARN 16678 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-05-05 11:45:22,252 INFO 16678 [egg-logrotator] clean all log before 31 days
+2020-05-05 11:45:23,244 INFO 16678 [egg-logrotator] broadcast log-reload
+2020-05-05 11:45:23,244 INFO 16678 [egg-logrotator] rotate files success by DayRotator, files ["/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/common-error.log -> /Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/common-error.log.2020-05-04","/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-example-web.log -> /Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-example-web.log.2020-05-04","/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-web.log -> /Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-web.log.2020-05-04","/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-schedule.log -> /Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-schedule.log.2020-05-04","/Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-agent.log -> /Users/xqs/Documents/git/javascript/node相关/egg-example/logs/egg-example/egg-agent.log.2020-05-04"]

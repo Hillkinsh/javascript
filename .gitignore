@@ -8,6 +8,9 @@ lib
 .idea
 .vscode
 unittest/node_modules
+/*/*/node_modules
+/*/*/run/
+package-lock.json
 
 node/stream/bigFile
 node
