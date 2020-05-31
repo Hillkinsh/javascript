@@ -1,20 +1,24 @@
-// 实现一个方法，拆解 URL 参数中的 queryString
-// 入参格式参考：
-const url = 'http://sample.com/?a=1&b=2&c=xx&d#hash';
-// 出参格式参考：
-const result = { a: '1', b: '2', c: 'xx', d: '' };
-/*拆解URL参数中queryString，返回一个 key - value 形式的 object*/
-function querySearch(url) {
-  let result = {}
-  if (!url || url.indexOf('?') === -1) return result
-  let str = url.split('?')[1]
-  str = str.split('#')[0]
-
-  let arr = str.split('&')
-  for (let i = 0; i< arr.length; i++) {
-    let value = arr[i].split('=')
-    result[value[0]] = value[1] || '' 
+function sleep(timeout) {
+  let t
+  let res
+  let out = new Promise((resolve, reject) => {
+    res = resolve
+    t = setTimeout(() => resolve(console.log('abc')), timeout)
+  })
+  out.resolve =  () => {
+    clearTimeout(t)
+    res(console.log('abc'))
   }
-  return result
+  return out
 }
-querySearch(url)
+sleep(3000)
+sleep(3000).resolve()
+sleep.resolve()
+
+
+async function sleep() {
+  let res = await axios.get("url").catch(function(err){
+    throw new Error(err)
+  })
+  return res
+}
