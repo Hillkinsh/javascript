@@ -1,0 +1,23 @@
+.three_ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap:break-word;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+}
+.two_ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap:break-word;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+.one_ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

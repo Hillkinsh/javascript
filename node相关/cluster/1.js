@@ -17,6 +17,7 @@ if (cluster.isMaster) {
   // 工作进程可以共享任何 TCP 连接。
   // 在本例子中，共享的是 HTTP 服务器。
   http.createServer((req, res) => {
+    console.log(req.url)
     res.writeHead(200);
     res.end('你好世界\n');
   }).listen(8000);

@@ -1,48 +1,16 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <style>
+  <meta charset="utf-8">
+  <title>行末省略号</title>
+  <link src='./test.css'>
+  <style>
 
-    </style>
+  </style>
 </head>
 <body>
-<div>
-    
+<div class="one_ellipsis">
+ 
 </div>
-
-
-
-
-
-
-
-
-
-    <script>
-        window.sayabc = function (event) {
-            console.log(`abc`, event)
-        }
-    </script>
-    <script>
-        function getNewlinePos (name) {
-            let lineMaxLength = 30
-            let count = 0
-            let newLinePos = 0
-            for (let i = 0; i < name.length; i++) {
-                if (count >= lineMaxLength) {
-                    return newLinePos = i + 1
-                }
-                if (name[i].match(/[\u4e00-\u9fa5]/g)) {
-                    count += 2
-                } else {
-                    count++
-                }
-            }
-            return newLinePos
-        }
-        console.log(getNewlinePos('一二三四五六七八九十一二三四五六七'))
-        console.log(getNewlinePos('一二三四五六七八九十一二三四'))
-        console.log(getNewlinePos('一二三四五六七八九十一二三四五'))
-        console.log(getNewlinePos(''))
-        console.log(getNewlinePos('abcdefg hijklmn opqrst uvwxyz abcdefg'))
-    </script>
 </body>
+</html>
