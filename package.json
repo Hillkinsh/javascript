@@ -9,7 +9,9 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "formidable": "^1.2.2",
-    "init": "^0.1.2"
+    "init": "^0.1.2",
+    "koa": "^2.12.0",
+    "koa-convert": "^1.2.0"
   },
   "devDependencies": {},
   "eslintConfig": {

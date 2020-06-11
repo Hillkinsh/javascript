@@ -1,14 +1,22 @@
-// 是管理node服务的
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
 
-var http = require("http");
+if (cluster.isMaster) {
+  // Fork workers.
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
 
-function reqFn (request, response) {
-  // 处理请求 request
-  console.log("Request received.");
-  // 处理相应 response
-  response.writeHead(200,  {"Content-Type":  "text/plain"});
-  response.write("Hello World");
-  response.end();
+  cluster.on('exit', function(worker, code, signal) {
+    console.log('worker ' + worker.process.pid + ' died');
+  });
+} else {
+  // Workers can share any TCP connection
+  // In this case it is an HTTP server
+  http.createServer(function(req, res) {
+    res.writeHead(200);
+    res.end("hello world\n");
+  }).listen(8000);
+  console.log('app starting...')
 }
-
-http.createServer(reqFn).listen(8888);

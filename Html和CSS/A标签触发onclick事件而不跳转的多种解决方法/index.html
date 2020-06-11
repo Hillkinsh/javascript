@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <script>
+   // onclick方法竟然是需要加()的，神奇。
+    function clickIt () {
+      console.log('情况1.')
+    }
+    function clickIt2 () {
+      console.log('情况2. 在方法内部添加return false 并没有用。')
+      return false
+    }
+    function clickIt3 () {
+      console.log('情况3. 这种应该是比较优雅的一种吧。')
+    }
+    function clickIt4 () {
+      console.log('情况4. 会跳到页面的顶部。')
+    }
+      </script>
+  <body>
+    <h1>
+      <div href="https://www.baidu.com" onclick='clickIt()'>不用a标签,设定css或用js来表现（有点复杂）</div>
+    </h1>
+    
+    <h1>
+      <a href="https://www.baidu.com" onclick='clickIt2();return false'>使用a标签,onclick属性或onclick事件中返回false</a>
+    </h1>
+    <h1>
+      <a href="javascript:void(0)" onclick='clickIt3()'>用href="javascript:void(0)"这种伪协议</a>
+    </h1>
+    <h1>
+      <a href="#" onclick='clickIt4()'>href="#" class="STYLE4" onclick="del()"（总是跳转到当前页面顶部，当页面内容较多时，还是会有跳转的感觉）</a>
+    </h1>
+  </body>
+
+  
+</html>

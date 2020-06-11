@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <script>
+   // onclick方法竟然是需要加()的，神奇。
+    /*
+      默认图片方案是两句代码
+      this.src='';
+      this.onerror=null;
+      第一句是图片，
+      第二句是当默认图片也挂掉，采取的兜底方案。
+
+
+      当对于大量的图片，更好的办法可以按照上面的方法写一个脚本给每个标签加一下onerror。
+    */
+      </script>
+  <body>
+    <h1>
+      <img src="https://2www.baidu.com" alt='1.挂掉图片 alt，效果太差'/>
+    </h1>
+    
+    <h1>
+      <img src="https://2www.baidu.com" alt='2.onerror' onerror="this.src='https://img5.tianyancha.com/logo/human/2/9349b3ad409b02df444ab2b98f6b3ffe.png@!z_200x200';this.οnerrοr=null;"/>
+    </h1>
+  </body>
+
+  
+</html>
