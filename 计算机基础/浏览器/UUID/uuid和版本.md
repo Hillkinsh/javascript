@@ -67,3 +67,6 @@ Java 5以上版本中自带的UUID生成器：好像只能生成Version 3/4的UU
 延伸阅读
 UUID规范：rfc4122
 DCE 1.1中的UUID
+
+// TYCID 的生成方式
+
