@@ -13,7 +13,9 @@
     "koa": "^2.12.0",
     "koa-convert": "^1.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
   "eslintConfig": {
     "root": true,
     "env": {

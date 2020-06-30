@@ -10,6 +10,11 @@ if (cluster.isMaster) {
     cluster.fork();
   }
 
+  let work = cluster.fork();
+
+  work.on('listening', address => {
+    console.log('正在监听。。。')
+  })
   cluster.on('exit', (worker, code, signal) => {
     console.log(`工作进程 ${worker.process.pid} 已退出`);
   });

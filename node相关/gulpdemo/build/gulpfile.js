@@ -30,27 +30,12 @@ var uglify = require('gulp-uglify')
 //   .pipe(gulp.dest('build'))
 // })
 
-// 文件流
 function minify (cb) {
   return gulp.src('*.js')
   // .pipe(uglify())
   .pipe(gulp.dest('build'));
 }
 
-// promise
-function promiseTask () {
-  return Promise.resolve('hello promise.')
-}
-
-const { exec } = require('child_process');
-
-function childProcessTask() {
-  return exec('date');
-}
-
-exports.default = childProcessTask;
-
 exports.minify = minify;
-exports.promiseTask = promiseTask;
 
 
