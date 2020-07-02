@@ -11,9 +11,12 @@
 
 ## 2.在EggCore中，重要的事情做了两个：
 
-+ 生命周期
++ 生命周期 this.lifecycle
 + this.loader = new Loader({options})
+
 > 他完成了loader的初始化。给loader上插上了 plugin/config/extend/custom/service/middleware/controller/router/custom_loader 等mixin 方法.
+
+> 这个loader的挂法很巧，在不同的地方可以挂不同的loader
 
 ## 3.在EggApplication中，做的事情：
 
