@@ -24,7 +24,7 @@
             font-weight: bold;
             display: inline-block;
             background-image:linear-gradient(#47A5F4, red);
-            background-clip: text; /* 设置元素的背景*/
+            -webkit-background-clip: text; /* 设置元素的背景*/
             -webkit-text-fill-color: transparent; /*文本填充色*/
           }
 
@@ -33,9 +33,10 @@
     <body>
       <div class='fc'>
         <h1>字体会变色的那种</h1>
-        <p>
-          设置元素的背景为仅文字，设置文本填充色为透明，这样设置了背景，就会在字体上展示背景色。背景色是可以渐变色的。
-        </p>
+        
       </div>
+      <p>
+        设置元素的背景为仅文字，设置文本填充色为透明，这样设置了背景，就会在字体上展示背景色。背景色是可以渐变色的。
+      </p>
     </body>
 </html>
