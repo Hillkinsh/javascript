@@ -1,7 +1,12 @@
 #include <iostream>
-int Partition (int data[], int length, int start, int end) {
-  if (data == nullptr || length <= 0 || start < 0 || end >= length) {
-    throw new std::exception("invalid parameters");
-  }
-  int index = 
+using namespace std;
+
+int main() {
+    int result;
+    int a = 2;
+    int b = 3;
+    result = a + b;
+    cout << result << endl;
+    printf("hello world");
+    return 0;
 }
