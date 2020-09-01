@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>resume.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF">个人信息</h2>
+<ul>
+<li>姓名：许青山</li>
+<li>性别：男</li>
+<li>出生年份： 1992 年</li>
+<li>学校专业： 硕士/通信工程/西安电子科技大学大学</li>
+<li>期望职位：前端工程师</li>
+<li>期望城市: 南京</li>
+<li>期望薪资：面议</li>
+</ul>
+<h2 id="%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系方式</h2>
+<ul>
+<li>手机: 157-7191-0973</li>
+<li>邮箱: 1294898264@qq.com</li>
+</ul>
+<h2 id="%E8%87%AA%E6%88%91%E7%AE%80%E4%BB%8B">自我简介</h2>
+<ul>
+<li>2 年 前端 开发经验，熟练掌握 Web/H5 前端相关技术，熟练掌握 JavaScript、HTML、CSS 以及 Node 来搭建前端应用。了解原生 JavaScript 和 JavaScript 类库的使用，有较大型前端项目开发经验（React | Vue ｜ Nuxt | egg ）。</li>
+<li>熟悉node和vue，对前端工程化有基本了解。</li>
+<li>具有较强的学习能力和团队合作能力，分析和解决问题的能力，熟悉项目开发流程和团队协同工作。</li>
+</ul>
+<h2 id="%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86">个人经历</h2>
+<ul>
+<li>2020 年 5 月- 至今 天眼查 担任前端开发工程师</li>
+<li>2018年 6 月 -2020 年 5 月 vipkid 担任前端开发工程师</li>
+</ul>
+<h2 id="%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86">工作经历</h2>
+<h4 id="%E5%A4%A9%E7%9C%BC%E6%9F%A5web">天眼查web</h4>
+<ul>
+<li>
+<p>项目地址</p>
+<ul>
+<li>https://www.tianyancha.com</li>
+</ul>
+</li>
+<li>
+<p>项目简介</p>
+<ul>
+<li>天眼查web项目是天眼查主要的在线服务平台，核心功能是查公司，查老板，查关系。项目是一个基于egg的服务端渲染项目，seo非常良好</li>
+</ul>
+</li>
+<li>
+<p>项目职责</p>
+<ul>
+<li>主要负责整个web项目的迭代和重构。针对项目开发的页面不能实时重载问题，引入livereload，实现了实时改动页面的实时重载，大大提高了开发效率。</li>
+<li>针对项目中git使用混乱，易引起合作的低效问题，推动了git的标准化使用。针对项目中代码风格混乱和node版本不统一，推动了eslint的代码的标准检查和node锁定版本。</li>
+</ul>
+</li>
+</ul>
+<h4 id="%E5%A4%A7%E7%B1%B3%E7%BD%91%E6%A0%A1h5%E4%B8%BB%E7%AB%99">大米网校H5主站</h4>
+<ul>
+<li>项目地址
+<ul>
+<li><a href="https://m.damiwangxiao.com/selling/">https://m.damiwangxiao.com/selling/</a></li>
+</ul>
+</li>
+<li>项目简介
+<ul>
+<li>大米网校m站是大米网校的h5项目，项目包含选课，订单、支付和添加辅导老师等功能。</li>
+<li>项目采用 Vue + webpack 来进行开发，是一个完整的配置化的商品售卖系统。</li>
+</ul>
+</li>
+<li>项目职责
+<ul>
+<li>主要负责整个项目的架构、开发和维护。从零到一的实现了项目的系统化，推动了项目的配置化。</li>
+</ul>
+</li>
+</ul>
+<h4 id="vipkid%E5%86%85%E9%83%A8%E5%BA%93%E7%9A%84%E5%BC%80%E5%8F%91%E5%92%8C%E7%BB%B4%E6%8A%A4">vipkid内部库的开发和维护</h4>
+<ul>
+<li>项目简介
+<ul>
+<li>基于公司各个项目的公共业务，抽离组件，提升开发效率。H5主站项目，活动项目等各种项目都需要有登陆，选课菜单，页面分享，资料列表等类似功能，每个项目重新过于低效，且不利于迭代，针对这种问题，分离出相关组件，打包成内部组件库供各端使用。</li>
+<li>基于运营方的强烈需求，封装了神策打点工具包。页面的访问效果对项目迭代的方向至关重要，运营活动效果的分析更加离不开用户对页面的访问数据。根据这一需求，封装了打点工具包。通过打点，可以很方便的分析页面的pv/uv 和各点击事件，以及漏斗。</li>
+</ul>
+</li>
+<li>项目职责
+<ul>
+<li>负责登陆组件、选课组件库的开发，负责神策打点包。</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
