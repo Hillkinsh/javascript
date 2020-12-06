@@ -1,17 +1,32 @@
 ## 个人信息
-
-- 姓名：许青山
-- 性别：男
-- 出生年份： 1992 年
-- 学校专业： 硕士/通信工程/西安电子科技大学大学
-- 期望职位：前端工程师
-- 期望城市: 南京
-- 期望薪资：面议
-
-## 联系方式
-
-- 手机: 157-7191-0973
-- 邮箱: 1294898264@qq.com
+<html>
+    <table style="margin-left: auto; margin-right: auto; border: 0px;">
+        <tr style="border:0px;">
+            <td style="width: 50%; border: 0px;">
+                姓名：许青山
+            </td>
+            <td style="width: 50%; border: 0px;">
+                性别：男
+            </td>
+            </tr>
+            <tr style="border:0px;">
+            <td style="width: 50%; border: 0px; background: #fff;">
+                出生年份： 1992 年
+            </td>
+            <td style="width: 50%; border: 0px; background: #fff;">
+                学校专业： 硕士 / 通信工程 / 西安电子科技大学大学
+            </td>
+            </tr>
+            <tr style="border:0px;">
+            <td style="width: 50%; border: 0px;">
+                手机: 157-7191-0973
+            </td>
+            <td style="width: 50%; border: 0px;">
+                邮箱: 1294898264@qq.com
+            </td>
+        </tr>
+    </table>
+</html>
 
 ## 自我简介
 
@@ -28,9 +43,7 @@
 
 #### 天眼查web
 
-- 项目地址
-
-  - https://www.tianyancha.com
+- 项目地址 https://www.tianyancha.com
 
 - 项目简介
 
@@ -43,8 +56,7 @@
 
 #### 大米网校H5主站
 
-- 项目地址
-  - [https://m.damiwangxiao.com/selling/](https://m.damiwangxiao.com/selling/)
+- 项目地址 [https://m.damiwangxiao.com/selling/](https://m.damiwangxiao.com/selling/)
 - 项目简介
   - 大米网校m站是大米网校的h5项目，项目包含选课，订单、支付和添加辅导老师等功能。
   - 项目采用 Vue + webpack 来进行开发，是一个完整的配置化的商品售卖系统。
@@ -55,6 +67,6 @@
 
 - 项目简介
   - 基于公司各个项目的公共业务，抽离组件，提升开发效率。H5主站项目，活动项目等各种项目都需要有登陆，选课菜单，页面分享，资料列表等类似功能，每个项目重新过于低效，且不利于迭代，针对这种问题，分离出相关组件，打包成内部组件库供各端使用。
-  - 基于运营方的强烈需求，封装了神策打点工具包。页面的访问效果对项目迭代的方向至关重要，运营活动效果的分析更加离不开用户对页面的访问数据。根据这一需求，封装了打点工具包。通过打点，可以很方便的分析页面的pv/uv 和各点击事件，以及漏斗。
+  - 基于运营方的强烈需求，封装了神策打点工具包。页面的访问效果对项目迭代的方向至关重要，运营活动效果的分析更加离不开用户对页面的访问数据。根据这一需求，封装了打点工具包。通过打点，可以很方便的分析页面的pv/uv 和各点击事件分析。
 - 项目职责
-  - 负责登陆组件、选课组件库的开发，负责神策打点包。
+  - 负责登陆组件、选课组件库的开发，负责神策打点包开发。

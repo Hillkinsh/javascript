@@ -1,16 +1,65 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>行末省略号</title>
-  <link src='./test.css'>
-  <style>
 
-  </style>
-</head>
 <body>
-<div class="one_ellipsis">
-  白宇1990年4月8日出生于陕西省西安市中国内地影视男演员毕业于中央戏剧学院表演系2009级2014年出演个人首部网络剧《屌丝日记》从而正式进入演艺圈同年出演抗战剧《少帅》2015年，出演青春情感励志剧《长大》；同年，主演都市青春偶像剧《微微一笑很倾城》。2016年，出演个人首部电影《微微一笑很倾城》；同年，因出演刑侦悬疑网络剧《美人为馅》中韩沉一角而受到关注 。2017年，主演都市奇幻剧《镇魂》；同年，主演古装剧《霍去病》。2018年7月28，主演的古装玄幻电影《缉妖法海传》上映 。2019年3月16日，他被评选为LikeTCCAsia亚太区最帅100张面孔第48位  白宇1990年4月8日出生于陕西省西安市中国内地影视男演员毕业于中央戏剧学院表演系2009级2014年出演个人首部网络剧《屌丝日记》从而正式进入演艺圈同年出演抗战剧《少帅》2015年，出演青春情感励志剧《长大》；同年，主演都市青春偶像剧《微微一笑很倾城》。2016年，出演个人首部电影《微微一笑很倾城》；同年，因出演刑侦悬疑网络剧《美人为馅》中韩沉一角而受到关注 。2017年，主演都市奇幻剧《镇魂》；同年，主演古装剧《霍去病》。2018年7月28，主演的古装玄幻电影《缉妖法海传》上映 。2019年3月16日，他被评选为LikeTCCAsia亚太区最帅100张面孔第48位 ...白宇1990年4月8日出生于陕西省西安市中国内地影视男演员毕业于中央戏剧学院表演系2009级2014年出演个人首部网络剧《屌丝日记》从而正式进入演艺圈同年出演抗战剧《少帅》2015年，出演青春情感励志剧《长大》；同年，主演都市青春偶像剧《微微一笑很倾城》。2016年，出演个人首部电影《微微一笑很倾城》；同年，因出演刑侦悬疑网络剧《美人为馅》中韩沉一角而受到关注 。2017年，主演都市奇幻剧《镇魂》；同年，主演古装剧《霍去病》。2018年7月28，主演的古装玄幻电影《缉妖法海传》上映 。2019年3月16日，他被评选为LikeTCCAsia亚太区最帅100张面孔第48位
-</div>
+  <script>
+    function computedValidLength (str) {
+      // 根据传入字符串的形式来判断返回对应于汉字的数目
+      // 检查范围包含 字母 数字 短线，空格，竖线
+      let result = str.length;
+      let hasLetter = /[a-zA-Z0-9\-\|\s]{2}/; // 2个以上；
+      
+      if (str.indexOf(' | ') !== -1) {
+        return result - 2;
+      }
+      if (str.indexOf('Pre-') !== -1) {
+        return result - 2;
+      }
+      if (!hasLetter.test(str)) {
+        return result;
+      }
+      return Math.ceil(str.length - countLetters(str) - countBIGLetters(str));
+      function countLetters(str) {
+        let result = 0;
+        let reg = /[a-z0-9\-\|\s]{1}/;
+        for (let i = 0; i < str.length; i++) {
+          if (reg.test(str[i])) {
+            result++
+          }
+        }
+        return result*0.5;
+      }
+      function countBIGLetters(str) {
+        let result = 0;
+        let count = 0;
+        let reg = /[A-Z]{1}/;
+        for (let i = 0; i < str.length; i++) {
+          if (reg.test(str[i])) {
+            count++
+          }
+        }
+        if (count == 3) {
+          result = 1
+        } else {
+          result = count * 0.3
+        }
+        return result;
+      }
+    }
+    console.log(computedValidLength('Pre-A轮'))
+    console.log(computedValidLength('Like'))
+    console.log(computedValidLength('IPO上市轮')) // 单独处理
+    console.log(computedValidLength('expands'))
+    // console.log(computedValidLength('香港特别行政区'))
+    // console.log(computedValidLength('注销'))
+    console.log(computedValidLength('PUPUPUPU'))
+    console.log(computedValidLength('香港特别行政区 | 退市'))
+    console.log(computedValidLength('108天'))
+    console.log(computedValidLength('EZ Robotics'))
+    console.log(computedValidLength('A+轮'))
+    console.log(computedValidLength('Score'))
+    console.log(computedValidLength('JSFamily集市家'))
+    console.log(computedValidLength('P2P'))
+  </script>
 </body>
 </html>
