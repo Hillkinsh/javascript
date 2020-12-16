@@ -1,13 +1,29 @@
+<style>
+.line {
+  stroke:"red";
+  stroke-width:3;
+}
+</style>
 <svg version="1.1"
      baseProfile="full"
-     width="200" height="200"
+     width="950" height="500"
      viewBox="0 0 100 100"
      xmlns="http://www.w3.org/2000/svg">
 
-  <rect width="100%" height="100%" fill="red" />
-<path d="M10 10 H 90 V 90 H 10 L 10 10"/>
-  <circle cx="150" cy="100" r="80" fill="green" />
+  <!-- <rect width="100%" height="100%" fill="red" /> -->
+<!-- <path d="M10 10 H 90 V 90 H 10 L 10 10"/> -->
+  <!-- <circle cx="150" cy="100" r="80" fill="green" /> -->
+  <!-- <rect width='200' height='100' cx="0" cy="200"/> -->
+  <g transform="translate(10, 10)" stroke="red" fill="blue">
+    <rect width='20' height='10' cx="0" cy="200"/>
+    <circle cx='5' cy='5' r='5'/>
+  </g>
+  <g stroke="red" stroke-width="3">
+    <line class="line" x1="0" y1="50" x2="50" y2="150" />
+    <path d="M50 10 L100 60 L120 60 L120 80" />
+    <!-- <path d="M10 10 H 90 V 90 H 10 L 10 10"/> -->
+  </g>
 
-  <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+  <!-- <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text> -->
 
 </svg>

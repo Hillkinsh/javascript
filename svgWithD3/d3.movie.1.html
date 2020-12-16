@@ -1,0 +1,68 @@
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>大黄脸</title>
+    <script src="d3.min.js" charset="utf-8"></script> 
+  </head> 
+  <body> 
+    <svg width="960" height="500"></svg>
+      
+    <script>
+      const svg = d3.select('svg');
+      const width = svg.attr('width');
+      const height = svg.attr('height');
+      
+      // 大圆
+      const circle = svg.append('circle')
+        .attr('r', height/2)
+        .attr('cx', width/2)
+        .attr('cy', height/2)
+        .attr('fill','yellow')
+        .attr('stroke', 'black');
+
+      const eyeSpacing = 100;
+      const eyeYoffset = 70;
+      const eyeRadius = 40;
+      const eyeBrowWidth = 70;
+      const eyeBrowHeight = 15;
+      const eyeBrowOffset = -70;
+
+      const g = svg.append('g')
+        .attr('transform', `translate(${width/2}, ${height/2})`);
+
+      const eyeG= g.append('g')
+        .attr('transform', `translate(0, -${eyeYoffset})`);
+
+      const eyeBrowG = eyeG.append('g')
+        .attr('transform', `translate(0, ${eyeBrowOffset})`);
+
+      eyeBrowG
+        .transition().duration(200)
+        .attr('transform', `translate(0, ${eyeBrowOffset - 50})`)
+        .transition().duration(200)
+        .attr('transform', `translate(0, ${eyeBrowOffset})`);
+
+      const leftEyebrow = eyeBrowG.append('rect')
+        .attr('x', -eyeSpacing - eyeBrowWidth/2)
+        .attr('width', eyeBrowWidth)
+        .attr('height', eyeBrowHeight);
+      const rightEyebrow = eyeBrowG.append('rect')
+        .attr('x', eyeSpacing - eyeBrowWidth/2)
+        .attr('width', eyeBrowWidth)
+        .attr('height', eyeBrowHeight)
+      const leftEye = eyeG.append('circle')
+        .attr('r', eyeRadius)
+        .attr('cx',  - eyeSpacing)
+      const rightEye = eyeG.append('circle')
+        .attr('r', eyeRadius)
+        .attr('cx',  + eyeSpacing)
+      const mouse = g.append('path')
+        .attr('d', d3.arc()({
+          innerRadius: 150,
+          outerRadius: 170,
+          startAngle: Math.PI/2,
+          endAngle: Math.PI/2 * 3
+        }));
+      </script> 
+  </body> 
+</html>

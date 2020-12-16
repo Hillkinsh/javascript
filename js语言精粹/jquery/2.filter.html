@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div class="abc">hahahah</div>
+    <div class="abc">tongceng</div>
+    <div class="abc">tongceng2</div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+   
+      // 1. :first
+      $('.abc:first').html('第一个abc元素不仅存在而且被我替换内部文案了。');
+      // 1. :last
+      $('.abc:last').html('lastaf一个abc元素不仅存在而且被我替换内部文案了。');
+      // 2. 判断元素是否存在的方式
+      // if ($('.abc').length > 0) {
+      //   $('.abc').html('元素不仅存在而且被我替换内部文案了。')
+      // }
+      // 3. 直接修改样式
+      $('.abc').css('color', 'red');
+      // 4. sibling 同层级
+      $('.abc').siblings().css('color', 'green');
+      
+    </script>
+  </body>
+</html>

@@ -1,65 +1,46 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
+<style>
+  ul {
+    height: 100px;
+    overflow: scroll;
+    margin-top: 500px;
+    /* position: relative; */
+  }
+  li {
+    height: 40px;
+    line-height: 40px;
+    
+  }
+  li span {
+    top: 480px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+  }
+  .a {
+    width: 60px;
+    height: 120px;
+    /* background-image: url('https://cdn.tianyancha.com/web-require-js/public/images/discuss/usm-preview-btn-right-sprite-v2.png'); */
+    background: url('https://cdn.tianyancha.com/web-require-js/public/images/discuss/usm-preview-btn-right-sprite-v2.png') no-repeat;
+      background-size: 180px 120px;
+  }
+</style>
 <body>
-  <script>
-    function computedValidLength (str) {
-      // 根据传入字符串的形式来判断返回对应于汉字的数目
-      // 检查范围包含 字母 数字 短线，空格，竖线
-      let result = str.length;
-      let hasLetter = /[a-zA-Z0-9\-\|\s]{2}/; // 2个以上；
-      
-      if (str.indexOf(' | ') !== -1) {
-        return result - 2;
-      }
-      if (str.indexOf('Pre-') !== -1) {
-        return result - 2;
-      }
-      if (!hasLetter.test(str)) {
-        return result;
-      }
-      return Math.ceil(str.length - countLetters(str) - countBIGLetters(str));
-      function countLetters(str) {
-        let result = 0;
-        let reg = /[a-z0-9\-\|\s]{1}/;
-        for (let i = 0; i < str.length; i++) {
-          if (reg.test(str[i])) {
-            result++
-          }
-        }
-        return result*0.5;
-      }
-      function countBIGLetters(str) {
-        let result = 0;
-        let count = 0;
-        let reg = /[A-Z]{1}/;
-        for (let i = 0; i < str.length; i++) {
-          if (reg.test(str[i])) {
-            count++
-          }
-        }
-        if (count == 3) {
-          result = 1
-        } else {
-          result = count * 0.3
-        }
-        return result;
-      }
-    }
-    console.log(computedValidLength('Pre-A轮'))
-    console.log(computedValidLength('Like'))
-    console.log(computedValidLength('IPO上市轮')) // 单独处理
-    console.log(computedValidLength('expands'))
-    // console.log(computedValidLength('香港特别行政区'))
-    // console.log(computedValidLength('注销'))
-    console.log(computedValidLength('PUPUPUPU'))
-    console.log(computedValidLength('香港特别行政区 | 退市'))
-    console.log(computedValidLength('108天'))
-    console.log(computedValidLength('EZ Robotics'))
-    console.log(computedValidLength('A+轮'))
-    console.log(computedValidLength('Score'))
-    console.log(computedValidLength('JSFamily集市家'))
-    console.log(computedValidLength('P2P'))
-  </script>
+ <ul>
+   <li><span>ninininin</span>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+   <li>hello world.</li>
+ </ul>
+ <div class="a">haha</div>
 </body>
 </html>

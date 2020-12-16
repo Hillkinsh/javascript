@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div class="abc">hahahah</div>
+    <div class="tongceng">tongceng</div>
+    <div class="tongc2">tongceng2</div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        console.log('hahhaha')
+      })
+      // 1. 不管目标元素存在与否，链式操作均不会报错
+      $('.abcd').html('元素不仅存在而且被我替换内部文案了。');
+
+      // 2. 判断元素是否存在的方式
+      if ($('.abc').length > 0) {
+        $('.abc').html('元素不仅存在而且被我替换内部文案了。')
+      }
+      // 3. 直接修改样式
+      $('.abc').css('color', 'red');
+      // 4. sibling 同层级
+      $('.abc').siblings().css('color', 'green');
+      
+    </script>
+  </body>
+</html>
