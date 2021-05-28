@@ -1,46 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
+<head>tianyancha</head>
 <style>
-  ul {
+  .outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner {
+    width:100px;
     height: 100px;
-    overflow: scroll;
-    margin-top: 500px;
-    /* position: relative; */
+    overflow-y: scroll;
+    position: relative;
+    z-index: 501;
+    background: #fff;
   }
-  li {
-    height: 40px;
-    line-height: 40px;
-    
-  }
-  li span {
-    top: 480px;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: aqua;
-  }
-  .a {
-    width: 60px;
+  .child {
     height: 120px;
-    /* background-image: url('https://cdn.tianyancha.com/web-require-js/public/images/discuss/usm-preview-btn-right-sprite-v2.png'); */
-    background: url('https://cdn.tianyancha.com/web-require-js/public/images/discuss/usm-preview-btn-right-sprite-v2.png') no-repeat;
-      background-size: 180px 120px;
+    background-color: yellow;
+    position: absolute;
+    z-index: 501;
+
+  }
+  .abs {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 500;
   }
 </style>
 <body>
- <ul>
-   <li><span>ninininin</span>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
-   <li>hello world.</li>
- </ul>
- <div class="a">haha</div>
+  <div class="outer">
+    <div class="abs">abs</div>
+    <div class="inner">
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+      <div class="">fhwiefhweif</div>
+    </div>
+  </div>
 </body>
 </html>
