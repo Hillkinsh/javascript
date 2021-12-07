@@ -24,10 +24,40 @@ var lengthOfLongestSubstring = function (s) {
   return result > count ? result : count
 }
 
-console.log(lengthOfLongestSubstring('abcabcbb'))
-console.log(lengthOfLongestSubstring("dvdf"))
-console.log(lengthOfLongestSubstring("ohomm"))
 
+function indexOfIt(s, start, end, ele) {
+  for (let i = start; i < end; i++) {
+    if (s[i] === ele) {
+      return i;
+    }
+  }
+  return -1;
+}
+var lengthOfLongestSubstringV2 = function(s) {
+    if (!s) return 0;
+    let prev = 0;
+    let next = 1;
+    let count = 1;
+    let result = 0;
+    while(next < s.length) {
+      let pos = indexOfIt(s, prev, next, s[next]);
+      if (pos === -1) {
+        count++;
+      } else {
+        result = result > count ? result : count;
+        prev = pos + 1;
+        count = next - prev + 1;
+      }
+      next++;
+    }
+    return result > count ? result : count;
+};
+
+console.log(lengthOfLongestSubstringV2('abcabcbb'))
+console.log(lengthOfLongestSubstringV2("dvdf"))
+console.log(lengthOfLongestSubstringV2("ohomm"))
+
+'abcabcbb'
 /**
  * 取一个位置作为字串的开始位，
  * 当s[i] 包含在字串中
