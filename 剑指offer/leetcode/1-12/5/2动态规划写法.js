@@ -1,5 +1,6 @@
 function longestPalindrome(s) {
   let len = s.length
+  // 字符串长度小于2时无意义。
   if (len < 2) return s
 
   let dp = []
@@ -8,7 +9,7 @@ function longestPalindrome(s) {
     if (!dp[i]) dp[i] = []
     dp[i][i] = true;
   }
-
+  console.log('dp:', dp)
   let maxLen = 1;
   let start = 0;
 

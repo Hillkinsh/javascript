@@ -17,4 +17,18 @@ var isPalindrome = function (x) {
   }
   return true
 };
-console.log(isPalindrome(121))
+
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+ var isPalindrome2 = function(x) {
+  let digit = 0;
+  let bak = x;
+  while(bak > 0) {
+    digit = digit * 10 + bak % 10;
+    bak = ~~(bak / 10);
+  }
+  return digit === x;
+};
+console.log(isPalindrome2(121));

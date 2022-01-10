@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, useReducer, Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 class ProductCategoryRow extends React.Component {
@@ -80,45 +79,6 @@ class ProductTable extends React.Component {
   }
 }
 
-// class SearchBar extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-//     this.handleInStockChange = this.handleInStockChange.bind(this);
-//   }
-  
-//   handleFilterTextChange(e) {
-//     this.props.onFilterTextChange(e.target.value);
-//   }
-  
-//   handleInStockChange(e) {
-//     this.props.onInStockChange(e.target.checked);
-//   }
-//   render() {
-//     const filterText = this.props.filterText;
-//     const inStockOnly = this.props.inStockOnly;
-
-//     return (
-//       <form>
-//         <input
-//           type="text"
-//           placeholder="Search..."
-//           value={filterText}
-//           onChange={this.handleFilterTextChange}
-//           />
-//         <p>
-//           <input
-//             type="checkbox"
-//             checked={inStockOnly}
-//             onChange={this.handleInStockChange}
-//             />
-//           {' '}
-//           Only show products in stock
-//         </p>
-//       </form>
-//     );
-//   }
-// }
 function SearchBar(props) {
   const handleFilterTextChange = (e) => {
     props.onFilterTextChange(e.target.value);
@@ -127,6 +87,13 @@ function SearchBar(props) {
   const handleInStockChange =(e) => {
     props.onInStockChange(e.target.checked);
   }
+
+  useEffect(() => {
+    console.log('useeffect...')
+    return () => {
+      console.log('return...')
+    }
+  })
   return (
     <form>
       <input
@@ -148,44 +115,8 @@ function SearchBar(props) {
   );
 }
 
-// class FilterableProductTable extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       filterText: '',
-//       inStockOnly: false
-//     };
-//     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-//     this.handleInStockChange = this.handleInStockChange.bind(this);
-//   }
-//   handleFilterTextChange(filterText) {
-//     this.setState({
-//       filterText: filterText
-//     });
-//   }
-  
-//   handleInStockChange(inStockOnly) {
-//     this.setState({
-//       inStockOnly: inStockOnly
-//     })
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <SearchBar filterText={this.state.filterText}
-//           inStockOnly={this.state.inStockOnly} 
-//           onFilterTextChange={this.handleFilterTextChange}
-//           onInStockChange={this.handleInStockChange}
-//           />
-//         <ProductTable products={this.props.products}
-//         filterText={this.state.filterText}
-//         inStockOnly={this.state.inStockOnly} />
-//       </div>
-//     );
-//   }
-// }
 function FilterableProductTable(props) {
-  const [filterText, setFilterText] = useState("");
+  const [filterText, setFilterText] = useState('');
   const [inStockOnly, setInStockOnly] = useState(false);
   const handleFilterTextChange = (filterText) => setFilterText(filterText);
   const handleInStockChange = (inStockOnly) => setInStockOnly(inStockOnly);
@@ -217,7 +148,7 @@ const PRODUCTS = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 const ChatAPI = {
-  subscribeToFriendStatus() {
+  subscribeToFriendStatus(id, cb) {
     
   }
 }
@@ -237,9 +168,217 @@ function useFriendStatus(friendID) {
 
   return isOnline;
 }
- 
+
+const themes = {
+  light: {
+    foreground: '#000000',
+    background: '#eeeeee'
+  },
+  dark: {
+    foreground: '#ffffff',
+    background: 'yellow'
+  }
+};
+
+const ThemeContext = React.createContext(themes.light);
+
+function App() {
+  return (
+    <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+const initialState = {count: 0};
+function init(initialCount) {
+  return {count: initialCount};
+}
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+    case 'reset':
+      return init(action.payload);
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+      <button onClick={() => dispatch({type: 'reset', payload: 10})}>reset</button>
+    </>
+  );
+}
+
+function Toolbar(props) {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+function ThemedButton() {
+  const theme = useContext(ThemeContext);
+  const [state, setState] = useState({ left: 0, top: 0, width: 100, height: 100 });
+  // const [filterText, setFilterText] = useState('');
+
+  useEffect(() => {
+    function handleWindowMouseMove(e) {
+      // 展开 「...state」 以确保我们没有 「丢失」 width 和 height
+      console.log('e::::::', e)
+      setState(state => ({ ...state, left: e.pageX, top: e.pageY }));
+    }
+    // 注意：这是个简化版的实现
+    window.addEventListener('mousemove', handleWindowMouseMove);
+    return () => window.removeEventListener('mousemove', handleWindowMouseMove);
+  }, []);
+  return (
+    <button style={{ background: theme.background, color: theme.foreground }}>
+      I am styled by theme context!
+    </button>
+  );
+}
+
+// 高阶组件
+function HOC(WrappedComponent) {
+  return class extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        name: '',
+      };
+      this.onChange = this.onChange.bind(this);
+    }
+    
+    onChange = (event) => {
+      this.setState({
+        name: event.target.value,
+      })
+    }
+    
+    render() {
+      const newProps = {
+        name: {
+          value: this.state.name,
+          onChange: this.onChange,
+        },
+      };
+      return <WrappedComponent {...this.props} {...newProps} />;
+    }
+  };
+}
+
+// 使用
+// @HOC
+class Example extends Component {
+  render() {
+    return <input name="name" {...this.props.name} />;
+  }
+}
+
+class CustomTextInput extends React.Component {
+  constructor(props) {
+    super(props);
+    // 创建一个 ref 来存储 textInput 的 DOM 元素
+    this.textInput = React.createRef();
+    this.focusTextInput = this.focusTextInput.bind(this);
+  }
+
+  focusTextInput() {
+    // 直接使用原生 API 使 text 输入框获得焦点
+    // 注意：我们通过 "current" 来访问 DOM 节点
+    this.textInput.current.focus();
+  }
+
+  render() {
+    // 告诉 React 我们想把 <input> ref 关联到
+    // 构造器里创建的 `textInput` 上
+    return (
+      <div>
+        <input
+          type="text"
+          ref={this.textInput} />
+        <input
+          type="button"
+          value="Focus the text input"
+          onClick={this.focusTextInput}
+        />
+      </div>
+    );
+  }
+}
+
+class Mouse extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.state = { x: 0, y: 0 };
+  }
+
+  handleMouseMove(event) {
+    this.setState({
+      x: event.clientX,
+      y: event.clientY
+    });
+  }
+
+  render() {
+    return (
+      <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>
+
+        {/* ...but how do we render something other than a <p>? */}
+        {this.props.render(this.state)}
+        {/* <p>The current mouse position is ({this.state.x}, {this.state.y})</p> */}
+      </div>
+    );
+  }
+}
+class Cat extends React.Component {
+  render() {
+    const mouse = this.props.mouse;
+    return (
+      <img src="/cat.png" style={{
+        position: 'absolute',
+        left: mouse.x,
+        top: mouse.y
+      }} />
+    );
+  }
+}
+class MouseTracker extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Move the mouse around!</h1>
+        <Mouse render={mouse => (
+          <Cat mouse={mouse} />
+        )}/>
+      </div>
+    );
+  }
+}
+
+// 你可以直接获取 DOM button 的 ref：
 ReactDOM.render(
-  <FilterableProductTable products={PRODUCTS} />,
+  
+  <React.StrictMode>
+    <MouseTracker />
+    <CustomTextInput />
+    <Example/>
+     <App />
+     <Counter />
+     <FilterableProductTable products={PRODUCTS} />
+   </React.StrictMode>,
   document.getElementById('root')
 );
 

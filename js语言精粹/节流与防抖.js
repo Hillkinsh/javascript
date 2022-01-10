@@ -13,6 +13,18 @@ function throttle(fn, time = 10) {
     }
   }
 }
+function c (fn ,time) {
+  return (...args) => {
+    if (fn.timer) {
+      return;
+    }
+    fn.timer = setTimeout(() => {
+      fn.call(this, ...args);
+      fn.timer = null;
+    })
+  }
+  
+}
 
 window.onresize = throttle(() => {
   console.log('hahahaha')

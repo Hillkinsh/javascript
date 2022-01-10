@@ -1,7 +1,11 @@
-// 1.常用的数据类型
+// 1.常用的数据类型 7 + 1
 
-// string, boolearn, number, null, undefined, symbol
+// string, boolearn, number, null, undefined, symbol，bigInt
 // object, array, function
+
+// BigInt 可以表示任意大的整数。一种方法来表示大于 2^53 - 1 的整数
+// 10n
+// bigInt(10)
 
 // 2. 数据类型检测
 

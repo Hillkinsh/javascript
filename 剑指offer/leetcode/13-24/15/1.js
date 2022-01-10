@@ -31,3 +31,6 @@ var threeSum = function (nums) {
   }
   return res
 }
+var threeSum2 = function (nums) {
+
+}

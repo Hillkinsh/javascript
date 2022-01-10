@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .out {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .inner {
+      background-color: blue;
+      /* margin: 10px; */
+      height: 50px;
+      /* flex: 1; */
+      border: 1px solid red;
+      box-sizing: border-box;
+    }
+    .item1 {
+      flex: unset;
+      width: 100px;
+    }
+    .item2 {
+      width: 200px;
+      flex-basis: 10%; /*子项的占用宽，设置了会覆盖width/height*/
+      /* flex-grow: 1; */
+      flex-shrink: 0;
+      
+    }
+    .item3 {
+      flex: unset;
+      width: 300px;
+    }
+    .out2 {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .out2 .item1 {
+      flex: unset;
+      width: 100px;
+    }
+    .out2 .item2 {
+      width: 20px;
+      flex-basis: 140px;
+      flex-grow: 2;
+      flex-shrink: 0;
+      
+    }
+    .out2 .item3 {
+      flex-grow: 1;
+      width: 80px;
+    }
+    .out3 {
+      width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .out3 .item1 {
+      flex: unset;
+      width: 100px;
+    }
+    .out3 .item2 {
+      width: 20px;
+      flex-basis: 140px;
+      flex-grow: 2;
+      flex-shrink: 1;
+    }
+    .out3 .item3 {
+      flex-shrink: 2;
+      width: 80px;
+    }
+
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>1. flex-basis</h3>
+  <p>flex-basis: 10%; /*子项的占用宽，设置了会覆盖width/height; auto时使用width*/</p>
+  <p>.item1 { flex: unset; width: 100px; }</p>
+  <p>.item2 { width: 200px; flex-basis: 10%; }</p>
+    <p>.item3 { flex: unset; width: 300px;}</p>
+  <div class="out">
+    <div class="inner item1">item1</div>
+    <div class="inner item2">item2</div>
+    <div class="inner item3">item3</div>
+  </div>
+  <h3>2. flex-grow 分配剩余空间</h3>
+  <p>基础空间和剩余空间</p>
+  <p>基础空间：width和flex-basis占用的空间。</p>
+  <p>剩余空间：总空间 - 基础空间</p>
+  <p>flex-basis: 10%; /*子项的占用宽，设置了会覆盖width/height*/</p>
+  <p>.item1 { flex: unset; width: 100px; }</p>
+  <p>.item2 { flex-grow:2; width: 20px; flex-basis: 140px; }</p>
+  <p>.item3 { flex-grow: 1; width: 80px;}</p>
+    <p>基础空间： 100 + 140 + 80 = 320; 剩余空间 180 </p>
+    <p>剩余空间分为3份，每份60，item2 两份； item3 1份</p>
+    <p>所以他们的渲染宽度为：item2 = 140 + 60* 2 = 260px</p>
+    <p>item3 = 80 + 60 = 140px</p>
+  <div class="out2">
+    <div class="inner item1">item1</div>
+    <div class="inner item2">item2</div>
+    <div class="inner item3">item3</div>
+  </div>
+  <h3>3. flex-shrink 吸收超出空间</h3>
+  <p>.item1 { flex: unset; width: 100px; }</p>
+  <p>.item2 { flex-shrink:1; width: 20px; flex-basis: 140px; }</p>
+  <p>.item3 { flex-shrink: 2; width: 80px;}</p>
+    <p>基础空间： 100 + 140 + 80 = 320; 超出空间 320 - 250 = 70 </p>
+    <p>超出空间分为4份，item1未设置，默认1份； item2 1份； item3 2份</p>
+    <p>item1 分担 100 * 1 / （100 * 1 + 140 * 1 + 80 * 2）* 70 = 17.5； item1最终宽度：100 - 17.5 = 82.5</p>
+    <p>item2 分担 140 * 1 / （100 * 1 + 140 * 1 + 80 * 2）* 70 = 24.5； item1最终宽度：140 - 24.5 = 115.5</p>
+    <p>item3 分担 80 * 2 / （100 * 1 + 140 * 1 + 80 * 2）* 70 = 28； item1最终宽度：80 - 28 = 52</p>
+
+    <div class="out3">
+      <div class="inner item1">item1</div>
+      <div class="inner item2">item2</div>
+      <div class="inner item3">item3</div>
+    </div>
+</body>
+</html>
