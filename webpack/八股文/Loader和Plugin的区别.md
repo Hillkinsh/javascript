@@ -1,0 +1,6 @@
+loader本质上是一个函数，在该函数中对接收到的内容进行转换，并返回转换后的结果。因为webpack只认识js，loader相当于一个翻译官的作用。
+
+插件基于事件流框架tapable，插件可以扩展webpack功能，在webpack运行的生命周期中，会广播出许多事件，plugin会监听这些事件，在合适的机会通过webpack的API改变输出结果。
+
+loader在modules。rules中配置。
+plugin在plugins中配置。
