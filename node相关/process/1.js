@@ -1,6 +1,7 @@
 // process属性
 // 当前node进程的信息，并加以控制。
-
+const process = require('process');
+console.log(process)
 process.execPath // 返回node的绝对路径
 // console.log(process.execPath) // /Users/xuqingshan/.nvm/versions/node/v12.10.0/bin/node
 process.version // node version
@@ -29,6 +30,6 @@ process.on('exit', (code) => {
 
 console.log('此消息最新显示');
 
-console.log(process.cpuUsage())
+console.log('cpuUsage', process.cpuUsage())
 
-console.log(process.arch)
+console.log('arch', process.arch)

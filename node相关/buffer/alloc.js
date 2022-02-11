@@ -1,7 +1,9 @@
 // Buffer.alloc()
-
 // Buffer.alloc(size[, fill[, encoding]])
-
+// 虽然 Buffer 类在全局作用域内可用，但仍然建议通过 import 或 require 语句显式地引用它。
+// 创建缓冲区。
+const { Buffer } = require('buffer');
+console.log('Buffer:', Buffer)
 let buf = Buffer.alloc(5)
 
 console.log(buf)
