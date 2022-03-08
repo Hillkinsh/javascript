@@ -53,8 +53,22 @@
   return i;
 };
 var nums = [0,1,2,2,3,2,0,4,2], val = 2
-var nums = [3,2,2,3], val = 3
+// var nums = [3,2,2,3], val = 3
 // var nums = [3,2,2,3], val = 5
 // i = 0, j = 2, 2,2,2,3, i=1, j=1;
+// 快慢指针
 
+var removeElement = function(nums, val) {
+  let i = 0;
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] === val) {
+      continue;
+    } else {
+      nums[i++] = nums[j];
+    }
+  }
+  nums.length = i;
+  return i;
+  
+}
 console.log(removeElement(nums, val), nums)

@@ -38,4 +38,20 @@
 };
 
 var nums = [-7,-3,2,3,11];
+var sortedSquares = function (nums) {
+  // 双边指针
+  let p = 0;
+  let q = nums.length - 1;
+  while(p <= q) {
+    let pp = nums[i] * nums[i];
+    let qq = nums[j] * nums[j];
+    if (pp < qq) {
+      nums[j - i] = qq;
+      j--
+    } else {
+      nums[j - i] = pp;
+      i++
+    }
+  }
+}
 console.log(sortedSquares(nums))
