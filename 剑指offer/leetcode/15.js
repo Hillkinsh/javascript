@@ -59,8 +59,72 @@ var threeSum = function (nums) {
   }
   return result;
 }
-var nums = [-1,0,1,2,-1,-1,-4];
 
+var threeSum = function(nums) {
+  nums.sort((a, b) => a - b);
+  const result = [];
+  let i = 0;
+  while (i < nums.length - 2) {
+    let pre = i + 1;
+    let aft = nums.length - 1;
+    while(pre < aft) {
+      const sum = nums[i] + nums[pre] + nums[aft];
+      if (sum <= 0) {
+        if (sum === 0) {
+          result.push([nums[i], nums[pre], nums[aft]]);
+          aft--;
+          while(pre < aft && nums[aft] === nums[aft + 1]) {
+            aft--;
+          }
+        }
+        pre++;
+        while(pre < aft && nums[pre] === nums[pre - 1]) {
+          pre++;
+        }
+      }
+      if (sum > 0) {
+        aft--;
+        while(pre < aft && nums[aft] === nums[aft + 1]) {
+          aft--;
+        }
+      }
+    }
+    while(i < nums.length - 2 && nums[i + 1] === nums[i]) {
+      i++;
+    }
+    i = i + 1;
+  }
+  return result;
+};
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+ var threeSum = function(nums) {
+  const len = nums.length;
+  if (len < 3) return [];
+  nums.sort((a, b) => a - b);
+  const res = [];
+  for (let i = 0; i < len - 2; i++) {
+      if (nums[i] > 0)    break; // 优化点，都为正数，停止查找
+      if (i > 0 && nums[i] === nums[i-1]) continue; // 优化2，和上一个值相同，不必查找
+      let l = i + 1,
+          r = len - 1;
+      while (l < r) {
+          const sum = nums[i] + nums[l] + nums[r];
+          if (sum > 0)    { r--; continue;}
+          if (sum < 0)    { l++; continue;}
+          res.push([nums[i], nums[l], nums[r]]);
+          while (l < r && nums[l] === nums[++l]) {};
+          while (l < r && nums[r] === nums[--r]) {};
+      }
+  }
+  return res;
+};
+var nums = [-1,0,1,2,-1,-4,-2,-3,3,0,4]
+
+// [-4, -3, -2, -1, -1, 0, 0, 1, 2, 3, 4]
 console.log(threeSum(nums))
 
 /**

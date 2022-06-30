@@ -16,3 +16,5 @@ const bigI:bigint = BigInt(1223334444433333333);
 function foo():void {
   console.log('abc')
 }
+
+let list: number[] = [1,2,3];

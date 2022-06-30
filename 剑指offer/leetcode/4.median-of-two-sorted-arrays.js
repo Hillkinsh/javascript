@@ -41,4 +41,8 @@ var findMedianSortedArrays = function(nums1, nums2) {
   }
 };
 // @lc code=end
+
+var findMedianSortedArrays = function(nums1, nums2) {
+
+};
 console.log(findMedianSortedArrays([1,2], [3, 4]))

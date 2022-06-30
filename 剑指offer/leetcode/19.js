@@ -36,7 +36,5 @@ var removeNthFromEnd = function(head, n) {
   return ret.next;
 };
 var removeNthFromEnd = function(head, n) {
-  let prev = head;
-  let aft = head;
-  let count = 0;
-}
+
+};

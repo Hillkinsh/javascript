@@ -29,6 +29,34 @@ var lengthOfLongestSubstring = function(s) {
     }
     return recur(s, 1, 0, 1);
 };
-// @lc code=end
 
+// s = "abcabcbb"
+var lengthOfLongestSubstring = function(s) {
+  let pre = 0;
+  
+  if (s.length < 2) return s.length;
+  let max = 1;
+  for (let i = 1; i < s.length; i++) {
+    const index = indexOfStr(s, s[i], i, pre);
+    console.log(index,i, ":index")
+    if (index !== -1) {
+      pre = index + 1;
+    } else {
+      max = Math.max(i - pre + 1, max);
+    }
+  }
+  return max;
+};
+function indexOfStr(s, ele, i, pre) {
+  let result = -1;
+  for (let j = pre; j < i; j++) {
+    if (s[j] === ele) {
+      result = j;
+      break;
+    }
+  }
+  return result;
+}
 
+var s = "bbbbb";
+console.log(lengthOfLongestSubstring(s))

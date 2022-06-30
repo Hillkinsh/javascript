@@ -54,7 +54,31 @@ var replaceSpace = function(s) {
   }
   return arr.join('');
 }
-
+var longestPalindrome = function(s) {
+  let result = s[0];
+  let i = 1;
+  while(i < s.length) {
+    let pre = i;
+    let aft = i;
+    while(s[pre] === s[pre - 1] && pre > 0) {
+      pre--;
+    }
+    
+    while(s[aft] === s[aft + 1] && aft < s.length - 1) {
+      aft++;
+    }
+    while(pre > 0 && aft < s.length - 1 && s[pre - 1] === s[aft + 1]) {
+      pre--;
+      aft++;
+    }
+    i = aft + 1;
+    if (aft - pre + 1 > result.length) {
+      result = s.slice(pre, aft + 1);
+    }
+  }
+  return result;
+};
 var s = "We are happy.";
 
 console.log(replaceSpace(s))
+console.log(longestPalindrome("cbbd"))
